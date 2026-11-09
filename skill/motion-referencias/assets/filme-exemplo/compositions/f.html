@@ -1,0 +1,150 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Outfit", sans-serif; color: #1b1a20; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    #root .full { position: absolute; inset: 0; }
+    #root .t { white-space: nowrap; line-height: 1.05; }
+    #f-palco { position: absolute; inset: 0; overflow: hidden; background: #f6f3ea; }
+    #f-grao { background-image: radial-gradient(#0000000c 1px, transparent 1.6px), radial-gradient(ellipse at 50% 40%, #ffffff66, #00000010 95%); background-size: 6px 6px, 100% 100%; }
+    #f-mundo { position: absolute; left: 0; top: 0; width: 3400px; height: 1080px; overflow: visible; }
+    #root .traco { fill: none; stroke: #1b1a20; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; }
+    #root .fino { fill: none; stroke: #1b1a20; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+    #root .nota { padding: 16px 34px; background: #fffdf6; font-size: 46px; font-weight: 800; box-shadow: 4px 8px 0 #0002; }
+    #root .nota::before { content: ""; position: absolute; left: 50%; top: -18px; width: 110px; height: 34px; margin-left: -55px; background: #ffd76acc; transform: rotate(-4deg); }
+    #root .selo { padding: 14px 32px; border: 6px solid #1b1a20; font-size: 58px; font-weight: 900; color: #fff; box-shadow: 5px 8px 0 #1b1a20; }
+    #f-quadro { position: absolute; left: 0; top: 0; }
+    #root .num { font-size: 70px; font-weight: 900; fill: #fff; }
+    #root .boneco { overflow: visible; }
+    #root .arvore { fill: none; stroke: #a7a297; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
+  </style>
+  <div id="root" data-composition-id="f" data-width="1920" data-height="1080">
+    <div id="f-palco" data-layout-allow-overflow data-layout-allow-overlap>
+      <div id="f-grao" class="full" data-layout-ignore></div>
+      <svg id="f-mundo" viewBox="0 0 3400 1080" data-layout-ignore></svg>
+      <div id="f-n1" class="a nota t">É sério...</div>
+      <div id="f-n2" class="a nota t">um dia aleatório, no meio da floresta</div>
+      <div id="f-n3" class="a nota t">depende da sua sorte!</div>
+      <!-- Misterioso: boneco de palito encapuzado -->
+      <div id="f-misc" class="a" style="width:200px;height:310px">
+        <svg class="boneco" width="200" height="310" viewBox="-100 -300 200 310">
+          <path d="M-46-200Q0-215 46-200L64-70H-64Z" fill="#1b1a20" />
+          <g id="f-mpe1"><path class="traco" d="M0-110V0" /></g>
+          <g id="f-mpe2"><path class="traco" d="M0-110V0" /></g>
+          <path class="traco" d="M0-110V-200" />
+          <g id="f-mbr"><path class="traco" d="M0-190-60-150-92-150" /></g>
+          <path class="traco" d="M0-190 40-120" />
+          <path d="M-44-232Q-40-300 0-300 40-300 44-232 22-212 0-210-22-212-44-232Z" fill="#1b1a20" />
+          <ellipse cx="0" cy="-238" rx="26" ry="20" fill="#0b0a10" />
+          <ellipse cx="-10" cy="-240" rx="6" ry="3.5" fill="#ff3b2e" /><ellipse cx="10" cy="-240" rx="6" ry="3.5" fill="#ff3b2e" />
+        </svg>
+      </div>
+      <!-- Jogador: boneco de palito com bandana -->
+      <div id="f-jog" class="a" style="width:200px;height:310px" data-layout-allow-overflow>
+        <svg class="boneco" width="200" height="310" viewBox="-100 -300 200 310">
+          <g id="f-pe2"><path class="traco" d="M0-110V0" /></g>
+          <g id="f-br2"><path class="traco" d="M0-190V-100" /></g>
+          <g id="f-corpo">
+            <path class="traco" d="M0-110V-200" />
+            <g id="f-cab">
+              <path d="M30-256Q62-262 70-240M30-252Q58-246 62-224" stroke="#ff5a1f" stroke-width="8" fill="none" stroke-linecap="round" />
+              <circle cx="0" cy="-238" r="36" fill="#f6f3ea" stroke="#1b1a20" stroke-width="12" />
+              <path d="M-36-254H36" stroke="#ff5a1f" stroke-width="12" stroke-linecap="round" />
+              <circle cx="-12" cy="-236" r="5" fill="#1b1a20" /><circle cx="12" cy="-236" r="5" fill="#1b1a20" />
+            </g>
+          </g>
+          <g id="f-pe1"><path class="traco" d="M0-110V0" /></g>
+          <g id="f-br1"><path class="traco" d="M0-190V-100" /></g>
+        </svg>
+        <svg id="f-r1" class="a" width="26" height="26" viewBox="-50 -50 100 100"><circle r="48" fill="#b9a5e8" stroke="#2a1b4d" stroke-width="6" /><circle r="31" fill="none" stroke="#2a1b4d" stroke-width="6" /><circle r="16" fill="none" stroke="#2a1b4d" stroke-width="6" /><circle r="6" fill="#2a1b4d" /></svg>
+        <svg id="f-r2" class="a" width="26" height="26" viewBox="-50 -50 100 100"><circle r="48" fill="#b9a5e8" stroke="#2a1b4d" stroke-width="6" /><circle r="31" fill="none" stroke="#2a1b4d" stroke-width="6" /><circle r="16" fill="none" stroke="#2a1b4d" stroke-width="6" /><circle r="6" fill="#2a1b4d" /></svg>
+        <svg id="f-k1" class="a" width="40" height="120" viewBox="-20 -60 40 120"><path d="M0-58 12-14 4-8V26H-4V-8L-12-14Z" fill="#1b1a20" /><circle cy="40" r="9" fill="none" stroke="#1b1a20" stroke-width="5" /></svg>
+        <svg id="f-k2" class="a" width="40" height="120" viewBox="-20 -60 40 120"><path d="M0-58 12-14 4-8V26H-4V-8L-12-14Z" fill="#1b1a20" /><circle cy="40" r="9" fill="none" stroke="#1b1a20" stroke-width="5" /></svg>
+      </div>
+      <svg id="f-ponto" class="a" width="90" height="90" viewBox="-50 -50 100 100" style="overflow:visible"><path class="fino" d="M-18-20Q-18-44 2-44 22-44 22-26 22-12 4-6V8" /><circle cy="30" r="6" fill="#1b1a20" /></svg>
+      <svg id="f-ah" class="a" width="140" height="140" viewBox="-70 -70 140 140" style="overflow:visible"><path class="fino" d="M0-60V-30M42-42 22-22M60 0H30M-42-42-22-22M-60 0H-30" /></svg>
+      <div id="f-s1" class="a selo t" style="background:#6a3df0">+2 Rinnegans</div>
+      <div id="f-s2" class="a selo t" style="background:#e3263a">+2 facadas</div>
+      <svg id="f-quadro" width="1920" height="1080" viewBox="0 0 1920 1080" data-layout-ignore><path d="M0 0H1920V1080H0ZM56 44V1036H1864V44Z" fill="#141217" fill-rule="evenodd" /><path d="M24 14H220L184 64H64V164L24 204ZM1896 14H1700L1736 64H1856V164L1896 204ZM24 1066H220L184 1016H64V916L24 876ZM1896 1066H1700L1736 1016H1856V916L1896 876Z" fill="#d22f2f" /></svg>
+      <div id="f-c1" class="a"><svg width="74" height="108" viewBox="0 0 30 44" style="overflow:visible;display:block"><path d="M1 1V35L10 27 16 41 23 38 17 24H29Z" fill="#fff" stroke="#111" stroke-width="2" stroke-linejoin="round" /></svg></div>
+      <div id="f-c2" class="a"><svg width="74" height="108" viewBox="0 0 30 44" style="overflow:visible;display:block"><path d="M1 1V35L10 27 16 41 23 38 17 24H29Z" fill="#ff5a1f" stroke="#111" stroke-width="2" stroke-linejoin="round" /></svg></div>
+      <svg id="f-dado" class="a" width="230" height="230" viewBox="-100 -100 200 200" style="overflow:visible">
+        <path d="M0-92 80-46V46L0 92-80 46V-46Z" fill="#ff5a1f" stroke="#1b1a20" stroke-width="9" stroke-linejoin="round" />
+        <path d="M0-92 46 22H-46ZM-80-46-46 22-80 46M80-46 46 22 80 46M-46 22 0 92 46 22" fill="none" stroke="#1b1a2066" stroke-width="4" />
+        <text id="f-d0" class="num" x="0" y="18" text-anchor="middle">3</text><text id="f-d1" class="num" x="0" y="18" text-anchor="middle">11</text><text id="f-d2" class="num" x="0" y="18" text-anchor="middle">7</text><text id="f-d3" class="num" x="0" y="18" text-anchor="middle">20</text>
+      </svg>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const S = 28.55, tl = gsap.timeline({ paused: true }), c = { xPercent: -50, yPercent: -50 }, P = L.passos;
+      // Mundo de traço: chão, grama e árvores desenhadas à mão
+      const r = L.rng(21), CHAO = 820;
+      let m = `<path class="traco" d="M-40 ${CHAO}H3440" />`;
+      for (let x = 20; x < 3400; x += 46 + r() * 40) m += `<path class="fino" d="M${x} ${CHAO}l${-6 + r() * 4} -${10 + r() * 12}M${x + 10} ${CHAO}l${4 + r() * 4} -${8 + r() * 10}" />`;
+      [80, 520, 980, 1420, 1880, 2330, 2760, 3200].forEach((x, i) => {
+        const h = 150 + r() * 70, w = 110 + r() * 40, y = CHAO - h;
+        let nuvem = `M${x - w * 0.5} ${y}`;
+        for (let k = 0; k <= 10; k++) { const a = Math.PI + (k / 10) * Math.PI * 2, rr = w * (0.5 + r() * 0.12); nuvem += ` Q${x + Math.cos(a - 0.3) * rr * 1.25} ${y - w * 0.55 + Math.sin(a - 0.3) * rr * 1.1} ${x + Math.cos(a) * rr} ${y - w * 0.55 + Math.sin(a) * rr}`; }
+        m += `<path class="arvore" d="M${x} ${CHAO}V${y + 20}M${x} ${y + 60}l-${22 + r() * 10} -30M${x} ${y + 40}l${18 + r() * 10} -26" /><path class="arvore" d="${nuvem}" />`;
+      });
+      document.getElementById("f-mundo").innerHTML = m;
+      // A página vira
+      gsap.set("#f-palco", { transformPerspective: 1600, transformOrigin: "50% 50%", opacity: 0 });
+      tl.set("#f-palco", { opacity: 1 }, 28.6 - S);
+      L.k(tl, "#f-palco", S, [[28.6, { rotationY: -90, scale: 0.94 }], [28.82, { rotationY: 0, scale: 1 }, "power2.out"]]);
+      // Notas
+      L.k(tl, "#f-n1", S, [[W[75], { x: 120, y: 96, rotation: -3, opacity: 0, scale: 1.3 }], [W[75] + 0.17, { opacity: 1, scale: 1 }, P(0.17)], [W[80] - 0.05, { opacity: 1 }], [W[80], { opacity: 0 }]]);
+      L.k(tl, "#f-n2", S, [[W[80], { x: 120, y: 96, rotation: -2, opacity: 0, scale: 1.3 }], [W[80] + 0.17, { opacity: 1, scale: 1 }, P(0.17)], [34.5, { opacity: 1 }], [34.55, { opacity: 0 }]]);
+      L.k(tl, "#f-n3", S, [[W[102], { x: 120, y: 96, rotation: -3, opacity: 0, scale: 1.3 }], [W[102] + 0.17, { opacity: 1, scale: 1 }, P(0.17)]]);
+      // Boneco do jogador, arrastado pelo cursor branco, andando a 12 quadros por segundo
+      const Y = CHAO - 300, X0 = 260, X1 = 700;
+      const E = 1.35;
+      gsap.set(["#f-jog", "#f-misc"], { transformOrigin: "50% 97%", scale: E });
+      gsap.set("#f-jog", { x: X0, y: Y });
+      gsap.set(["#f-pe1", "#f-pe2"], { svgOrigin: "0 -110" }); gsap.set(["#f-br1", "#f-br2"], { svgOrigin: "0 -190" });
+      gsap.set("#f-pe1", { rotation: -12 }); gsap.set("#f-pe2", { rotation: 12 }); gsap.set("#f-br1", { rotation: -20 }); gsap.set("#f-br2", { rotation: 20 });
+      L.k(tl, "#f-jog", S, [[30.0, { x: X0 }], [32.6, { x: X1 }, P(2.6)]]);
+      L.k(tl, "#f-mundo", S, [[30.0, { x: 0 }], [32.6, { x: -620 }, P(2.6)]]);
+      for (let i = 0, t = 30.0; t < 32.6; i++, t += 1 / 6) {
+        const a = i % 2 ? 30 : -30;
+        tl.set("#f-pe1", { rotation: a }, t - S); tl.set("#f-pe2", { rotation: -a }, t - S);
+        tl.set("#f-br1", { rotation: -a * 0.9 }, t - S); tl.set("#f-br2", { rotation: a * 0.9 }, t - S);
+        tl.set("#f-corpo", { y: i % 2 ? -8 : 0 }, t - S);
+      }
+      tl.set("#f-pe1", { rotation: -12 }, 32.62 - S); tl.set("#f-pe2", { rotation: 12 }, 32.62 - S);
+      tl.set("#f-br1", { rotation: -20 }, 32.62 - S); tl.set("#f-br2", { rotation: 20 }, 32.62 - S); tl.set("#f-corpo", { y: 0 }, 32.62 - S);
+      const mao = (x) => ({ x: x + 114, y: Y - 56 });
+      L.k(tl, "#f-c1", S, [[29.3, { x: 120, y: 1150 }], [29.86, mao(X0), "power3.out"], [29.9, { scale: 0.82 }], [30.0, Object.assign(mao(X0), { scale: 0.82 })], [32.6, Object.assign(mao(X1), { scale: 0.82 }), P(2.6)], [32.68, { scale: 1 }], [33.1, { x: 300, y: 1150 }, "power3.in"]]);
+      // Encapuzado trazido pelo cursor laranja
+      const XM = 1180;
+      gsap.set(["#f-mpe1", "#f-mpe2"], { svgOrigin: "0 -110" }); gsap.set("#f-mbr", { svgOrigin: "0 -190", rotation: 50 });
+      gsap.set("#f-mpe1", { rotation: -10 }); gsap.set("#f-mpe2", { rotation: 10 });
+      L.k(tl, "#f-misc", S, [[32.96, { x: 2150, y: Y, rotation: 6 }], [33.9, { x: XM, rotation: 0 }, P(0.94)]]);
+      for (let i = 0, t = 32.96; t < 33.9; i++, t += 1 / 6) { tl.set("#f-mpe1", { rotation: i % 2 ? 26 : -26 }, t - S); tl.set("#f-mpe2", { rotation: i % 2 ? -26 : 26 }, t - S); }
+      tl.set("#f-mpe1", { rotation: -10 }, 33.92 - S); tl.set("#f-mpe2", { rotation: 10 }, 33.92 - S);
+      tl.to("#f-mbr", { rotation: 0, duration: 0.17, ease: P(0.17), immediateRender: false }, 34.66 - S);
+      L.k(tl, "#f-c2", S, [[32.7, { x: 2100, y: 1150 }], [32.94, { x: 2250, y: Y - 90 }, "power3.out"], [32.96, { x: 2250, scale: 0.82 }], [33.9, { x: XM + 100, scale: 0.82 }, P(0.94)], [34.0, { scale: 1 }], [34.6, { x: XM - 24, y: Y + 97 }, "power2.inOut"], [34.82, { scale: 0.82 }], [35.04, { x: X1 + 84, y: Y - 19 }, P(0.2)], [35.08, { x: XM - 24, y: Y + 97, scale: 1 }, P(0.04)], [35.1, { scale: 0.82 }], [35.28, { x: X1 + 116, y: Y - 19 }, P(0.18)], [35.4, { scale: 1 }], [35.9, { x: 1500, y: 700 }, "power2.inOut"], [36.36, { x: 1560, y: 600, scale: 0.82 }], [36.48, { x: X1 + 168, y: Y + 97 }, P(0.12)], [36.6, { x: 1560, y: 640 }, P(0.12)], [36.72, { x: X1 + 146, y: Y + 146 }, P(0.12)], [37.0, { scale: 1 }], [37.4, { x: 2100, y: 900 }, "power3.in"]]);
+      gsap.set("#f-ponto", { ...c, x: X1 + 100, y: Y - 150 }); L.carimbo(tl, "#f-ponto", S, 33.4); tl.to("#f-ponto", { opacity: 0, duration: 0.08, immediateRender: false }, 34.6 - S);
+      // Dois Rinnegans saem da mão dele e vão para os olhos
+      const olho = [[88, 64], [112, 64]], mao2 = [364, 150];
+      [["#f-r1", W[97], 0], ["#f-r2", W[98], 1]].forEach(([s, t, i]) => {
+        L.k(tl, s, S, [[34.84, { ...c, x: mao2[0], y: mao2[1], scale: 0, rotation: 0 }], [34.92, { scale: 2.6 }, "back.out(2)"], [Math.max(t - 0.2, 34.95), { scale: 2.6 }], [t + 0.02, { x: olho[i][0], y: olho[i][1], scale: 1, rotation: 360 }, P(0.2)]]);
+      });
+      gsap.set("#f-ah", { ...c, x: X1 + 100, y: Y - 22 }); L.anel(tl, "#f-ah", S, W[98] + 0.05, 0.4, 1.3);
+      gsap.set("#f-s1", { ...c, x: 760, y: 250 }); L.carimbo(tl, "#f-s1", S, 35.42, -4); tl.to("#f-s1", { opacity: 0, duration: 0.06, immediateRender: false }, W[99] - S);
+      // Ou duas facadas
+      [["#f-k1", W[100], [150, 150]], ["#f-k2", W[101], [134, 186]]].forEach(([s, t, p]) => {
+        L.k(tl, s, S, [[t - 0.12, { ...c, x: 840, y: 120, rotation: -70, opacity: 0 }], [t, { x: p[0], y: p[1], rotation: -80 }, P(0.12)]]);
+        tl.set(s, { opacity: 1 }, t - 0.12 - S);
+        tl.fromTo("#f-corpo", { x: 0 }, { x: -10, duration: 1 / 12, yoyo: true, repeat: 3, ease: "steps(1)", immediateRender: false }, t - S);
+      });
+      gsap.set("#f-s2", { ...c, x: 760, y: 250 }); L.carimbo(tl, "#f-s2", S, W[101] + 0.1, 4);
+      tl.fromTo("#f-jog", { rotation: 0 }, { rotation: -84, duration: 0.36, ease: P(0.36), immediateRender: false }, 37.0 - S);
+      tl.to("#f-s2", { opacity: 0, duration: 0.06, immediateRender: false }, 37.9 - S);
+      // O dado decide
+      ["#f-d0", "#f-d1", "#f-d2", "#f-d3"].forEach((s, i, arr) => L.mostra(tl, s, S, i === 0 ? 37.4 : 37.5 + i * 0.2, i < arr.length - 1 ? 37.7 + i * 0.2 : undefined));
+      L.k(tl, "#f-dado", S, [[W[102], { ...c, x: 1760, y: -200, rotation: 0, scale: 1 }], [37.72, { x: 1580, y: 330, rotation: 160 }, P(0.28)], [37.96, { x: 1440, y: 700, rotation: 300 }, P(0.24)], [38.1, { x: 1400, y: 620, rotation: 340 }, P(0.14)], [38.22, { x: 1380, y: 700, rotation: 360 }, P(0.12)], [38.93, { x: 1380, y: 700, rotation: 360 }], [39.28, { x: 960, y: 540, scale: 13, rotation: 560 }, "power3.in"]]);
+      window.__timelines["f"] = tl;
+    })();
+  </script>
+</template>

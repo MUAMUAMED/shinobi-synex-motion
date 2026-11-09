@@ -1,0 +1,38 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+    #gr-cv { position: absolute; left: 0; top: 0; }
+  </style>
+  <div id="root" data-composition-id="grao" data-width="1920" data-height="1080">
+    <canvas id="gr-cv" width="1920" height="1080" data-layout-ignore></canvas>
+  </div>
+  <script>
+    (function () {
+      // Poeira de película como na referência: pontos claros e escuros que trocam 15 vezes por segundo,
+      // para nenhum quadro do filme ficar parado
+      const tl = gsap.timeline({ paused: true }), cv = document.getElementById("gr-cv"), g = cv.getContext("2d");
+      let ultimo = -1;
+      L.drive(tl, 0, 0, 58.5, (t) => {
+        const q = Math.floor(t * 15);
+        if (q === ultimo) return;
+        ultimo = q;
+        g.clearRect(0, 0, 1920, 1080);
+        const r = L.rng(q * 7919 + 13);
+        for (let i = 0; i < 70; i++) {
+          const x = r() * 1920, y = r() * 1080, s = 0.8 + r() * 2.2;
+          g.globalAlpha = 0.25 + r() * 0.35;
+          g.fillStyle = i % 2 ? "#ffffff" : "#000000";
+          g.beginPath(); g.arc(x, y, s, 0, 6.283); g.fill();
+        }
+        // um fio de poeira de vez em quando
+        if (r() < 0.25) {
+          g.globalAlpha = 0.35; g.strokeStyle = r() < 0.5 ? "#ffffff" : "#000000"; g.lineWidth = 1.5;
+          const x = r() * 1920, y = r() * 1080;
+          g.beginPath(); g.moveTo(x, y); g.quadraticCurveTo(x + 20 + r() * 30, y + (r() - 0.5) * 40, x + 40 + r() * 50, y + (r() - 0.5) * 30); g.stroke();
+        }
+        g.globalAlpha = 1;
+      });
+      window.__timelines["grao"] = tl;
+    })();
+  </script>
+</template>

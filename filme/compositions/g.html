@@ -1,0 +1,191 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Outfit", sans-serif; color: #fff; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    #root .full { position: absolute; inset: 0; }
+    #root .t { white-space: nowrap; line-height: 1.05; letter-spacing: -0.015em; }
+    #root .t span { display: inline-block; }
+    #g-noite { background: radial-gradient(ellipse at 50% 45%, #241224, #0b0a10 70%); }
+    #g-m1, #g-m2 { background: #ff5a1f; }
+    #g-m1 { clip-path: polygon(0 0, 100% 0, 100% 18%, 0 82%); }
+    #g-m2 { clip-path: polygon(0 82%, 100% 18%, 100% 100%, 0 100%); }
+    #g-corte { position: absolute; left: 0; top: 0; overflow: visible; }
+    #root .vida { width: 640px; }
+    #root .vida b { display: block; font-size: 34px; font-weight: 800; letter-spacing: 0.08em; margin-bottom: 12px; }
+    #root .vida u { display: block; height: 30px; border-radius: 16px; background: #ffffff22; overflow: hidden; }
+    #root .vida u i { display: block; height: 100%; border-radius: 16px; transform-origin: 0 50%; }
+    #root .dano { font-size: 72px; font-weight: 900; color: #ff2b3a; text-shadow: 0 4px 0 #0008; }
+    #g-verde { background: radial-gradient(ellipse at 50% 45%, #1cc777, #0f8a52 70%); }
+    #g-treino { width: 900px; height: 380px; border-radius: 44px; background: #fff; color: #0b0a10; box-shadow: 0 30px 70px #0005; }
+    #g-trilho { position: absolute; left: 250px; top: 240px; width: 580px; height: 40px; border-radius: 20px; background: #e3efe8; overflow: hidden; }
+    #g-barra { width: 100%; height: 100%; background: #13a862; border-radius: 20px; transform-origin: 0 50%; }
+    #root .nv { position: absolute; left: 250px; top: 150px; padding: 8px 22px; border-radius: 30px; background: #0b0a10; color: #fff; font-size: 38px; font-weight: 800; }
+    #g-azul { position: absolute; inset: 0; overflow: hidden; }
+    #g-azulf { background: radial-gradient(ellipse at 50% 45%, #4b84ff, #1f4fd8 70%); }
+    #g-missao { width: 640px; height: 660px; border-radius: 30px; background: #f4e7c5; color: #4a3214; box-shadow: 0 30px 70px #0005; overflow: hidden; }
+    #g-missao u { position: absolute; left: 60px; height: 18px; border-radius: 9px; background: #4a321444; display: block; }
+    #g-botao { position: absolute; left: 140px; top: 520px; width: 360px; height: 96px; border-radius: 48px; background: #0b0a10; color: #fff; font-size: 44px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+    #g-d20 { width: 300px; height: 300px; overflow: visible; }
+    #root .num { font-size: 72px; font-weight: 900; fill: #fff; }
+    #root .orb { padding: 16px 32px; border-radius: 50px; background: #1b1925; border: 3px solid #ff5a1f; font-size: 42px; font-weight: 700; }
+    #g-aneis { position: absolute; left: 0; top: 0; overflow: visible; }
+    #g-orbitas { z-index: 0; }
+    #root .mq { position: absolute; left: -300px; white-space: nowrap; font-size: 300px; font-weight: 900; letter-spacing: -0.045em; line-height: 1; color: transparent; -webkit-text-stroke: 3px #ffffff30; }
+    #g-ponto { width: 40px; height: 40px; border-radius: 50%; background: #ff5a1f; box-shadow: 0 0 34px 10px #ff5a1f66; }
+  </style>
+  <div id="root" data-composition-id="g" data-width="1920" data-height="1080">
+    <div id="g-noite" class="full" data-layout-ignore></div>
+    <!-- Combate -->
+    <div id="g-combate" class="full" data-layout-allow-overflow data-layout-allow-overlap>
+      <div id="g-mqc" class="full" data-layout-ignore><div id="g-mc1" class="mq" style="top:-40px;-webkit-text-stroke-color:#ff5a1f55" data-layout-ignore>combate combate combate combate</div><div id="g-mc2" class="mq" style="top:800px;-webkit-text-stroke-color:#ff5a1f55" data-layout-ignore>combate combate combate combate</div></div>
+      <div id="g-v1" class="a vida"><b>VOCÊ</b><u><i id="g-b1" style="background:#ff5a1f"></i></u></div>
+      <div id="g-v2" class="a vida"><b style="text-align:right">INIMIGO</b><u><i id="g-b2" style="background:#ff2b3a"></i></u></div>
+      <svg id="g-esp" class="a" data-ic="choque" style="width:300px;height:300px;color:#ff5a1f"></svg>
+      <div id="g-tit" class="a t" style="font-size:200px;font-weight:900">COMBATE</div>
+      <div id="g-din" class="a t" style="font-size:96px;font-weight:800;color:#ff5a1f">dinâmico</div>
+      <div id="g-n1" class="a dano t">-30</div><div id="g-n2" class="a dano t">-25</div><div id="g-n3" class="a dano t">-25</div>
+    </div>
+    <svg id="g-corte" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" stroke="#fff" stroke-linecap="round" data-layout-ignore>
+      <path id="g-s0" pathLength="1" stroke-width="18" d="M-40 905 1960 175" />
+      <path id="g-s1" pathLength="1" stroke-width="12" d="M200 1100 1500 -40" />
+      <path id="g-s2" pathLength="1" stroke-width="12" d="M-40 300 1960 780" />
+      <path id="g-s3" pathLength="1" stroke-width="12" d="M1700 1100 400 -40" />
+    </svg>
+    <!-- Abertura em laranja, cortada ao meio -->
+    <div id="g-m1" class="full" data-layout-ignore></div>
+    <div id="g-m2" class="full" data-layout-ignore></div>
+    <div id="g-l1" class="a t" style="font-size:170px;font-weight:900;letter-spacing:-0.045em;color:#0b0a10"><span id="g-w107">Além</span> <span id="g-w108">disso,</span></div>
+    <div id="g-l2" class="a t" style="font-size:170px;font-weight:900;letter-spacing:-0.045em;color:#0b0a10"><span id="g-w109" style="color:#fff">Synex</span> <span id="g-w110">possui</span></div>
+    <!-- Treinos -->
+    <div id="g-verde" class="full" data-layout-ignore></div>
+    <div id="g-mqv" class="full" data-layout-ignore><div id="g-mv1" class="mq" style="top:-30px" data-layout-ignore>treinos treinos treinos treinos</div><div id="g-mv2" class="mq" style="top:790px" data-layout-ignore>desafio desafio desafio desafio</div></div>
+    <div id="g-cab1" class="a t" style="font-size:96px;font-weight:800;letter-spacing:-0.035em"><span id="g-w114">treinos</span> <span id="g-w115">que</span> <span id="g-w116">realmente</span> <span id="g-w117">te</span> <span id="g-w118">desafiam</span></div>
+    <div id="g-treino" class="a">
+      <svg data-ic="forca" style="position:absolute;left:50px;top:100px;width:170px;height:170px;color:#13a862"></svg>
+      <div class="t" style="position:absolute;left:250px;top:62px;font-size:70px;font-weight:800">Treino</div>
+      <div id="g-nv1" class="nv">Nv 12</div><div id="g-nv2" class="nv" style="background:#13a862">Nv 13</div>
+      <div id="g-trilho"><div id="g-barra"></div></div>
+      <svg id="g-trofeu" data-ic="trofeu" style="position:absolute;left:720px;top:40px;width:120px;height:120px;color:#e8a317"></svg>
+    </div>
+    <!-- Missões -->
+    <div id="g-azul" data-layout-allow-overflow data-layout-allow-overlap>
+      <div id="g-azulf" class="full" data-layout-ignore></div>
+      <div id="g-mqa" class="full" data-layout-ignore><div id="g-ma1" class="mq" style="top:-30px" data-layout-ignore>missões missões missões missões</div><div id="g-ma2" class="mq" style="top:790px" data-layout-ignore>rpg de mesa rpg de mesa rpg de mesa</div></div>
+      <canvas id="g-confete" class="a" width="1920" height="1080" data-layout-ignore></canvas>
+      <div id="g-cab2" class="a t" style="font-size:70px;font-weight:800;letter-spacing:-0.03em"><span id="g-w119">missões</span> <span id="g-w120">que</span> <span id="g-w121">funcionam</span> <span id="g-w122">exatamente</span> <span id="g-w123">como</span> <span id="g-w124">um</span> <span id="g-w125" style="color:#ffb08a">RPG</span> <span id="g-w126" style="color:#ffb08a">de</span> <span id="g-w127" style="color:#ffb08a">mesa</span></div>
+      <div id="g-missao" class="a">
+        <svg data-ic="pergaminho_fechado" style="position:absolute;left:50px;top:44px;width:120px;height:120px;color:#8a5a2a"></svg>
+        <svg data-ic="mapa" style="position:absolute;right:50px;top:54px;width:100px;height:100px;color:#8a5a2a"></svg>
+        <div class="t" style="position:absolute;left:190px;top:68px;font-size:72px;font-weight:800">Missão</div>
+        <u style="top:220px;width:520px"></u><u style="top:270px;width:480px"></u><u style="top:320px;width:500px"></u><u style="top:370px;width:340px"></u>
+        <div id="g-botao">Rolar d20</div>
+      </div>
+      <svg id="g-d20" class="a" viewBox="-100 -100 200 200">
+        <path d="M0-92 80-46V46L0 92-80 46V-46Z" fill="#ff5a1f" stroke="#fff" stroke-width="8" stroke-linejoin="round" />
+        <path d="M0-92 46 22H-46ZM-80-46-46 22-80 46M80-46 46 22 80 46M-46 22 0 92 46 22" fill="none" stroke="#ffffff77" stroke-width="4" />
+        <text id="g-d0" class="num" x="0" y="18" text-anchor="middle">4</text><text id="g-d1" class="num" x="0" y="18" text-anchor="middle">15</text><text id="g-d2" class="num" x="0" y="18" text-anchor="middle">9</text><text id="g-d3" class="num" x="0" y="18" text-anchor="middle">17</text>
+      </svg>
+      <div id="g-ok" class="a t" style="padding:14px 30px;border-radius:20px;background:#13a862;font-size:54px;font-weight:900;border:5px solid #fff">Sucesso!</div>
+      <div id="g-cur" class="a"><svg width="74" height="108" viewBox="0 0 30 44" style="overflow:visible;display:block"><path d="M1 1V35L10 27 16 41 23 38 17 24H29Z" fill="#fff" stroke="#111" stroke-width="2" stroke-linejoin="round" /></svg></div>
+    </div>
+    <!-- Outros sistemas em órbita -->
+    <svg id="g-aneis" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" data-layout-ignore>
+      <ellipse id="g-e0" cx="960" cy="560" rx="780" ry="230" stroke="#ffffff30" stroke-width="3" transform="rotate(-7 960 560)" pathLength="1" />
+      <ellipse id="g-e1" cx="960" cy="560" rx="560" ry="160" stroke="#ff5a1f66" stroke-width="3" transform="rotate(-7 960 560)" pathLength="1" />
+    </svg>
+    <div id="g-orbitas" class="full" data-layout-allow-overflow data-layout-allow-overlap></div>
+    <div id="g-l3" class="a t" style="font-size:96px;font-weight:800;letter-spacing:-0.035em"><span id="g-w128">e</span> <span id="g-w129">vários</span> <span id="g-w130">outros</span></div>
+    <div id="g-l4" class="a t" style="font-size:124px;font-weight:900"><span id="g-w131">sistemas</span> <span id="g-w132" style="color:#ff5a1f">inovadores!</span></div>
+    <div id="g-ponto" class="a" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = 39.1, tl = gsap.timeline({ paused: true }), c = { xPercent: -50, yPercent: -50 }, f = 1 / 30;
+      // Dentro da face do dado: tudo laranja
+      L.icones(document.getElementById("root") || document);
+      [["#g-noite", 39.3], ["#g-m1", 39.3], ["#g-m2", 39.3]].forEach(([s, t]) => L.mostra(tl, s, S, t));
+      gsap.set("#g-l1", { ...c, x: 960, y: 430 }); gsap.set("#g-l2", { ...c, x: 960, y: 630 });
+      L.vivo(tl, "#g-l1", S, 39.28, 40.8, { scale: 1 }, { scale: 1.08 }); L.vivo(tl, "#g-l2", S, 39.28, 40.8, { scale: 1 }, { scale: 1.08 });
+      [107, 108, 109, 110].forEach((i) => L.palavra(tl, "#g-w" + i, S, W[i]));
+      L.sai(tl, "#g-l1", S, 40.78, 0.08); L.sai(tl, "#g-l2", S, 40.8, 0.08);
+      // Um corte divide o laranja e revela o combate
+      L.k(tl, "#g-s0", S, [[40.82, { strokeDasharray: 1, strokeDashoffset: 1, opacity: 1 }], [40.9, { strokeDashoffset: 0 }, "power2.out"], [41.0, { opacity: 0 }]]);
+      L.k(tl, "#g-m1", S, [[40.92, { x: 0, y: 0 }], [41.24, { x: -760, y: -420 }, "power3.in"]]);
+      L.k(tl, "#g-m2", S, [[40.92, { x: 0, y: 0 }], [41.24, { x: 1300, y: 760 }, "power3.in"]]);
+      tl.set(["#g-m1", "#g-m2"], { opacity: 0 }, 41.26 - S);
+      gsap.set("#g-v1", { x: 140, y: 110 }); gsap.set("#g-v2", { x: 1140, y: 110 });
+      gsap.set(["#g-b1", "#g-b2"], { scaleX: 1 });
+      L.impacto(tl, "#g-esp", S, W[112], { de: 2.2, d: 0.36, blur: 18 }); gsap.set("#g-esp", { ...c, x: 960, y: 430 });
+      L.impacto(tl, "#g-tit", S, W[112] + 0.05, { de: 1.5, d: 0.3, blur: 14 }); gsap.set("#g-tit", { ...c, x: 960, y: 700 });
+      L.palavra(tl, "#g-din", S, W[113]); gsap.set("#g-din", { ...c, x: 960, y: 845 });
+      L.palavra(tl, "#g-v1", S, W[112] + 0.1); L.palavra(tl, "#g-v2", S, W[112] + 0.16);
+      const golpes = [[41.2, "#g-s1", 0.7, "#g-n1", 1540, 240], [41.62, "#g-s2", 0.45, "#g-n2", 1660, 260], [41.96, "#g-s3", 0.2, "#g-n3", 1580, 230]];
+      golpes.forEach(([t, s, v, n, x, y]) => {
+        L.k(tl, s, S, [[t - 0.05, { strokeDasharray: 1, strokeDashoffset: 1, opacity: 1 }], [t + 0.02, { strokeDashoffset: 0 }, "power2.out"], [t + 0.12, { opacity: 0 }]]);
+        tl.to("#g-b2", { scaleX: v, duration: 0.2, ease: "power3.out", immediateRender: false }, t - S);
+        gsap.set(n, { ...c, x, y });
+        L.k(tl, n, S, [[t, { opacity: 0, y: y + 30, scale: 1.4 }], [t + 0.1, { opacity: 1, y, scale: 1 }, "back.out(2)"], [t + 0.36, { opacity: 1, y: y - 20 }], [t + 0.46, { opacity: 0, y: y - 40 }]]);
+        tl.fromTo("#g-combate", { x: 0 }, { x: 14, duration: f, yoyo: true, repeat: 3, immediateRender: false }, t - S);
+      });
+      tl.to("#g-b1", { scaleX: 0.86, duration: 0.2, immediateRender: false }, 41.75 - S);
+      // Fundos com palavras gigantes correndo e câmera sempre viva
+      L.mostra(tl, "#g-mqc", S, 40.9, 42.2);
+      L.vivo(tl, "#g-mc1", S, 40.9, 42.2, { x: 0 }, { x: -600 }); L.vivo(tl, "#g-mc2", S, 40.9, 42.2, { x: -600 }, { x: 0 });
+      L.mostra(tl, "#g-mqv", S, 42.18, 44.7);
+      L.vivo(tl, "#g-mv1", S, 42.18, 44.7, { x: 0 }, { x: -700 }); L.vivo(tl, "#g-mv2", S, 42.18, 44.7, { x: -700 }, { x: 0 });
+      L.vivo(tl, "#g-ma1", S, 44.36, 47.62, { x: 0 }, { x: -700 }); L.vivo(tl, "#g-ma2", S, 44.36, 47.62, { x: -700 }, { x: 0 });
+      L.vivo(tl, "#g-esp", S, W[112] + 0.36, 42.17, { rotation: 0 }, { rotation: 14 });
+      tl.to("#g-combate", { opacity: 0, filter: "blur(10px)", scale: 0.92, duration: 0.18, ease: "power2.in", immediateRender: false }, 42.18 - S);
+      // Treinos: o chão fica verde e a barra luta para encher
+      L.k(tl, "#g-verde", S, [[42.18, { opacity: 0 }], [42.5, { opacity: 1 }, "power2.inOut"]]);
+      gsap.set("#g-cab1", { ...c, x: 960, y: 220 });
+      for (let i = 114; i <= 118; i++) L.palavra(tl, "#g-w" + i, S, W[i]);
+      L.k(tl, "#g-treino", S, [[W[114] - 0.02, { ...c, x: 960, y: 580, scale: 1.4, opacity: 0, filter: "blur(16px)" }], [W[114], { opacity: 1 }], [W[114] + 0.38, { scale: 1.3, filter: "blur(0px)" }, "expo.out"], [44.7, { scale: 1.36 }]]);
+      L.k(tl, "#g-barra", S, [[42.5, { scaleX: 0.06, backgroundColor: "#13a862" }], [43.36, { scaleX: 0.86 }, "power2.out"], [W[118], { scaleX: 0.86 }], [W[118] + 0.12, { scaleX: 0.5, backgroundColor: "#ff2b3a" }, "power3.in"], [W[118] + 0.3, { backgroundColor: "#13a862" }], [44.12, { scaleX: 1 }, "power2.out"]]);
+      tl.fromTo("#g-treino", { x: 960 }, { x: 972, duration: f, yoyo: true, repeat: 3, immediateRender: false }, W[118] + 0.1 - S);
+      L.mostra(tl, "#g-nv1", S, 0, 44.14); gsap.set("#g-nv1", { opacity: 1 });
+      L.carimbo(tl, "#g-nv2", S, 44.14); L.carimbo(tl, "#g-trofeu", S, 44.18, 10);
+      // Íris azul nasce do fim da barra
+      L.mostra(tl, "#g-azul", S, 44.36, 47.62); L.iris(tl, "#g-azul", S, 44.36, 0.28, 66, 59);
+      gsap.set("#g-cab2", { ...c, x: 960, y: 110 });
+      for (let i = 119; i <= 127; i++) L.palavra(tl, "#g-w" + i, S, W[i]);
+      L.k(tl, "#g-missao", S, [[44.46, { ...c, x: 720, y: 600, scaleX: 1.15, scaleY: 0, transformOrigin: "50% 0%", opacity: 1 }], [44.86, { scaleY: 1.15 }, "power3.out"]]);
+      gsap.set("#g-missao", { xPercent: -50, yPercent: -50, transformOrigin: "50% 0%" });
+      // Clicar em "Rolar d20" rola o dado
+      L.cursor(tl, "#g-cur", S, [1500, 1200], [740, 856], [1600, 1250], 45.9, W[123], 46.4);
+      tl.fromTo("#g-botao", { scale: 1 }, { scale: 0.9, duration: 0.05, yoyo: true, repeat: 1, immediateRender: false }, W[123] + 0.01 - S);
+      ["#g-d0", "#g-d1", "#g-d2", "#g-d3"].forEach((s, i, arr) => L.mostra(tl, s, S, W[123] + 0.04 + i * 0.22, i < arr.length - 1 ? W[123] + 0.04 + (i + 1) * 0.22 : 47.62));
+      L.k(tl, "#g-d20", S, [[W[123] + 0.02, { ...c, x: 740, y: 860, scale: 0.2, rotation: 0 }], [W[123] + 0.3, { x: 1150, y: 380, scale: 1, rotation: 280 }, "power2.out"], [W[123] + 0.62, { x: 1440, y: 600, rotation: 520 }, "power2.in"], [W[123] + 0.78, { x: 1480, y: 540, rotation: 600 }, "power2.out"], [W[127], { x: 1490, y: 580, rotation: 640 }, "power2.in"]]);
+      gsap.set("#g-ok", { ...c, x: 1490, y: 810 }); L.carimbo(tl, "#g-ok", S, W[127], -4);
+      const conf = L.confete(document.getElementById("g-confete"), { t0: W[127], x: 1490, y: 600, cores: ["#ffffff", "#ffd36a", "#ff5a1f", "#13a862"], n: 140, vel: 1900, vida: 1.2 });
+      L.drive(tl, S, W[127], 47.62, (t) => conf(t));
+      // Íris fecha no dado e revela as órbitas
+      L.iris(tl, "#g-azul", S, 47.36, 0.26, 77.6, 53.7, false);
+      L.mostra(tl, "#g-verde", S, 42.18, 44.7);
+      tl.set(["#g-treino", "#g-cab1"], { opacity: 0 }, 44.7 - S);
+      const nomes = ["Clãs", "Aldeias", "Dōjutsu", "Bukijutsu", "Invocações", "Gacha", "Inventário", "Missões"];
+      const orb = document.getElementById("g-orbitas"), pil = [];
+      nomes.forEach((n, i) => { const d = document.createElement("div"); d.className = "a orb t"; d.textContent = n; orb.appendChild(d); pil.push(d); });
+      L.k(tl, "#g-e0", S, [[47.6, { strokeDasharray: 1, strokeDashoffset: 1 }], [48.2, { strokeDashoffset: 0 }, "power2.out"], [49.3, { opacity: 1 }], [49.6, { opacity: 0 }]]);
+      L.k(tl, "#g-e1", S, [[47.7, { strokeDasharray: 1, strokeDashoffset: 1 }], [48.3, { strokeDashoffset: 0 }, "power2.out"], [49.3, { opacity: 1 }], [49.6, { opacity: 0 }]]);
+      const giro = gsap.parseEase("power3.in");
+      L.drive(tl, S, 47.55, 49.75, (t) => {
+        const fecha = t < 49.3 ? 1 : 1 - giro(Math.min(1, (t - 49.3) / 0.4));
+        pil.forEach((d, i) => {
+          const anel = i % 2, rx = (anel ? 560 : 780) * fecha, ry = (anel ? 160 : 230) * fecha;
+          const th = (i / nomes.length) * 6.283 + (t - 47.55) * (anel ? 0.55 : 0.4) + (t > 49.3 ? (t - 49.3) * 6 : 0);
+          const px = Math.cos(th) * rx, py = Math.sin(th) * ry, rot = -7 * Math.PI / 180;
+          const x = 960 + px * Math.cos(rot) - py * Math.sin(rot), y = 560 + px * Math.sin(rot) + py * Math.cos(rot);
+          const prof = (Math.sin(th) + 1) / 2, nasce = Math.min(1, Math.max(0, (t - 47.65 - i * 0.07) / 0.18));
+          gsap.set(d, { x, y, xPercent: -50, yPercent: -50, scale: (0.72 + 0.4 * prof) * nasce * Math.max(fecha, 0.05), opacity: nasce * (0.55 + 0.45 * prof), filter: `blur(${(1 - prof) * 3}px)`, zIndex: Math.round(prof * 10) });
+        });
+      });
+      gsap.set("#g-l3", { ...c, x: 960, y: 425 }); gsap.set("#g-l4", { ...c, x: 960, y: 570 });
+      for (let i = 128; i <= 131; i++) L.palavra(tl, "#g-w" + i, S, W[i]);
+      L.impacto(tl, "#g-w132", S, W[132], { de: 1.5, d: 0.3, blur: 14 });
+      L.implode(tl, "#g-l3", S, 49.3, 0.3); L.implode(tl, "#g-l4", S, 49.32, 0.3);
+      L.k(tl, "#g-ponto", S, [[49.55, { ...c, x: 960, y: 540, scale: 0, opacity: 1 }], [49.72, { scale: 1 }, "back.out(2.4)"]]);
+      window.__timelines["g"] = tl;
+    })();
+  </script>
+</template>

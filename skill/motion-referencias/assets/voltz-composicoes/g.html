@@ -1,0 +1,88 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; font-family: "Outfit", sans-serif; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    canvas { position: absolute; left: 0; top: 0; }
+    #g-red { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 52%, #7c0b2c 15%, #3a0617 38%, #000 66%); }
+    #g-mor { width: 260px; height: 190px; border-radius: 70px; background: #f4e7ee; display: flex; align-items: center; justify-content: center; }
+    #g-mor i { display: block; width: 80px; height: 80px; border-radius: 50%; background: #e0325f; }
+    .g-gl { position: absolute; background: #fff; }
+    #g-chip { width: 356px; height: 356px; border-radius: 50%; overflow: hidden; }
+    #g-chip img { width: 100%; height: 100%; display: block; }
+    #g-wh { position: absolute; inset: 0; background: #fff; }
+    #g-trail { position: absolute; left: 0; top: 0; }
+    #g-trail img { position: absolute; left: 0; top: 0; width: 120px; height: 120px; border-radius: 50%; }
+    #g-wall { position: absolute; left: -200px; top: -240px; width: 1480px; height: 1000px; }
+    #g-wall i { position: absolute; width: 96px; height: 60px; border-radius: 50%; background: #35bfb3; filter: blur(16px); opacity: 0.8; }
+    #g-wall b { position: absolute; width: 96px; height: 60px; border-radius: 50%; background: #7c0e3a; filter: blur(16px); opacity: 0.85; }
+    #g-txt { color: #fff; font-size: 44px; font-weight: 500; white-space: nowrap; }
+    #g-txt span { display: inline-block; }
+    #g-st1, #g-st2 { width: 620px; height: 620px; }
+    #g-off { position: absolute; inset: 0; background: #000; }
+  </style>
+  <div id="root" data-composition-id="g" data-width="1080" data-height="1920">
+    <div id="g-red" data-layout-ignore></div>
+    <div id="g-wall" data-layout-ignore></div>
+    <canvas id="g-conf" width="1080" height="1920" data-layout-ignore></canvas>
+    <div id="g-trail" data-layout-ignore></div>
+    <div id="g-chip" class="a" data-layout-allow-overflow><img src="assets/chip.png"/></div>
+    <div id="g-txt" class="a"><span id="g-w1">Moedas</span> <span id="g-w2">nos</span> <span id="g-w3">BOTS</span></div>
+    <div id="g-mor" class="a" data-layout-ignore><i></i></div>
+    <div id="g-b1" class="g-gl" style="left:0;top:908px;width:1080px;height:330px;background:#e8fff7" data-layout-ignore></div>
+    <div id="g-b2" class="g-gl" style="left:0;top:180px;width:860px;height:530px;background:#e8fff7" data-layout-ignore></div>
+    <div id="g-b3" class="g-gl" style="left:0;top:1260px;width:1080px;height:560px;background:#f4fffb" data-layout-ignore></div>
+    <div id="g-wh" data-layout-ignore></div>
+    <div id="g-st1" class="a" data-layout-ignore></div>
+    <div id="g-st2" class="a" data-layout-ignore></div>
+    <div id="g-off" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = 614, tl = gsap.timeline({ paused: true }), center = { xPercent: -50, yPercent: -50 };
+      document.getElementById("g-st1").innerHTML = FX.star("#ffffff");
+      document.getElementById("g-st2").innerHTML = FX.star("#ffffff");
+      FX.keys(tl, "#g-mor", S, [[614, { ...center, x: 540, y: 950, scale: 1 }], [617, { scale: 1.06 }], [618, { scale: 1.1 }], [619, { opacity: 0 }]]);
+      // Blocos "quebrados" antes do flash
+      FX.keys(tl, "#g-b1", S, [[614, { opacity: 0 }], [615, { opacity: 1 }], [616, { opacity: 0 }]]);
+      FX.keys(tl, "#g-b2", S, [[615, { opacity: 0 }], [616, { opacity: 1 }], [618, { opacity: 0 }]]);
+      FX.keys(tl, "#g-b3", S, [[617, { opacity: 0 }], [618, { opacity: 1 }], [619, { opacity: 0 }]]);
+      FX.keys(tl, "#g-wh", S, [[618, { opacity: 0 }], [619, { opacity: 1 }], [620, { opacity: 0.85 }], [622, { opacity: 0.6 }], [624, { opacity: 0.4 }], [626, { opacity: 0.2 }], [629, { opacity: 0.05 }], [631, { opacity: 0 }]]);
+      FX.keys(tl, "#g-chip", S, [[620, { ...center, x: 540, y: 960, scale: 0.85, filter: "blur(4px) brightness(3)" }], [622, { scale: 0.92, filter: "blur(0px) brightness(1.4)" }, "power2.out"], [625, { scale: 1, filter: "blur(0px) brightness(1)" }, "power2.out"]]);
+      FX.keys(tl, "#g-txt", S, [[622, { ...center, x: 540, y: 1205, opacity: 0, scale: 0.9 }], [625, { opacity: 1, scale: 1 }]]);
+      FX.word(tl, "#g-w1", S, 622, 5); FX.word(tl, "#g-w2", S, 628, 6); FX.word(tl, "#g-w3", S, 633, 6);
+      // Rastro de fichas em arco
+      const box = document.getElementById("g-trail"), n = 34, im = [];
+      for (let i = 0; i < n; i++) { const m = document.createElement("img"); m.src = "assets/chip.png"; box.appendChild(m); im.push(m); }
+      const angAt = (u) => { // arco ao redor do centro, com a cabeca do rastro girando no sentido anti-horario
+        return u; };
+      FX.drive(tl, S, 619, 647, (t) => {
+        const f = t * 30, head = 619;
+        im.forEach((m, i) => {
+          const k = Math.max(0, (f - head) / 28);
+          const a = -0.6 - (1 - Math.pow(1 - k, 2.4)) * 4.6 + 0.03 * (n - i) * (k < 0.25 ? 2.4 : 1);
+          const r = 420 + k * 40;
+          const x = 540 + Math.cos(a) * r, y = 960 + Math.sin(a) * r * (k > 0.6 ? 0.8 : 0.92);
+          const sz = (0.45 + 0.75 * (i / n)) * (k > 0.2 ? 1.45 : 1.1);
+          m.style.transform = `translate(${x - 60}px,${y - 60}px) rotate(${a * 57}deg) scale(${sz}, ${sz * 0.55})`;
+          m.style.opacity = f < head + 1 ? 0 : 1;
+        });
+      });
+      gsap.set("#g-trail", { filter: "blur(1.2px) sepia(0.55) saturate(1.2) brightness(1.15)" });
+      // Muro de pontos ciano
+      const wall = document.getElementById("g-wall");
+      for (let r = 0; r < 7; r++) for (let q = 0; q < 14; q++) {
+        const e = document.createElement(r % 2 ? "i" : "b");
+        e.style.left = q * 118 + (r % 2) * 40 + "px"; e.style.top = r * 92 + (q - 7) * (q - 7) * 7 + "px"; wall.appendChild(e);
+      }
+      FX.keys(tl, "#g-wall", S, [[624, { opacity: 0, x: 200, y: -30, rotation: -14, transformOrigin: "50% 100%" }], [630, { opacity: 0.85, x: 80, rotation: -10 }], [640, { opacity: 1, x: -40, y: 20, rotation: -4 }], [646, { x: -60, y: 30 }]]);
+      FX.keys(tl, "#g-red", S, [[614, { opacity: 0.6 }], [619, { opacity: 1 }], [640, { opacity: 1 }]]);
+      FX.keys(tl, "#g-st1", S, [[624, { ...center, x: 560, y: 1730, scale: 0.15, opacity: 0, rotation: 15 }], [625, { scale: 0.75, opacity: 1 }], [627, { scale: 0.25, opacity: 0.6 }], [628, { opacity: 0 }], [632, { x: 650, y: 1160, scale: 0.15, opacity: 0, rotation: 0 }], [634, { x: 480, y: 1120, scale: 1.15, opacity: 1 }], [636, { x: 540, y: 1150, scale: 0.55, opacity: 0.7 }], [637, { opacity: 0 }]]);
+      FX.keys(tl, "#g-st2", S, [[637, { ...center, x: 540, y: 1500, scale: 0.2, opacity: 0, rotation: 15 }], [639, { y: 1660, scale: 0.75, opacity: 0.85 }], [641, { y: 1650, scale: 0.35, opacity: 0.5 }], [642, { opacity: 0 }]]);
+      // Pisca e apaga
+      FX.keys(tl, "#g-off", S, [[642, { opacity: 0 }], [643, { opacity: 0.3 }], [644, { opacity: 0.8 }], [645, { opacity: 0.1 }], [646, { opacity: 0.5 }], [647, { opacity: 1 }]]);
+      const C = FX.confetti(document.getElementById("g-conf"), { seed: 66, n: 240, colors: ["#ff5fb2", "#ffd35a", "#fff", "#7fe6ff", "#ff8f6a", "#b777ff"], x: 540, y: 1950, spread: 1.5, speed: 2800, t0: 616 / 30 });
+      FX.drive(tl, S, 616, 647, (t) => C(t));
+      window.__timelines["g"] = tl;
+    })();
+  </script>
+</template>

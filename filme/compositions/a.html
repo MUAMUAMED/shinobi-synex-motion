@@ -1,0 +1,169 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Outfit", sans-serif; color: #fff; background: #0b0a10; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    #root .q { position: absolute; inset: 0; overflow: hidden; }
+    #root .dr { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    #root .bt { display: flex; flex-direction: column; align-items: center; line-height: 0.92; letter-spacing: -0.045em; font-weight: 800; white-space: nowrap; }
+    #root .bt span { display: inline-block; }
+    #root .pq { font-size: 120px; }
+    #root .gd { font-size: 330px; font-weight: 900; }
+    #root .claro { background: #f2efe8; color: #0b0a10; }
+    #root .escuro { background: #0b0a10; color: #f2efe8; }
+    #root .verm { background: #ff2b3a; color: #fff; }
+    #root .eco { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 330px; font-weight: 900; letter-spacing: -0.045em; color: transparent; -webkit-text-stroke: 3px currentColor; white-space: nowrap; line-height: 0.92; }
+    #root .faixa { position: absolute; left: -400px; white-space: nowrap; font-weight: 900; letter-spacing: -0.04em; line-height: 1; }
+    #a-grade span { position: absolute; font-size: 104px; font-weight: 800; letter-spacing: -0.045em; transform: translate(-50%, -50%); white-space: nowrap; }
+    #a-risco { position: absolute; left: 0; top: 0; overflow: visible; }
+    #a-ponto { width: 26px; height: 26px; border-radius: 50%; background: #ff2b3a; box-shadow: 0 0 30px 8px #ff2b3a88; }
+    #root .gl { position: absolute; }
+  </style>
+  <div id="root" data-composition-id="a" data-width="1920" data-height="1080">
+    <div id="a-tudo" class="q" data-layout-allow-overflow data-layout-allow-overlap>
+      <!-- Sério... -->
+      <div id="a-q0" class="q claro">
+        <div class="dr">
+          <img id="a-chibi" class="a" src="assets/chibi/19f.png" width="640" height="640" alt="" />
+          <div id="a-serio" class="a" style="font-size:210px;font-weight:900;letter-spacing:-0.045em;white-space:nowrap">Sério<span id="a-p1" style="display:inline-block">.</span><span id="a-p2" style="display:inline-block">.</span><span id="a-p3" style="display:inline-block">.</span></div>
+        </div>
+      </div>
+      <!-- Tá todo mundo -->
+      <div id="a-q1" class="q escuro">
+        <div class="dr"><div class="bt"><div class="pq"><span id="a-w1">tá</span> <span id="a-w2">todo</span></div><div class="gd"><span id="a-w3">mundo</span></div></div></div>
+      </div>
+      <!-- cansado: as letras caem de cansaço -->
+      <div id="a-q2" class="q claro">
+        <div class="dr"><div class="bt"><div id="a-cansado" class="gd">cansado</div></div></div>
+      </div>
+      <!-- daqueles RPs -->
+      <div id="a-q3" class="q escuro">
+        <div class="dr">
+          <div id="a-e1" class="eco" style="color:#ff2b3a" data-layout-ignore>RPs</div><div id="a-e2" class="eco" style="color:#f2efe8" data-layout-ignore>RPs</div><div id="a-e3" class="eco" style="color:#ff2b3a" data-layout-ignore>RPs</div>
+          <div class="bt"><div class="pq"><span id="a-w5">daqueles</span></div><div class="gd" style="font-size:420px"><span id="a-w6">RPs</span></div></div>
+        </div>
+      </div>
+      <!-- genéricos: o fundo repete a palavra -->
+      <div id="a-q4" class="q verm">
+        <div id="a-f1" class="faixa" style="top:40px;font-size:200px;color:#ffffff22" data-layout-ignore>genéricos genéricos genéricos genéricos</div>
+        <div id="a-f2" class="faixa" style="top:820px;font-size:200px;color:#ffffff22" data-layout-ignore>genéricos genéricos genéricos genéricos</div>
+        <div class="dr"><div class="bt"><div class="gd" style="font-size:300px">genéricos</div></div></div>
+      </div>
+      <!-- de Naruto -->
+      <div id="a-q5" class="q claro">
+        <div class="dr"><div class="bt"><div class="pq"><span id="a-w8">de</span></div><div class="gd"><span id="a-w9">Naruto</span></div></div></div>
+      </div>
+      <!-- são sempre -->
+      <div id="a-q6" class="q escuro">
+        <div class="dr">
+          <div id="a-e4" class="eco" style="color:#f2efe8" data-layout-ignore>sempre</div><div id="a-e5" class="eco" style="color:#ff2b3a" data-layout-ignore>sempre</div>
+          <div class="bt"><div class="pq"><span id="a-w10">são</span></div><div class="gd"><span id="a-w11">sempre</span></div></div>
+        </div>
+      </div>
+      <!-- as mesmas: a palavra se copia em grade -->
+      <div id="a-q7" class="q claro">
+        <div class="dr"><div id="a-grade" style="position:absolute;left:960px;top:540px;width:0;height:0"></div></div>
+      </div>
+      <!-- coisas: faixas correndo em sentidos opostos -->
+      <div id="a-q8" class="q escuro">
+        <div class="dr" style="display:block">
+          <div id="a-c0" class="faixa" style="top:-60px;font-size:190px" data-layout-ignore>coisas coisas coisas coisas coisas</div>
+          <div id="a-c1" class="faixa" style="top:150px;font-size:190px" data-layout-ignore>coisas coisas coisas coisas coisas</div>
+          <div id="a-c2" class="faixa" style="top:360px;font-size:190px;color:#ff2b3a" data-layout-ignore>coisas coisas coisas coisas coisas</div>
+          <div id="a-c3" class="faixa" style="top:570px;font-size:190px" data-layout-ignore>coisas coisas coisas coisas coisas</div>
+          <div id="a-c4" class="faixa" style="top:780px;font-size:190px" data-layout-ignore>coisas coisas coisas coisas coisas</div>
+          <div id="a-c5" class="faixa" style="top:990px;font-size:190px" data-layout-ignore>coisas coisas coisas coisas coisas</div>
+        </div>
+      </div>
+      <!-- e nenhuma -->
+      <div id="a-q9" class="q claro">
+        <div class="dr"><div class="bt"><div class="pq"><span id="a-w15">e</span></div><div class="gd"><span id="a-w16">nenhuma</span></div></div></div>
+      </div>
+      <!-- inovação! riscada -->
+      <div id="a-q10" class="q verm">
+        <div id="a-cam" class="dr">
+          <div class="bt"><div class="gd" style="font-size:300px">inovação!</div></div>
+          <svg id="a-risco" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" stroke="#0b0a10" stroke-width="34" stroke-linecap="round" data-layout-ignore><path id="a-rp" pathLength="1" d="M300 590C620 548 980 610 1300 560S1560 548 1640 572" /></svg>
+        </div>
+      </div>
+      <div id="a-g1" class="gl" style="left:120px;top:210px;width:900px;height:46px;background:#fff" data-layout-ignore></div>
+      <div id="a-g2" class="gl" style="left:700px;top:600px;width:1220px;height:90px;background:#0b0a10" data-layout-ignore></div>
+      <div id="a-g3" class="gl" style="left:0;top:820px;width:760px;height:60px;background:#fff" data-layout-ignore></div>
+      <div id="a-g4" class="gl" style="left:1100px;top:120px;width:500px;height:150px;background:#0b0a10" data-layout-ignore></div>
+    </div>
+    <div id="a-ponto" class="a" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = 0, tl = gsap.timeline({ paused: true }), c = { xPercent: -50, yPercent: -50 }, f = 1 / 30;
+      // Ritmo da referência: cada palavra é um quadro, o fundo alterna e acelera com a fala
+      L.batida(tl, S, [
+        { sel: "#a-q0", t: 0, deriva: { scale: 1.05 } },
+        { sel: "#a-q1", t: W[1] - 0.02, deriva: { scale: 1.08, rotation: -1.5 } },
+        { sel: "#a-q2", t: W[4] - 0.02, deriva: { scale: 1.07 } },
+        { sel: "#a-q3", t: W[5] - 0.02, deriva: { scale: 1.1, rotation: 1.5 } },
+        { sel: "#a-q4", t: W[7] - 0.02, deriva: { scale: 1.08 } },
+        { sel: "#a-q5", t: W[8] - 0.02, deriva: { scale: 1.07, rotation: -1 } },
+        { sel: "#a-q6", t: W[10] - 0.02, deriva: { scale: 1.1 } },
+        { sel: "#a-q7", t: W[12] - 0.02, deriva: { scale: 0.86 } },
+        { sel: "#a-q8", t: W[14] - 0.02, deriva: { scale: 1.12, rotation: -4 } },
+        { sel: "#a-q9", t: W[15] - 0.02, deriva: { scale: 1.06 } },
+        { sel: "#a-q10", t: W[17] - 0.02, deriva: { scale: 1.08 }, de: 1.4 },
+      ], 7.3);
+      gsap.set("#a-q0", { opacity: 1 }); // visível já no primeiro quadro
+
+      // Sério... a chibi entra e balança de leve, o texto chega com a palavra
+      L.k(tl, "#a-chibi", S, [[0.02, { ...c, x: 470, y: 600, scale: 1.25, rotation: -6, opacity: 0, filter: "blur(14px)" }], [0.05, { opacity: 1 }], [0.4, { y: 560, scale: 1, rotation: 2, filter: "blur(0px)" }, "expo.out"], [0.92, { y: 548, rotation: -1 }, "sine.inOut"]]);
+      gsap.set("#a-serio", { ...c, x: 1290, y: 530 });
+      L.pop(tl, "#a-serio", S, W[0], 1.35);
+      L.vivo(tl, "#a-serio", S, W[0] + 0.12, 0.93, { x: 1290 }, { x: 1250 });
+      [["#a-p1", 0.44], ["#a-p2", 0.56], ["#a-p3", 0.68]].forEach(([s, t]) => L.carimbo(tl, s, S, t));
+
+      // tá todo MUNDO
+      L.pop(tl, "#a-w1", S, W[1]); L.pop(tl, "#a-w2", S, W[2]); L.pop(tl, "#a-w3", S, W[3], 1.4);
+      // cansado: cada letra cai um pouco, como quem perdeu a força
+      const r = L.rng(4);
+      L.letras(document.getElementById("a-cansado")).forEach((s, i) => {
+        tl.fromTo(s, { y: 0, rotation: 0 }, { y: 18 + r() * 40, rotation: (r() - 0.5) * 26, duration: 0.42, ease: "power2.in", immediateRender: false }, W[4] + 0.08 + i * 0.02 - S);
+      });
+      // daqueles RPs, com ecos
+      L.pop(tl, "#a-w5", S, W[5]); L.pop(tl, "#a-w6", S, W[6], 1.5);
+      L.ecos(tl, ["#a-e1", "#a-e2", "#a-e3"], S, W[6] + 0.04, 0.42);
+      // genéricos: faixas correndo
+      L.vivo(tl, "#a-f1", S, W[7] - 0.02, W[8], { x: 0 }, { x: -420 });
+      L.vivo(tl, "#a-f2", S, W[7] - 0.02, W[8], { x: -420 }, { x: 0 });
+      // de Naruto
+      L.pop(tl, "#a-w8", S, W[8]); L.pop(tl, "#a-w9", S, W[9], 1.4);
+      // são SEMPRE
+      L.pop(tl, "#a-w10", S, W[10]); L.pop(tl, "#a-w11", S, W[11], 1.5);
+      L.ecos(tl, ["#a-e4", "#a-e5"], S, W[11] + 0.04, 0.4);
+
+      // as mesmas: uma palavra vira 25 cópias, do centro para fora
+      const grade = document.getElementById("a-grade"), copias = [];
+      for (let y = -2; y <= 2; y++) for (let x = -2; x <= 2; x++) {
+        const s = document.createElement("span");
+        s.textContent = x === 0 && y === 0 ? "as mesmas" : "mesmas";
+        s.style.left = x * 520 + "px"; s.style.top = y * 215 + "px";
+        if ((x + y) % 2 === 0 && !(x === 0 && y === 0)) s.style.color = "#ff2b3a";
+        grade.appendChild(s); copias.push({ s, d: Math.hypot(x, y) });
+      }
+      copias.forEach(({ s, d }) => {
+        const t = d === 0 ? W[12] : W[13] + d * 0.06;
+        gsap.set(s, { opacity: 0 });
+        tl.fromTo(s, { opacity: 1, scale: 1.4, filter: "blur(5px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.12, ease: "expo.out", immediateRender: false }, t - S);
+      });
+      // coisas: faixas em sentidos alternados
+      for (let i = 0; i < 6; i++) L.vivo(tl, "#a-c" + i, S, W[14] - 0.02, W[15], { x: i % 2 ? -700 : 0 }, { x: i % 2 ? 0 : -700 });
+      // e nenhuma
+      L.pop(tl, "#a-w15", S, W[15]); L.pop(tl, "#a-w16", S, W[16], 1.4);
+      // inovação! riscada à mão, câmera treme
+      L.k(tl, "#a-rp", S, [[6.4, { strokeDasharray: 1, strokeDashoffset: 1 }], [6.56, { strokeDashoffset: 0 }, "power2.out"]]);
+      L.treme(tl, "#a-tudo", S, 6.5, 16, 6);
+      // Glitch de 4 quadros e implosão até o ponto vermelho
+      [["#a-g1", 6.72], ["#a-g2", 6.72 + f], ["#a-g3", 6.72 + 2 * f], ["#a-g4", 6.72 + 3 * f], ["#a-g2", 6.72 + 3 * f]].forEach(([s, t]) => L.mostra(tl, s, S, t, t + f));
+      gsap.set("#a-g2", { opacity: 0 });
+      tl.to("#a-tudo", { scale: 0.02, opacity: 0.4, duration: 0.24, ease: "power3.in", immediateRender: false, transformOrigin: "50% 50%" }, 6.86);
+      L.k(tl, "#a-ponto", S, [[6.99, { ...c, x: 960, y: 540, scale: 0, opacity: 1 }], [7.08, { scale: 1 }, "back.out(2)"]]);
+      window.__timelines["a"] = tl;
+    })();
+  </script>
+</template>

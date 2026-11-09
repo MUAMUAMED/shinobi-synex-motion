@@ -1,0 +1,223 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Outfit", sans-serif; color: #fff; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    #root .full { position: absolute; inset: 0; }
+    #root .t { white-space: nowrap; line-height: 1.05; letter-spacing: -0.015em; }
+    #root .t span { display: inline-block; }
+    #d-fundo { background: #0b0a10; }
+    #d-mundo { position: absolute; inset: 0; overflow: hidden; }
+    #d-chao { background: radial-gradient(ellipse at 60% 45%, #3a1608, #120c10 55%, #0b0a10 85%); }
+    #d-cam { position: absolute; left: 960px; top: 540px; width: 0; height: 0; }
+    #d-plano { position: absolute; left: 0; top: 0; width: 0; height: 0; transform-style: preserve-3d; }
+    #root .cd { position: absolute; width: 380px; height: 214px; }
+    #root .cd img { position: absolute; inset: 0; width: 380px; height: 214px; object-fit: cover; border-radius: 16px; display: block; }
+    #root .fg { position: absolute; width: 760px; height: 428px; object-fit: cover; border-radius: 26px; filter: blur(12px); opacity: 0.75; }
+    #d-scrim { background: linear-gradient(90deg, #0b0a1000 30%, #0b0a10dd 62%, #0b0a10ee); }
+    #d-cont { color: #ff5a1f; font-size: 250px; font-weight: 800; line-height: 250px; height: 250px; overflow: hidden; white-space: nowrap; text-shadow: 0 0 60px #ff5a1f66; }
+    #d-cont span { display: inline-block; vertical-align: top; }
+    #d-cont i { display: block; font-style: normal; height: 250px; line-height: 250px; text-align: center; }
+    #d-ponto { width: 40px; height: 40px; border-radius: 50%; background: #ff5a1f; box-shadow: 0 0 34px 10px #ff5a1f66; }
+    /* Quadros dos conceitos */
+    #d-conc { position: absolute; inset: 0; }
+    #root .q { position: absolute; inset: 0; overflow: hidden; }
+    #root .dr { position: absolute; inset: 0; }
+    #root .gw { position: absolute; font-weight: 900; letter-spacing: -0.045em; line-height: 0.9; white-space: nowrap; }
+    #root .listras { position: absolute; left: -200px; top: -200px; width: 2400px; height: 1500px; background: repeating-linear-gradient(-45deg, #ffffff12 0 46px, transparent 46px 92px); }
+    #root .foto { position: absolute; overflow: hidden; border-radius: 30px; border: 10px solid #fff; box-shadow: 0 30px 80px #0007; background: #222; }
+    #root .foto img { position: absolute; width: 136%; left: -18%; top: -3%; display: block; }
+    #root .nm { position: absolute; font-size: 44px; font-weight: 700; white-space: nowrap; }
+    #root .hr { position: absolute; display: flex; align-items: center; gap: 24px; font-size: 54px; font-weight: 800; white-space: nowrap; }
+    #root .hr b { display: inline-block; padding: 6px 20px; border-radius: 16px; background: #fff; color: #1f4fd6; font-size: 44px; font-weight: 900; }
+    #root .hr svg { width: 64px; height: 64px; }
+    #root .chip { position: absolute; display: flex; align-items: center; gap: 18px; padding: 14px 32px 14px 22px; border-radius: 50px; background: #fff; color: #23843a; font-size: 50px; font-weight: 800; white-space: nowrap; }
+    #root .chip svg { width: 58px; height: 58px; }
+    #d-bolha { position: absolute; width: 880px; padding: 44px 52px; border-radius: 40px; background: #0b0a10; color: #fff; font-size: 62px; font-weight: 800; line-height: 1.12; }
+    #d-bolha::after { content: ""; position: absolute; left: -26px; top: 120px; border: 26px solid transparent; border-right-color: #0b0a10; border-left: 0; }
+    #root .exp { position: absolute; width: 216px; height: 198px; border-radius: 22px; border: 6px solid #0b0a10; object-fit: cover; }
+    #d-mitica { position: absolute; overflow: hidden; padding: 12px 34px; border-radius: 40px; background: linear-gradient(90deg, #f7b733, #e0262f); color: #fff; font-size: 44px; font-weight: 900; letter-spacing: 0.08em; box-shadow: 0 0 40px #f7b73388; }
+    #d-reflexo { position: absolute; top: -20px; left: 0; width: 60px; height: 120px; background: #ffffffcc; transform: skewX(-20deg); }
+    #d-olhos { position: absolute; width: 1500px; height: 359px; border-radius: 26px; object-fit: cover; }
+    #d-selo { position: absolute; overflow: visible; }
+    #d-hist { position: absolute; font-size: 66px; font-weight: 800; white-space: nowrap; }
+  </style>
+  <div id="root" data-composition-id="d" data-width="1920" data-height="1080">
+    <div id="d-fundo" class="full" data-layout-ignore></div>
+    <div id="d-mundo" data-layout-allow-overflow data-layout-allow-overlap>
+      <div id="d-chao" class="full" data-layout-ignore></div>
+      <div id="d-cam" data-layout-ignore><div id="d-plano"></div></div>
+      <img id="d-fg1" class="fg a" src="assets/recriados/kurosawa_jinbei_kiri_veteran.jpg" alt="" data-layout-ignore />
+      <img id="d-fg2" class="fg a" src="assets/recriados/tsukumo_retsu_ember_tracker.jpg" alt="" data-layout-ignore />
+      <div id="d-scrim" class="full" data-layout-ignore></div>
+      <img id="d-chibi" class="a" src="assets/chibi/05f.png" width="640" height="640" alt="" />
+      <div id="d-l1" class="a t" style="font-size:56px;font-weight:600"><span id="d-w39">o</span> <span id="d-w40" style="color:#ff5a1f">Shinobi</span> <span id="d-w41" style="color:#ff5a1f">Synex</span> <span id="d-w42">conta</span> <span id="d-w43">com</span> <span id="d-w44">mais</span> <span id="d-w45">de</span></div>
+      <div id="d-cont" class="a"><span>+</span><span id="d-c1"><i>0</i><i>1</i></span><span id="d-c2"><i>0</i><i>1</i><i>2</i></span><span id="d-c3"><i>0</i><i>3</i><i>6</i><i>9</i><i>4</i><i>7</i><i>0</i></span></div>
+      <div id="d-npc" class="a t" style="font-size:104px;font-weight:800">NPCs</div>
+    </div>
+
+    <div id="d-conc" data-layout-allow-overflow data-layout-allow-overlap>
+      <!-- ROTINAS: Kaede Isana, Kirigakure -->
+      <div id="d-q0" class="q" style="background:#1f4fd6">
+        <div class="dr">
+          <div id="d-l0" class="listras" data-layout-ignore></div>
+          <div class="gw" style="left:110px;top:110px;font-size:250px">rotinas</div>
+          <div class="nm" style="left:120px;top:400px;color:#ffffffbb">Kaede Isana · Kirigakure</div>
+          <div id="d-h0" class="hr" style="left:120px;top:500px"><b>06h</b><svg data-ic="onda"></svg>confere as marés</div>
+          <div id="d-h1" class="hr" style="left:120px;top:610px"><b>09h</b><svg data-ic="navio"></svg>inspeciona os navios</div>
+          <div id="d-h2" class="hr" style="left:120px;top:720px"><b>21h</b><svg data-ic="lua"></svg>patrulha os canais</div>
+          <div id="d-f0" class="foto" style="left:1150px;top:250px;width:600px;height:640px"><img src="assets/elas/kaede_rosto.jpg" alt="" /></div>
+          <svg id="d-relogio" class="a" width="220" height="220" viewBox="-110 -110 220 220" data-layout-ignore>
+            <circle r="100" fill="#fff" /><circle r="100" fill="none" stroke="#0b0a10" stroke-width="10" />
+            <g id="d-ph" ><rect x="-7" y="-58" width="14" height="64" rx="7" fill="#1f4fd6" /></g>
+            <g id="d-pm"><rect x="-5" y="-84" width="10" height="90" rx="5" fill="#0b0a10" /></g>
+            <circle r="12" fill="#ff5a1f" />
+          </svg>
+        </div>
+      </div>
+      <!-- PERSONALIDADES: Karinna Uzumaki, a mítica -->
+      <div id="d-q1" class="q" style="background:#f2efe8;color:#0b0a10">
+        <div class="dr">
+          <div class="gw" style="left:960px;top:70px;font-size:196px" data-cx="1">personalidades</div>
+          <div id="d-f1" class="foto" style="left:250px;top:330px;width:540px;height:580px;border-color:#e0262f"><img src="assets/elas/karinna_rosto.jpg" alt="" /></div>
+          <div id="d-mitica" style="left:190px;top:300px">MÍTICA<div id="d-reflexo"></div></div>
+          <div class="nm" style="left:520px;top:940px;transform:translateX(-50%);font-weight:800;color:#e0262f">Karinna Uzumaki</div>
+          <div id="d-bolha" style="left:900px;top:330px">“Ora, ora... que criaturinha curiosa você me saiu.”</div>
+          <img id="d-x0" class="exp" src="assets/elas/karinna_exp0.jpg" style="left:930px;top:720px" alt="" />
+          <img id="d-x1" class="exp" src="assets/elas/karinna_exp1.jpg" style="left:1180px;top:720px" alt="" />
+          <img id="d-x2" class="exp" src="assets/elas/karinna_exp5.jpg" style="left:1430px;top:720px" alt="" />
+        </div>
+      </div>
+      <!-- HISTÓRIAS: Yūgao Sarutobi -->
+      <div id="d-q2" class="q" style="background:#0b0a10">
+        <div class="dr">
+          <div class="gw" style="left:960px;top:60px;font-size:220px" data-cx="1">histórias</div>
+          <img id="d-olhos" src="assets/elas/yugao_olho.jpg" style="left:210px;top:330px" alt="" />
+          <svg id="d-selo" class="a" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" stroke="#ff2b3a" stroke-width="12" data-layout-ignore><circle id="d-sc" cx="1640" cy="300" r="120" pathLength="1" /><circle id="d-sc2" cx="1640" cy="300" r="92" pathLength="1" stroke-width="5" /></svg>
+          <div class="nm" style="left:210px;top:735px;color:#ff2b3a">Yūgao Sarutobi · Konoha</div>
+          <div id="d-hist" style="left:210px;top:810px">Gravou um selo proibido no próprio peito.</div>
+        </div>
+      </div>
+      <!-- VIDAS: Sari Kazekage -->
+      <div id="d-q3" class="q" style="background:#2f9e44">
+        <div class="dr">
+          <div id="d-l3" class="listras" data-layout-ignore></div>
+          <div class="gw" style="left:110px;top:110px;font-size:300px">vidas</div>
+          <div class="nm" style="left:120px;top:430px;color:#ffffffcc">Sari Kazekage · Sunagakure</div>
+          <div id="d-v0" class="chip" style="left:120px;top:530px"><svg data-ic="calendario"></svg>19 anos</div>
+          <div id="d-v1" class="chip" style="left:120px;top:650px"><svg data-ic="erva"></svg>herborista</div>
+          <div id="d-v2" class="chip" style="left:120px;top:770px"><svg data-ic="lanterna"></svg>estuda até tarde</div>
+          <div id="d-f3" class="foto" style="left:1150px;top:240px;width:600px;height:640px"><img src="assets/elas/sari_rosto.jpg" alt="" /></div>
+        </div>
+      </div>
+      <!-- completamente -->
+      <div id="d-q4" class="q" style="background:#f2efe8;color:#0b0a10">
+        <div class="dr">
+          <div class="gw" style="left:960px;top:90px;font-size:210px" data-cx="1">completamente</div>
+          <div id="d-m0" class="foto" style="left:250px;top:470px;width:340px;height:370px;border-color:#1f4fd6"><img src="assets/elas/kaede_rosto.jpg" alt="" /></div>
+          <div id="d-m1" class="foto" style="left:610px;top:470px;width:340px;height:370px;border-color:#e0262f"><img src="assets/elas/karinna_rosto.jpg" alt="" /></div>
+          <div id="d-m2" class="foto" style="left:970px;top:470px;width:340px;height:370px;border-color:#0b0a10"><img src="assets/elas/yugao_rosto.jpg" alt="" /></div>
+          <div id="d-m3" class="foto" style="left:1330px;top:470px;width:340px;height:370px;border-color:#2f9e44"><img src="assets/elas/sari_rosto.jpg" alt="" /></div>
+        </div>
+      </div>
+      <!-- diferentes! -->
+      <div id="d-q5" class="q" style="background:#ff5a1f">
+        <div class="dr">
+          <div id="d-n0" class="foto" style="left:250px;top:470px;width:340px;height:370px;border-color:#1f4fd6"><img src="assets/elas/kaede_rosto.jpg" alt="" /></div>
+          <div id="d-n1" class="foto" style="left:610px;top:470px;width:340px;height:370px;border-color:#e0262f"><img src="assets/elas/karinna_rosto.jpg" alt="" /></div>
+          <div id="d-n2" class="foto" style="left:970px;top:470px;width:340px;height:370px;border-color:#0b0a10"><img src="assets/elas/yugao_rosto.jpg" alt="" /></div>
+          <div id="d-n3" class="foto" style="left:1330px;top:470px;width:340px;height:370px;border-color:#2f9e44"><img src="assets/elas/sari_rosto.jpg" alt="" /></div>
+          <div id="d-dif" class="gw" style="left:960px;top:540px;font-size:290px" data-cx="2">diferentes!</div>
+        </div>
+      </div>
+    </div>
+    <div id="d-ponto" class="a" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = 14.4, tl = gsap.timeline({ paused: true }), c = { xPercent: -50, yPercent: -50 };
+      L.icones(document.getElementById("d-conc"));
+      // Entra pelo furo da engrenagem
+      L.iris(tl, "#d-mundo", S, 14.5, 0.36, 53.23, 50);
+      // Parede só com os NPCs recriados de outras obras
+      const R = window.RECRIADOS, plano = document.getElementById("d-plano");
+      for (let i = 0; i < 40; i++) {
+        const col = i % 8, lin = Math.floor(i / 8), d = document.createElement("div");
+        d.className = "cd";
+        d.innerHTML = `<img src="assets/recriados/${R[i % R.length]}.jpg" alt="">`;
+        d.style.left = (col - 3.5) * 402 - 190 + "px"; d.style.top = (lin - 2) * 236 - 107 + "px";
+        plano.appendChild(d);
+      }
+      gsap.set("#d-plano", { transformPerspective: 1800 });
+      L.k(tl, "#d-plano", S, [[14.5, { rotationY: -18, rotationX: 8 }], [17.94, { rotationY: -6, rotationX: 3 }]]);
+      L.k(tl, "#d-cam", S, [[14.5, { x: 0, y: 0, scale: 2.3, filter: "blur(10px)" }], [15.2, { scale: 1, filter: "blur(0px)" }, "expo.out"], [17.94, { x: -160, y: 30, scale: 1.1 }]]);
+      // Profundidade: cartões desfocados no primeiro plano
+      L.k(tl, "#d-fg1", S, [[14.6, { x: 1500, y: -120, rotation: -8 }], [17.94, { x: 1000, y: -40, rotation: -5 }]]);
+      L.k(tl, "#d-fg2", S, [[14.6, { x: -300, y: 760, rotation: 7 }], [17.94, { x: 100, y: 700, rotation: 4 }]]);
+      L.k(tl, "#d-scrim", S, [[15.5, { opacity: 0 }], [16.0, { opacity: 1 }, "power2.out"]]);
+      // Apresentadora e contador
+      L.k(tl, "#d-chibi", S, [[W[42] - 0.02, { ...c, x: 330, y: 690, scale: 1.2, rotation: -5, opacity: 0, filter: "blur(14px)" }], [W[42], { opacity: 1 }], [W[42] + 0.36, { x: 420, y: 650, scale: 1, rotation: 2, filter: "blur(0px)" }, "expo.out"], [17.94, { x: 440, y: 630, rotation: -2 }]]);
+      gsap.set("#d-l1", { ...c, x: 960, y: 130 });
+      for (let i = 39; i <= 45; i++) L.palavra(tl, "#d-w" + i, S, W[i]);
+      L.vivo(tl, "#d-l1", S, W[39], 17.94, { scale: 1 }, { scale: 1.06 });
+      L.k(tl, "#d-cont", S, [[W[44] - 0.02, { ...c, x: 1340, y: 500, scale: 1.5, opacity: 0, filter: "blur(16px)" }], [W[44], { opacity: 1 }], [W[44] + 0.35, { scale: 1, filter: "blur(0px)" }, "expo.out"], [17.94, { scale: 1.08, rotation: -3 }]]);
+      L.k(tl, "#d-c1", S, [[W[46], { y: 0 }], [W[48] + 0.05, { y: -250 }, "power2.inOut"]]);
+      L.k(tl, "#d-c2", S, [[W[46], { y: 0 }], [W[48] + 0.12, { y: -500 }, "power2.inOut"]]);
+      L.k(tl, "#d-c3", S, [[W[44] + 0.1, { y: 0 }], [W[48] + 0.2, { y: -1500 }, "power2.inOut"]]);
+      L.k(tl, "#d-npc", S, [[W[49], { ...c, x: 1340, y: 700, opacity: 0, scale: 1.4, filter: "blur(10px)" }], [W[49] + 0.13, { opacity: 1, scale: 1, filter: "blur(0px)" }, "expo.out"], [17.94, { scale: 1.08 }]]);
+      L.mostra(tl, "#d-mundo", S, 14.4, 18.0);
+
+      // Conceitos em batida: cada palavra é um quadro de cor, com uma NPC e um dado real dela
+      const fim = 22.2;
+      L.batida(tl, S, [
+        { sel: "#d-q0", t: W[51] - 0.02, deriva: { scale: 1.05, rotation: -0.8 } },
+        { sel: "#d-q1", t: W[52] - 0.02, deriva: { scale: 1.05 } },
+        { sel: "#d-q2", t: W[53] - 0.02, deriva: { scale: 1.08 } },
+        { sel: "#d-q3", t: W[55] - 0.04, deriva: { scale: 1.06, rotation: 0.8 } },
+        { sel: "#d-q4", t: W[56] - 0.02, deriva: { scale: 1.04 } },
+        { sel: "#d-q5", t: W[57] - 0.02, deriva: { scale: 1.1 } },
+      ], fim);
+      // Palavra gigante de cada quadro chega como na referência
+      document.querySelectorAll("#d-conc .gw").forEach((g) => {
+        const t = { "d-q0": W[51], "d-q1": W[52], "d-q2": W[53], "d-q3": W[55], "d-q4": W[56], "d-q5": W[57] }[g.closest(".q").id];
+        const cx = g.dataset.cx === "1" ? { xPercent: -50 } : g.dataset.cx === "2" ? { xPercent: -50, yPercent: -50 } : {};
+        gsap.set(g, Object.assign({ opacity: 0 }, cx));
+        tl.fromTo(g, { opacity: 0, filter: "blur(10px)", scale: 1.18 }, { opacity: 1, filter: "blur(0px)", scale: 1, duration: 0.13, ease: "expo.out", immediateRender: false }, t - 0.02 - S);
+      });
+      // Foto que sobe girando e continua viva
+      const foto = (sel, t, rot, ate) => L.k(tl, sel, S, [[t, { y: 420, rotation: rot - 10, opacity: 0 }], [t + 0.02, { opacity: 1 }], [t + 0.24, { y: 0, rotation: rot }, "expo.out"], [ate, { y: -16, rotation: rot - 1.5 }]]);
+      // ROTINAS
+      L.vivo(tl, "#d-l0", S, W[51] - 0.02, W[52], { x: 0 }, { x: -130 });
+      foto("#d-f0", W[51] - 0.02, 4, W[52]);
+      L.k(tl, "#d-relogio", S, [[W[51] + 0.06, { x: 1030, y: 160, scale: 0, rotation: -40 }], [W[51] + 0.26, { scale: 1, rotation: 0 }, "back.out(2.2)"], [W[52], { rotation: 6 }]]);
+      gsap.set(["#d-ph", "#d-pm"], { svgOrigin: "0 0" });
+      L.vivo(tl, "#d-pm", S, W[51] + 0.06, W[52], { rotation: 0 }, { rotation: 1080 });
+      L.vivo(tl, "#d-ph", S, W[51] + 0.06, W[52], { rotation: 90 }, { rotation: 180 });
+      ["#d-h0", "#d-h1", "#d-h2"].forEach((s, i) => L.k(tl, s, S, [[W[51] + 0.1 + i * 0.12, { x: -60, opacity: 0, filter: "blur(6px)" }], [W[51] + 0.24 + i * 0.12, { x: 0, opacity: 1, filter: "blur(0px)" }, "expo.out"], [W[52], { x: 12 }]]));
+      // PERSONALIDADES
+      foto("#d-f1", W[52] - 0.02, -4, W[53]);
+      L.carimbo(tl, "#d-mitica", S, W[52] + 0.14, -8);
+      L.vivo(tl, "#d-reflexo", S, W[52] + 0.2, W[52] + 0.6, { x: -80 }, { x: 420 });
+      L.k(tl, "#d-bolha", S, [[W[52] + 0.08, { x: 120, scale: 0.6, opacity: 0, transformOrigin: "0% 40%" }], [W[52] + 0.28, { x: 0, scale: 1, opacity: 1 }, "back.out(1.8)"], [W[53], { x: -10, scale: 1.02 }]]);
+      ["#d-x0", "#d-x1", "#d-x2"].forEach((s, i) => L.k(tl, s, S, [[W[52] + 0.3 + i * 0.14, { y: 80, scale: 0.4, rotation: i % 2 ? 6 : -6, opacity: 0 }], [W[52] + 0.46 + i * 0.14, { y: 0, scale: 1, opacity: 1 }, "back.out(2)"], [W[53], { rotation: i % 2 ? 3 : -3 }]]));
+      // HISTÓRIAS
+      L.k(tl, "#d-olhos", S, [[W[53] - 0.02, { x: 120, scale: 1.25, filter: "blur(10px)" }], [W[53] + 0.14, { x: 30, scale: 1.04, filter: "blur(0px)" }, "expo.out"], [W[55], { x: -40, scale: 1 }]]);
+      gsap.set(["#d-sc", "#d-sc2"], { svgOrigin: "1640 300" });
+      L.k(tl, "#d-sc", S, [[W[53] + 0.05, { strokeDasharray: 1, strokeDashoffset: 1, rotation: -90 }], [W[53] + 0.32, { strokeDashoffset: 0, rotation: 0 }, "power2.out"]]);
+      L.k(tl, "#d-sc2", S, [[W[53] + 0.12, { strokeDasharray: "0.06 0.04", strokeDashoffset: 1, rotation: 0 }], [W[55], { strokeDashoffset: 0, rotation: 60 }]]);
+      L.k(tl, "#d-hist", S, [[W[53] + 0.1, { clipPath: "inset(0% 100% 0% 0%)" }], [W[53] + 0.3, { clipPath: "inset(0% 0% 0% 0%)" }, "power3.out"]]);
+      // VIDAS
+      L.vivo(tl, "#d-l3", S, W[55] - 0.04, W[56], { x: -130 }, { x: 0 });
+      foto("#d-f3", W[55] - 0.04, -3, W[56]);
+      ["#d-v0", "#d-v1", "#d-v2"].forEach((s, i) => L.k(tl, s, S, [[W[55] + 0.04 + i * 0.08, { scale: 0.3, opacity: 0 }], [W[55] + 0.16 + i * 0.08, { scale: 1, opacity: 1 }, "back.out(2.2)"], [W[56], { x: 10 }]]));
+      // completamente: as quatro em fila
+      [-6, 4, -3, 6].forEach((rot, i) => L.k(tl, "#d-m" + i, S, [[W[56] + i * 0.07, { y: 700, rotation: rot * 3, opacity: 0 }], [W[56] + 0.02 + i * 0.07, { opacity: 1 }], [W[56] + 0.3 + i * 0.07, { y: 0, rotation: rot }, "expo.out"], [W[57], { y: -20, rotation: rot * 1.3 }]]));
+      // diferentes!: cada uma voa para um canto
+      const cantos = [[-180, -330, -16], [-120, 300, 12], [140, -330, 14], [190, 300, -12]];
+      cantos.forEach(([x, y, r], i) => L.k(tl, "#d-n" + i, S, [[W[57] - 0.02, { x: 0, y: -20, rotation: [-6, 4, -3, 6][i] * 1.3 }], [W[57] + 0.3, { x, y, rotation: r }, "expo.out"], [22.0, { x: x * 1.15, y: y * 1.15, rotation: r * 1.2 }]]));
+      // Tudo implode no ponto laranja
+      tl.to("#d-conc", { scale: 0.02, rotation: 30, duration: 0.2, ease: "power3.in", immediateRender: false, transformOrigin: "50% 50%" }, 22.0 - S);
+      L.k(tl, "#d-ponto", S, [[22.18, { ...c, x: 960, y: 540, scale: 0, opacity: 1 }], [22.36, { scale: 1 }, "back.out(2.4)"]]);
+      window.__timelines["d"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,100 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; font-family: "Outfit", sans-serif; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    canvas { position: absolute; left: 0; top: 0; }
+    #f-gray { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 42%, #3d3d3d, #161616 58%, #000 88%); }
+    #f-grn { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 18%, #1f6a1f, #0a260a 45%, #0000 72%); }
+    #f-pur { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 36%, #4a2a60, #1c0f2a 55%, #000 86%); }
+    #f-red { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, #4c0a1c, #000 62%); }
+    #f-s { color: #fbb68c; font-size: 78px; font-weight: 500; }
+    #f-s2 { color: #fbb68c; font-size: 78px; font-weight: 500; }
+    #f-ln { position: absolute; left: 0; top: 0; }
+    #f-cal { width: 680px; height: 660px; border-radius: 96px; background: radial-gradient(ellipse at 42% 42%, #fff 18%, #cfcfcf 82%, #9c9c9c); color: #6e6e6e; text-align: center; overflow: hidden; }
+    #f-cal .d { position: absolute; left: 0; width: 100%; top: 52px; color: #e01e45; font-size: 96px; font-weight: 500; }
+    #f-cal .n { position: absolute; left: 0; width: 100%; top: 160px; font-size: 300px; font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; }
+    #f-fl { width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(#fff 3%, #ffd59a 14%, #d24a1d55 40%, #0000 68%); mix-blend-mode: screen; }
+    #f-ra { width: 120px; height: 200px; border-radius: 50%; background: linear-gradient(120deg, #ff5a5a88, #ffe36a88, #5aff9a88, #5ab7ff88, #0000); filter: blur(10px); mix-blend-mode: screen; }
+    #f-pill { width: 620px; height: 230px; border-radius: 60px; background: radial-gradient(ellipse at 50% 60%, #fff 42%, #c7c7c7); color: #333; font-size: 86px; font-weight: 500; display: flex; align-items: center; justify-content: center; white-space: nowrap; letter-spacing: -0.02em; }
+    #f-pix { width: 860px; height: 1130px; border-radius: 76px; background: radial-gradient(ellipse at 50% 50%, #fff 38%, #bebebe 82%, #8f8f8f); color: #666; text-align: center; overflow: hidden; }
+    #f-ok { position: absolute; left: 372px; top: 340px; width: 116px; height: 116px; border-radius: 50%; background: #27d832; color: #fff; font-size: 72px; font-weight: 800; line-height: 116px; }
+    #f-t1 { position: absolute; left: 0; width: 100%; top: 480px; font-size: 56px; font-weight: 600; color: #555; }
+    #f-t1 i { font-style: normal; color: #8c8c8c; }
+    #f-t2 { position: absolute; left: 0; width: 100%; top: 546px; font-size: 40px; color: #777; }
+    #f-t3 { position: absolute; left: 90px; top: 640px; font-size: 32px; text-align: left; color: #666; line-height: 1.25; }
+    #f-t4 { position: absolute; right: 90px; top: 684px; font-size: 25px; color: #666; }
+    #f-nit { width: 860px; height: 452px; border-radius: 42px; overflow: hidden; }
+    #f-nit img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.04); }
+    #f-st1, #f-st2 { width: 520px; height: 520px; }
+    #f-p1 { width: 520px; height: 200px; border-radius: 40px; }
+  </style>
+  <div id="root" data-composition-id="f" data-width="1080" data-height="1920">
+    <div id="f-gray" data-layout-ignore></div>
+    <div id="f-grn" data-layout-ignore></div>
+    <div id="f-pur" data-layout-ignore></div>
+    <div id="f-red" data-layout-ignore></div>
+    <canvas id="f-dust" width="1080" height="1920" data-layout-ignore></canvas>
+    <div id="f-s" class="a">Sendo</div>
+    <div id="f-s2" class="a">sorteios</div>
+    <svg id="f-ln" width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" stroke="#ffc9a8" stroke-width="7" stroke-linecap="round" data-layout-ignore>
+      <path id="f-l1" pathLength="1" d="M225 1150C200 1060 300 1040 420 1060S740 1130 860 1090"/>
+      <path id="f-l2" pathLength="1" stroke="#fff" d="M500 1090C640 1110 730 1070 760 980 790 880 710 760 620 730 550 700 480 760 470 800"/>
+    </svg>
+    <div id="f-fl" class="a" data-layout-ignore></div>
+    <div id="f-ra" class="a" data-layout-ignore></div>
+    <div id="f-cal" class="a" data-layout-allow-overflow><div id="f-d1" class="d">Seg.</div><div id="f-n1" class="n">25</div><div id="f-d2" class="d">Ter.</div><div id="f-n2" class="n">26</div></div>
+    <div id="f-pill" class="a" data-layout-allow-overflow>Valendo</div>
+    <div id="f-pix" class="a" data-layout-allow-overflow>
+      <div id="f-ok">✓</div>
+      <div id="f-t1">Pix <i>recebido</i></div>
+      <div id="f-t2">R$250</div>
+      <div id="f-t3"><b style="font-weight:500">Sobre a transação</b><br>Detalhes do pagamento</div>
+      <div id="f-t4">Terça-Feira, 26/11/2025</div>
+    </div>
+    <div id="f-nit" class="a" data-layout-allow-overflow><img src="assets/nitro.png"/></div>
+    <div id="f-st1" class="a" data-layout-ignore></div>
+    <div id="f-st2" class="a" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = 525, tl = gsap.timeline({ paused: true }), center = { xPercent: -50, yPercent: -50 };
+      document.getElementById("f-st1").innerHTML = FX.star("#d9ffe0");
+      document.getElementById("f-st2").innerHTML = FX.star("#fff");
+      gsap.set("#f-cal,#f-pill,#f-pix,#f-nit", { transformPerspective: 1100 });
+      // Sendo sorteios
+      FX.keys(tl, "#f-s", S, [[525, { ...center, x: 409, y: 1290, opacity: 0, filter: "blur(8px)", color: "#c0541c" }], [527, { y: 1148, opacity: 0.9, filter: "blur(1px)", color: "#ee8a56" }], [529, { y: 1085, opacity: 1, filter: "blur(0px)", color: "#fbb68c" }], [531, { y: 1045 }], [535, { y: 1000 }], [538, { y: 989, color: "#ffffff" }], [538, { opacity: 1, color: "#d0d0d0" }], [540, { opacity: 0.65, color: "#a0a0a0" }], [542, { opacity: 0.2, filter: "blur(5px)" }], [543, { opacity: 0 }]]);
+      FX.keys(tl, "#f-s2", S, [[528, { ...center, x: 682, y: 1420, opacity: 0, filter: "blur(7px)", color: "#c0541c" }], [529, { y: 1358, opacity: 0.4 }], [531, { y: 1188, opacity: 0.9, filter: "blur(1px)" }], [533, { y: 1102, opacity: 1, filter: "blur(0px)" }], [535, { y: 1046, color: "#ffd9c2" }], [538, { y: 1000, color: "#ffffff" }], [542, { y: 975 }], [545, { y: 985, opacity: 0.5, color: "#aaaaaa" }], [547, { opacity: 0 }]]);
+      FX.keys(tl, "#f-l1", S, [[526, { strokeDasharray: 1, strokeDashoffset: 1 }], [530, { strokeDashoffset: 0.4 }], [536, { strokeDashoffset: -0.3 }], [541, { strokeDashoffset: -0.62, opacity: 1, stroke: "#fff" }], [543, { strokeDashoffset: -0.68, opacity: 0 }]]);
+      FX.keys(tl, "#f-l2", S, [[542, { strokeDasharray: 1, strokeDashoffset: 1, opacity: 0 }], [543, { strokeDashoffset: 0.75, opacity: 1 }], [546, { strokeDashoffset: 0.15 }], [548, { strokeDashoffset: -0.25 }], [550, { strokeDashoffset: -0.95 }], [550.5, { opacity: 0 }]]);
+      // Calendario gira e troca o dia
+      FX.keys(tl, "#f-gray", S, [[547, { opacity: 0 }], [550, { opacity: 0.6 }], [566, { opacity: 0.85 }], [572, { opacity: 1 }], [590, { opacity: 0.7 }], [596, { opacity: 0.2 }], [600, { opacity: 0 }]]);
+      FX.keys(tl, "#f-cal", S, [[547, { ...center, x: 540, y: 620, scale: 0.05, rotation: -50, opacity: 0 }], [548, { opacity: 1 }], [549, { scale: 0.28, rotation: -30, y: 640 }], [550, { x: 300, y: 790, scale: 0.46, rotation: 90, filter: "blur(1px)" }, "power1.out"], [551, { x: 400, y: 800, scale: 0.75, rotation: 60, filter: "blur(3px)" }, "power1.out"], [552, { x: 500, y: 860, scale: 1.1, rotation: 30, filter: "blur(4px)" }, "power1.out"], [553, { x: 520, y: 900, scale: 1.2, rotation: 0, filter: "blur(4px)" }], [555, { x: 580, y: 880, scale: 1.05, rotation: -22, filter: "blur(2px)" }], [557, { x: 540, y: 890, scale: 0.92, rotation: -42, filter: "blur(1px)" }], [559, { x: 560, y: 895, scale: 0.88, rotation: -30 }], [561, { x: 540, y: 930, scale: 0.84, rotation: -3, filter: "blur(1px)" }, "power1.out"], [563, { x: 540, y: 950, scale: 0.8, rotation: 0, filter: "blur(0px)" }], [565, { scaleY: 0.76, scale: 0.85, skewY: 1 }], [566, { scaleY: 0.5, y: 950, scale: 0.9 }], [567, { scaleY: 0.26, y: 1010, scale: 0.92 }], [568.5, { opacity: 0 }]]);
+      FX.keys(tl, "#f-d2", S, [[555, { opacity: 0 }], [557, { opacity: 1 }]]);
+      FX.keys(tl, "#f-n2", S, [[555, { opacity: 0 }], [557, { opacity: 1 }]]);
+      FX.keys(tl, "#f-d1", S, [[554, { opacity: 1 }], [556, { opacity: 0 }]]);
+      FX.keys(tl, "#f-n1", S, [[554, { opacity: 1 }], [556, { opacity: 0 }]]);
+      FX.keys(tl, "#f-fl", S, [[548, { ...center, x: 560, y: 760, scale: 0.15, opacity: 0 }], [550, { x: 500, y: 830, scale: 0.8, opacity: 1 }], [553, { x: 820, y: 800, scale: 1.2 }], [556, { x: 660, y: 780, scale: 1 }], [560, { x: 760, y: 790, scale: 0.65, opacity: 0.8 }], [564, { opacity: 0 }]]);
+      FX.keys(tl, "#f-ra", S, [[551, { x: 620, y: 540, opacity: 0, rotation: -20 }], [555, { x: 820, y: 510, opacity: 1 }], [560, { x: 700, y: 520, opacity: 0.8 }], [564, { opacity: 0 }]]);
+      // Pilula Valendo
+      FX.keys(tl, "#f-pill", S, [[567, { ...center, x: 540, y: 1000, scaleX: 1.3, scaleY: 0.18, rotation: 3, opacity: 0, color: "#555555" }], [568, { opacity: 1 }], [571, { scaleX: 1, scaleY: 0.38, y: 985, rotation: 1 }], [573, { scaleX: 0.9, scaleY: 0.88, rotation: 0, y: 985 }, "power2.out"], [576, { scaleX: 0.95, scaleY: 0.9 }], [579, { scaleX: 1, y: 1020, color: "#aaaaaa" }], [581, { scaleX: 1, scaleY: 0.92, y: 1020, opacity: 1 }], [581.5, { opacity: 0 }]]);
+      // Pix cresce
+      FX.keys(tl, "#f-pix", S, [[581, { ...center, x: 540, y: 1035, scaleX: 0.68, scaleY: 0.2, opacity: 0 }], [582, { opacity: 1, scaleX: 0.72, scaleY: 0.42, y: 1030 }], [583, { scaleX: 0.78, scaleY: 0.62, y: 1040 }, "power1.out"], [584, { scaleX: 0.86, scaleY: 0.82, y: 1030 }, "power1.out"], [586, { scaleX: 1.08, scaleY: 1, y: 1020, rotation: 1 }, "power1.out"], [589, { scaleX: 1.02, scaleY: 1, y: 1010, rotation: 3.5 }], [592, { scaleX: 1, scaleY: 1, y: 1000, rotation: 15, filter: "blur(1px)" }, "power1.in"], [594, { scale: 0.9, rotation: 40, filter: "blur(4px)", y: 990, backgroundColor: "#e8c8ee" }], [595.5, { opacity: 0 }]]);
+      FX.keys(tl, "#f-t1", S, [[582, { opacity: 0 }], [585, { opacity: 1 }]]);
+      FX.keys(tl, "#f-ok", S, [[582, { scale: 0.4 }], [586, { scale: 1 }, "back.out(2)"]]);
+      FX.keys(tl, "#f-t3", S, [[585, { opacity: 0 }], [589, { opacity: 1 }]]);
+      FX.keys(tl, "#f-t4", S, [[586, { opacity: 0 }], [590, { opacity: 1 }]]);
+      // Estrelas
+      FX.keys(tl, "#f-st1", S, [[572, { ...center, x: 540, y: 660, scale: 0.2, opacity: 0, rotation: 10 }], [574, { scale: 0.75, opacity: 1 }], [576, { scale: 0.4, opacity: 0.8, y: 665 }], [577, { opacity: 0 }], [577.5, { x: 540, y: 1210, scale: 0.2, rotation: -20 }], [578, { opacity: 1, scale: 0.3 }], [580, { scale: 0.95, y: 1230 }], [582, { scale: 0.7, x: 480, y: 1650, opacity: 0.9 }], [584, { scale: 0.75, x: 540, y: 1720 }], [586, { scale: 0.2, opacity: 0, y: 1660 }]]);
+      FX.keys(tl, "#f-st2", S, [[585, { ...center, x: 620, y: 360, scale: 0.1, opacity: 0, rotation: 0 }], [587, { x: 620, y: 60, scale: 1.1, opacity: 1 }], [588, { x: 620, y: 140, scale: 0.55 }], [589, { opacity: 0 }]]);
+      FX.keys(tl, "#f-grn", S, [[574, { opacity: 0 }], [580, { opacity: 1 }], [588, { opacity: 0.8 }], [593, { opacity: 0 }]]);
+      FX.keys(tl, "#f-pur", S, [[592, { opacity: 0 }], [597, { opacity: 1 }], [606, { opacity: 0.75 }], [609, { opacity: 0.2 }], [611, { opacity: 0 }]]);
+      FX.keys(tl, "#f-red", S, [[608, { opacity: 0 }], [614, { opacity: 1 }]]);
+      // Nitro
+      FX.keys(tl, "#f-nit", S, [[594, { ...center, x: 540, y: 980, scale: 1.08, rotation: 34, filter: "blur(8px)", opacity: 0 }], [595, { opacity: 1 }], [597, { x: 550, y: 960, scale: 0.92, rotation: 18, filter: "blur(6px)" }, "power2.out"], [600, { x: 540, y: 960, scale: 0.86, rotation: -8, filter: "blur(4px)" }, "power2.out"], [602, { scale: 0.82, rotation: -4, filter: "blur(1px)" }], [604, { scale: 0.76, rotation: -2, filter: "blur(0px)" }], [607, { scale: 0.62, rotation: -3, y: 955 }], [609, { scale: 0.56, rotation: -18, y: 955 }, "power1.in"], [611, { scale: 0.56, rotation: -38, y: 960, filter: "blur(1px)" }], [613, { scale: 0.45, rotation: -50, filter: "blur(3px)", opacity: 0.9 }], [614, { opacity: 0 }]]);
+      const D = FX.dust(document.getElementById("f-dust"), { seed: 77, n: 110, color: "#c9c9c9", alpha: 0.65 });
+      FX.drive(tl, S, 548, 614, (t) => D(t));
+      FX.keys(tl, "#f-dust", S, [[548, { opacity: 0 }], [552, { opacity: 1 }], [610, { opacity: 0.6 }], [614, { opacity: 0 }]]);
+      window.__timelines["f"] = tl;
+    })();
+  </script>
+</template>

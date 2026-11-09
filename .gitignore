@@ -1,0 +1,8 @@
+.env
+*.env
+node_modules/
+renders/
+.hyperframes/
+filme/assets/video/
+filme/assets/som/mixkit/baixados/
+filme/assets/som/musica.mp3

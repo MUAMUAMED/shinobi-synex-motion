@@ -1,0 +1,66 @@
+{
+ "beaky": {
+  "brilho": 232.0,
+  "cortes_min": 12.0,
+  "cena_mediana": 2.83,
+  "pretos_min": 0.0,
+  "chicotes_min": 0.0,
+  "modelo": "Branco contínuo"
+ },
+ "cendap": {
+  "brilho": 222.0,
+  "cortes_min": 33.0,
+  "cena_mediana": 0.55,
+  "pretos_min": 0.0,
+  "chicotes_min": 5.928853754940711,
+  "modelo": "Bloco de cor"
+ },
+ "gespat": {
+  "brilho": 228.0,
+  "cortes_min": 34.0,
+  "cena_mediana": 0.77,
+  "pretos_min": 0.0,
+  "chicotes_min": 0.0,
+  "modelo": "Bloco de cor"
+ },
+ "hakuna": {
+  "brilho": 29.0,
+  "cortes_min": 44.0,
+  "cena_mediana": 0.83,
+  "pretos_min": 21.08626198083067,
+  "chicotes_min": 1.9169329073482428,
+  "modelo": "Neon escuro"
+ },
+ "open-manager": {
+  "brilho": 238.0,
+  "cortes_min": 12.0,
+  "cena_mediana": 3.12,
+  "pretos_min": 0.0,
+  "chicotes_min": 2.898550724637681,
+  "modelo": "Branco contínuo"
+ },
+ "season-cloud": {
+  "brilho": 31.0,
+  "cortes_min": 39.0,
+  "cena_mediana": 1.19,
+  "pretos_min": 22.388059701492537,
+  "chicotes_min": 2.9850746268656714,
+  "modelo": "Neon escuro"
+ },
+ "voltz": {
+  "brilho": 32.0,
+  "cortes_min": 37.0,
+  "cena_mediana": 0.97,
+  "pretos_min": 24.705882352941178,
+  "chicotes_min": 5.294117647058823,
+  "modelo": "Imersivo de objetos"
+ },
+ "zei": {
+  "brilho": 227.0,
+  "cortes_min": 23.0,
+  "cena_mediana": 1.6,
+  "pretos_min": 0.0,
+  "chicotes_min": 1.5503875968992247,
+  "modelo": "Branco contínuo"
+ }
+}

@@ -1,0 +1,56 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; font-family: "Outfit", sans-serif; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    #j-m { width: 1080px; height: 1920px; object-fit: cover; }
+    #j-wh { position: absolute; inset: 0; background: #fff; }
+    #j-n { color: #4ff049; font-size: 104px; font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; line-height: 1; overflow: hidden; height: 104px; }
+    #j-n span { display: inline-block; vertical-align: top; }
+    #j-n i { display: block; font-style: normal; line-height: 104px; }
+    #j-p { color: #cfeed0; font-size: 34px; font-weight: 600; }
+    #j-bar { display: flex; gap: 22px; padding: 14px 20px; border-radius: 22px; background: #2a2226; }
+    #j-bar u { display: block; width: 36px; height: 36px; border-radius: 50%; background: #55484e; }
+    #j-bar u:last-child { background: #e04f55; }
+    #j-g { position: absolute; inset: 0; background: linear-gradient(115deg, #000 42%, #2a1004); }
+    #j-t1 { color: #fff; word-spacing: -4px; font-size: 86px; font-weight: 600; white-space: nowrap; }
+    #j-t1 span { display: inline-block; }
+    #j-t2 { color: #fff; font-size: 66px; font-weight: 500; font-family: "Inter", sans-serif; white-space: nowrap; }
+    #j-t2 span { display: inline-block; }
+  </style>
+  <div id="root" data-composition-id="j" data-width="1080" data-height="1920">
+    <img id="j-m" class="a" src="assets/mosaic.jpg" data-layout-allow-overflow data-layout-ignore/>
+    <div id="j-n" class="a"><span id="j-a"><i>1</i></span><span id="j-b"><i>5</i><i>4</i><i>5</i></span><span id="j-c"><i>7</i><i>8</i><i>9</i><i>0</i></span></div>
+    <div id="j-p" class="a">Participantes</div>
+    
+    <div id="j-wh" data-layout-ignore></div>
+    <div id="j-g" data-layout-ignore></div>
+    <div id="j-t1" class="a"><span id="j-1">E</span> <span id="j-2">muito</span> <span id="j-3" style="color:#b9b9b9">mais!</span></div>
+    <div id="j-t2" class="a"><span id="j-d">Divirta</span><span id="j-e" style="vertical-align:9px">-se</span></div>
+  </div>
+  <script>
+    (function () {
+      const S = 802, tl = gsap.timeline({ paused: true }), center = { xPercent: -50, yPercent: -50 };
+      FX.keys(tl, "#j-wh", S, [[802, { opacity: 1 }], [803, { opacity: 0.85 }], [804, { opacity: 0.6 }], [805, { opacity: 0.4 }], [807, { opacity: 0.18 }], [812, { opacity: 0.04 }], [814, { opacity: 0 }]]);
+      // Mosaico: perto ate o frame 823, corte para aberto no 824
+      FX.keys(tl, "#j-m", S, [[802, { transformOrigin: "47% 52%", scale: 1.76, x: 90, y: 60, filter: "blur(12px)", opacity: 1 }], [806, { scale: 1.72, x: 40, y: 20, filter: "blur(7px)" }, "power2.out"], [809, { scale: 1.68, x: 0, y: 0, filter: "blur(3px)" }, "power2.out"], [814, { scale: 1.64, x: -20, y: -20, filter: "blur(1px)" }], [823, { scale: 1.6, x: -40, y: -30, filter: "blur(0px)" }], [823.9, { scale: 1.6 }], [824, { scale: 1.02, x: 0, y: 0 }], [842, { scale: 1, y: -14 }], [844, { scale: 0.96, filter: "blur(2px)", opacity: 0.8 }], [845, { scale: 0.92, filter: "blur(6px)", opacity: 0.6 }], [846, { scale: 0.86, filter: "blur(12px)", opacity: 0.25 }], [847, { opacity: 0 }]]);
+      // Odometro
+      FX.keys(tl, "#j-n", S, [[808, { ...center, x: 540, y: 1270, scale: 1.4, opacity: 0, filter: "blur(6px)" }], [811, { y: 1240, opacity: 0.8, filter: "blur(4px)" }], [814, { y: 1130, opacity: 1, filter: "blur(1px)" }], [819, { y: 1100, filter: "blur(0px)" }], [823, { y: 1100, scale: 1.42 }], [824, { x: 540, y: 960, scale: 1 }], [842, { y: 950 }], [844, { opacity: 0.8 }], [846, { opacity: 0.15, filter: "blur(6px)" }], [847, { opacity: 0 }]]);
+      FX.keys(tl, "#j-b", S, [[810, { y: 0 }], [815, { y: -104 }, "power1.inOut"], [819, { y: -208 }, "power1.inOut"]]);
+      FX.keys(tl, "#j-c", S, [[810, { y: 0 }], [814, { y: -104 }, "power1.inOut"], [818, { y: -208 }, "power1.inOut"], [822, { y: -312 }, "power1.inOut"]]);
+      FX.keys(tl, "#j-n", S, [[824, { color: "#4ff049" }], [829, { color: "#ffffff" }]]);
+      FX.keys(tl, "#j-p", S, [[824, { ...center, x: 540, y: 1032, opacity: 0, color: "#6bf06a" }], [827, { opacity: 1 }], [833, { color: "#d6f4d6" }], [842, { y: 1022 }], [846, { opacity: 0 }]]);
+      
+      // E muito mais!
+      FX.keys(tl, "#j-g", S, [[847, { opacity: 0 }], [850, { opacity: 0.1 }], [860, { opacity: 0.45 }], [872, { opacity: 1 }], [875, { opacity: 0.7 }], [878, { opacity: 0 }]]);
+      gsap.set("#j-t1,#j-t2", { opacity: 0 });
+      FX.keys(tl, "#j-t1", S, [[849, { ...center, x: 540, y: 962, opacity: 1 }], [872, { y: 950, scale: 1 }], [874, { y: 925, filter: "blur(2px)", opacity: 0.8 }], [876, { y: 890, filter: "blur(5px)", opacity: 0.6 }], [878, { y: 860, filter: "blur(7px)", opacity: 0.15 }], [879, { opacity: 0 }]]);
+      [[1, 850], [2, 845], [3, 863]].forEach(([i, f]) => FX.word(tl, "#j-" + i, S, f, 8));
+      FX.keys(tl, "#j-1", S, [[850, { color: "#888888", filter: "blur(9px)", opacity: 0.1 }], [855, { color: "#ffffff", filter: "blur(0px)", opacity: 1 }]]);
+      FX.keys(tl, "#j-2", S, [[845, { opacity: 0, filter: "blur(8px)" }], [852, { opacity: 0.8, filter: "blur(0px)", color: "#9a9a9a" }], [858, { color: "#ffffff" }]]);
+      // Divirta-se
+      FX.keys(tl, "#j-t2", S, [[879.5, { ...center, x: 500, y: 1060, opacity: 0, filter: "blur(5px)", rotation: 0 }], [880, { opacity: 0.05 }], [884, { x: 520, y: 1000, opacity: 0.6, filter: "blur(1px)" }, "power1.out"], [887, { x: 540, y: 985, opacity: 1, filter: "blur(0px)", rotation: 0 }], [889, { rotation: -6, y: 985 }], [893, { rotation: -14, y: 980 }], [895, { rotation: -32, scale: 0.75, x: 540, y: 960, filter: "blur(2px)" }, "power1.in"], [897, { rotation: -80, scale: 0.55, x: 540, y: 930, opacity: 0.85, filter: "blur(3px)" }], [899, { rotation: -130, scale: 0.2, x: 700, y: 760, opacity: 0.7 }]]);
+      FX.keys(tl, "#j-e", S, [[883, { opacity: 0, x: 22, y: 34 }], [887, { opacity: 0.8, x: 8, y: 12 }], [889, { opacity: 1, x: 0, y: 0 }]]);
+      window.__timelines["j"] = tl;
+    })();
+  </script>
+</template>

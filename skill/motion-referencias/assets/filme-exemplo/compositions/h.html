@@ -1,0 +1,127 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Outfit", sans-serif; color: #fff; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    #root .full { position: absolute; inset: 0; }
+    #root .t { white-space: nowrap; line-height: 1.05; letter-spacing: -0.015em; }
+    #root .t span { display: inline-block; }
+    #h-noite { background: radial-gradient(ellipse at 50% 50%, #1a1420, #0b0a10 72%); }
+    #h-grade { background-image: linear-gradient(#ffffff08 2px, transparent 2px), linear-gradient(90deg, #ffffff08 2px, transparent 2px); background-size: 96px 96px; }
+    #h-ponto { width: 40px; height: 40px; border-radius: 50%; background: #ff5a1f; box-shadow: 0 0 34px 10px #ff5a1f66; }
+    #root .q { position: absolute; inset: 0; overflow: hidden; }
+    #root .dr { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    #root .bt { display: flex; flex-direction: column; align-items: center; line-height: 0.92; letter-spacing: -0.045em; font-weight: 800; white-space: nowrap; }
+    #root .bt span { display: inline-block; }
+    #root .pq { font-size: 120px; }
+    #root .gd { font-size: 300px; font-weight: 900; }
+    #root .claro { background: #f2efe8; color: #0b0a10; }
+    #root .escuro { background: #0b0a10; color: #f2efe8; }
+    #root .lar { background: #ff5a1f; color: #fff; }
+    #root .eco { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 300px; font-weight: 900; letter-spacing: -0.045em; color: transparent; -webkit-text-stroke: 3px currentColor; white-space: nowrap; line-height: 0.92; }
+    #h-raios { position: absolute; left: -1500px; top: -1500px; width: 3000px; height: 3000px; border-radius: 50%; background: repeating-conic-gradient(from 0deg, #0b0a1010 0deg 8deg, #0b0a1000 8deg 16deg); }
+    #h-fantasma { font-size: 1100px; font-weight: 900; color: #ffffff14; line-height: 1; }
+    #h-voce { font-size: 420px; font-weight: 900; color: #ff5a1f; letter-spacing: -0.04em; text-shadow: 0 0 80px #ff5a1f55; }
+    #h-flash { background: #fff; }
+    #h-sub { position: absolute; left: 0; top: 0; overflow: visible; }
+    #h-tinta { width: 400px; height: 400px; }
+    #h-laranja { background: radial-gradient(ellipse at 45% 50%, #ff7a3d, #ff5a1f 45%, #e2440f); }
+    #h-marca { width: 230px; height: 230px; }
+    #root .anel { width: 300px; height: 300px; border-radius: 50%; border: 8px solid #fff; }
+    #h-shinobi { font-size: 96px; font-weight: 800; letter-spacing: 0.14em; color: #fff; }
+    #h-synex { font-size: 168px; font-weight: 900; letter-spacing: -0.02em; color: #0b0a10; }
+    #h-brilho { width: 160px; height: 160px; overflow: visible; }
+  </style>
+  <div id="root" data-composition-id="h" data-width="1920" data-height="1080">
+    <div id="h-noite" class="full" data-layout-ignore></div>
+    <div id="h-grade" class="full" data-layout-ignore></div>
+    <div id="h-qs" class="full" data-layout-allow-overflow data-layout-allow-overlap>
+      <div id="h-q0" class="q claro"><div class="dr"><div class="bt"><div class="gd" style="font-size:240px">mas</div></div></div></div>
+      <div id="h-q1" class="q escuro"><div class="dr"><div class="bt"><div class="pq">a</div><div class="gd"><span id="h-px">próxima</span></div></div></div></div>
+      <div id="h-q2" class="q lar"><div class="dr">
+        <div id="h-e1" class="eco" style="color:#fff" data-layout-ignore>inovação</div><div id="h-e2" class="eco" style="color:#0b0a10" data-layout-ignore>inovação</div>
+        <div class="bt"><div class="gd">inovação</div></div></div></div>
+      <div id="h-q3" class="q claro"><div class="dr"><div class="bt"><div class="gd" style="font-size:260px">será<span id="h-d1">.</span><span id="h-d2">.</span><span id="h-d3">.</span></div></div></div></div>
+      <div id="h-q4" class="q escuro"><div class="dr">
+        <div id="h-fantasma" class="a t">V</div>
+        <div id="h-e3" class="eco" style="color:#ff5a1f;font-size:420px" data-layout-ignore>VOCÊ</div><div id="h-e4" class="eco" style="color:#f2efe8;font-size:420px" data-layout-ignore>VOCÊ</div>
+        <div class="bt"><div id="h-voce">VOCÊ</div></div></div></div>
+      <div id="h-q5" class="q claro"><div class="dr"><div class="bt"><div class="pq"><span id="h-w139">que</span> <span id="h-w140">vai</span></div><div class="gd"><span id="h-w141">fazer</span></div></div></div></div>
+      <div id="h-q6" class="q lar"><div class="dr"><div class="bt"><div class="pq"><span id="h-w142">nessa</span></div><div class="gd"><span id="h-w143">história</span></div></div>
+        <svg id="h-sub" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" stroke="#0b0a10" stroke-width="22" stroke-linecap="round" data-layout-ignore><path id="h-subp" pathLength="1" d="M520 800C800 770 1100 815 1400 785" /></svg></div></div>
+      <div id="h-q7" class="q claro"><div class="dr" style="display:block">
+        <div id="h-raios" data-layout-ignore></div>
+        <img id="h-chibi" class="a" src="assets/chibi/02f.png" width="680" height="680" alt="" />
+        <div id="h-l4" class="a" style="font-size:150px;font-weight:900;letter-spacing:-0.045em;line-height:0.95;white-space:nowrap"><div><span id="h-w144">seja</span></div><div><span id="h-w145">bem-vindo</span></div><div style="font-size:110px;color:#ff5a1f"><span id="h-w146">ao...</span></div></div>
+      </div></div>
+    </div>
+    <div id="h-ponto" class="a" data-layout-ignore></div>
+    <svg id="h-tinta" class="a" viewBox="-200 -200 400 400" data-layout-ignore><path fill="#ff5a1f" d="M0-150C40-160 70-120 110-128S170-70 150-20 196 60 140 100 80 190 20 160-60 196-100 140-190 90-150 30-196-60-130-100-60-170 0-150Z" /></svg>
+    <div id="h-laranja" class="full" data-layout-ignore></div>
+    <div id="h-a1" class="a anel" data-layout-ignore></div>
+    <div id="h-a2" class="a anel" data-layout-ignore></div>
+    <div id="h-a3" class="a anel" data-layout-ignore></div>
+    <canvas id="h-confete" class="a" width="1920" height="1080" data-layout-ignore></canvas>
+    <svg id="h-marca" class="a" viewBox="-100 -100 200 200"><path id="h-mp" fill="#fff" fill-rule="evenodd" d="M0-96C14-40 40-14 96 0 40 14 14 40 0 96-14 40-40 14-96 0-40-14-14-40 0-96ZM0-18A18 18 0 1 0 0 18 18 18 0 1 0 0-18Z" /></svg>
+    <svg id="h-brilho" class="a" viewBox="-100 -100 200 200"><path fill="#fff" d="M0-100 6-6 100 0 6 6 0 100-6 6-100 0-6-6Z" /></svg>
+    <div id="h-shinobi" class="a t">SHINOBI</div>
+    <div id="h-synex" class="a t">SYNEX</div>
+    <div id="h-flash" class="full" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = 49.7, tl = gsap.timeline({ paused: true }), c = { xPercent: -50, yPercent: -50 }, f = 1 / 30;
+      L.mostra(tl, "#h-noite", S, 49.75); L.mostra(tl, "#h-grade", S, 49.75);
+      // O ponto laranja abre o primeiro quadro como uma íris
+      L.k(tl, "#h-ponto", S, [[49.75, { ...c, x: 960, y: 540, scale: 1, opacity: 1 }], [49.95, { scale: 1.6 }, "power2.in"], [49.97, { opacity: 0 }]]);
+      L.iris(tl, "#h-q0", S, 49.94, 0.12, 50, 50);
+      // Palavra por quadro, fundo alternando: mas / a próxima / inovação / será... / VOCÊ / que vai fazer / nessa história
+      L.batida(tl, S, [
+        { sel: "#h-q0", t: 49.94, deriva: { scale: 1.06 } },
+        { sel: "#h-q1", t: W[134] - 0.02, deriva: { scale: 1.08, rotation: -1.5 } },
+        { sel: "#h-q2", t: W[136] - 0.02, deriva: { scale: 1.08 }, de: 1.3 },
+        { sel: "#h-q3", t: W[137] - 0.02, deriva: { scale: 1.05 } },
+        { sel: "#h-q4", t: W[138] - 0.02, deriva: { scale: 1.12 }, de: 2.2 },
+        { sel: "#h-q5", t: W[139] - 0.02, deriva: { scale: 1.07, rotation: 1 } },
+        { sel: "#h-q6", t: W[142] - 0.02, deriva: { scale: 1.07 } },
+        { sel: "#h-q7", t: W[144] - 0.04, deriva: { scale: 1.04 } },
+      ], 55.2);
+      L.pop(tl, "#h-px", S, W[135], 1.4);
+      L.ecos(tl, ["#h-e1", "#h-e2"], S, W[136] + 0.04, 0.45);
+      [["#h-d1", 51.3], ["#h-d2", 51.34], ["#h-d3", 51.38]].forEach(([s, t]) => L.carimbo(tl, s, S, t));
+      // VOCÊ: clarão, letra fantasma, ecos e tremida
+      L.k(tl, "#h-flash", S, [[W[138] - 0.01, { opacity: 0 }], [W[138], { opacity: 0.9 }], [W[138] + 2 * f, { opacity: 0 }]]);
+      L.k(tl, "#h-fantasma", S, [[W[138], { ...c, x: 960, y: 560, scale: 1.5, opacity: 0 }], [W[138] + 0.06, { opacity: 1 }], [W[139], { scale: 1.1, opacity: 0.7 }, "power2.out"]]);
+      L.ecos(tl, ["#h-e3", "#h-e4"], S, W[138] + 0.05, 0.4);
+      L.treme(tl, "#h-qs", S, W[138] + 0.02, 18, 6);
+      L.pop(tl, "#h-w139", S, W[139]); L.pop(tl, "#h-w140", S, W[140]); L.pop(tl, "#h-w141", S, W[141], 1.4);
+      L.pop(tl, "#h-w142", S, W[142]); L.pop(tl, "#h-w143", S, W[143], 1.4);
+      L.k(tl, "#h-subp", S, [[52.8, { strokeDasharray: 1, strokeDashoffset: 1 }], [53.0, { strokeDashoffset: 0 }, "power2.out"]]);
+      // A apresentadora dá as boas-vindas, com raios girando atrás
+      L.vivo(tl, "#h-raios", S, 53.4, 55.2, { x: 560, y: 600, rotation: 0 }, { x: 560, y: 600, rotation: 30 });
+      L.k(tl, "#h-chibi", S, [[W[144] - 0.04, { ...c, x: 560, y: 760, scale: 1.25, rotation: -6, opacity: 0, filter: "blur(14px)" }], [W[144] - 0.02, { opacity: 1 }], [W[144] + 0.34, { y: 620, scale: 1, rotation: 3, filter: "blur(0px)" }, "expo.out"], [54.4, { y: 600, rotation: -2 }]]);
+      gsap.set("#h-l4", { x: 1000, y: 560, yPercent: -50 });
+      L.pop(tl, "#h-w144", S, W[144], 1.35); L.pop(tl, "#h-w145", S, W[145], 1.35); L.pop(tl, "#h-w146", S, W[146], 1.35);
+      // Logo de novo, agora com giro duplo, três anéis e brilho
+      L.k(tl, "#h-tinta", S, [[W[147] - 0.01, { ...c, x: 960, y: 540, scale: 0.4, rotation: 0, opacity: 0 }], [W[147], { opacity: 1 }], [W[147] + 0.32, { scale: 7, rotation: -40 }, "expo.out"]]);
+      L.mostra(tl, "#h-laranja", S, W[147] + 0.2);
+      tl.set("#h-tinta", { opacity: 0 }, W[147] + 0.36 - S);
+      L.iris(tl, "#h-laranja", S, 56.95, 0.42, 33.85, 50, false);
+      L.k(tl, "#h-flash", S, [[W[147] - 0.01, { opacity: 0 }], [W[147], { opacity: 0.8 }], [W[147] + 0.1, { opacity: 0 }]]);
+      L.k(tl, "#h-marca", S, [[W[147] + 0.02, { ...c, x: 650, y: 540, scale: 2.6, rotation: -720, opacity: 0, filter: "blur(18px)" }], [W[147] + 0.04, { opacity: 1 }], [W[147] + 0.6, { scale: 1, rotation: 0, filter: "blur(0px)" }, "expo.out"], [56.95, { rotation: 30 }], [57.4, { x: 960, y: 540, scale: 1.1, rotation: 60 }, "power2.inOut"], [57.9, { rotation: 75, opacity: 1, filter: "blur(0px)" }], [58.4, { scale: 0.85, opacity: 0, filter: "blur(10px)" }, "power2.in"]]);
+      tl.to("#h-mp", { fill: "#ff5a1f", duration: 0.3, immediateRender: false }, 57.0 - S);
+      [["#h-a1", W[147] + 0.06], ["#h-a2", W[147] + 0.16], ["#h-a3", W[148] + 0.02]].forEach(([s, t]) => { gsap.set(s, { ...c, x: 650, y: 540 }); L.anel(tl, s, S, t, 0.75, 2.4); });
+      gsap.set("#h-shinobi", { x: 800, y: 440, yPercent: -50 }); gsap.set("#h-synex", { x: 790, y: 600, yPercent: -50 });
+      L.letras(document.getElementById("h-shinobi")).forEach((s, i) => {
+        gsap.set(s, { opacity: 0 });
+        tl.fromTo(s, { opacity: 0, y: 46, rotation: 14 }, { opacity: 1, y: 0, rotation: 0, duration: 0.3, ease: "back.out(1.6)", immediateRender: false }, W[147] + 0.14 + i * 0.04 - S);
+      });
+      L.impacto(tl, "#h-synex", S, W[148], { de: 1.7, d: 0.3, blur: 16 });
+      tl.fromTo(["#h-marca", "#h-shinobi"], { x: "+=0" }, { x: "+=10", duration: f, yoyo: true, repeat: 3, immediateRender: false }, W[148] + 0.03 - S);
+      L.k(tl, "#h-brilho", S, [[55.25, { ...c, x: 735, y: 455, scale: 0, rotation: 0, opacity: 1 }], [55.4, { scale: 1, rotation: 45 }, "back.out(2)"], [55.6, { scale: 0, rotation: 90 }, "power2.in"]]);
+      L.sai(tl, "#h-shinobi", S, 56.9, 0.16); L.sai(tl, "#h-synex", S, 56.95, 0.16);
+      const conf = L.confete(document.getElementById("h-confete"), { t0: W[148] + 0.02, x: 1100, y: 560, cores: ["#ffffff", "#0b0a10", "#ffc2a3"], n: 170, vel: 2400, vida: 1.8 });
+      L.drive(tl, S, W[148], 57.2, (t) => conf(t));
+      window.__timelines["h"] = tl;
+    })();
+  </script>
+</template>

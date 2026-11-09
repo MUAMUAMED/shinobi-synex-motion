@@ -1,0 +1,113 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Outfit", sans-serif; color: #fff; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    #root .full { position: absolute; inset: 0; }
+    #root .t { white-space: nowrap; line-height: 1.05; letter-spacing: -0.015em; }
+    #root .t span { display: inline-block; }
+    #e-mundo { position: absolute; inset: 0; overflow: hidden; }
+    #e-cor { background: #0e0b14; }
+    #e-luz { background: radial-gradient(ellipse at 50% 55%, #ffffff22, #00000000 60%), radial-gradient(ellipse at 50% 120%, #00000055, #00000000 60%); }
+    #root .pilula { width: 600px; height: 130px; background: #fff; color: #0b0a10; display: flex; align-items: center; gap: 26px; padding: 0 40px; font-size: 66px; font-weight: 800; box-shadow: 0 18px 40px #0004; }
+    #root .pilula svg { width: 92px; height: 92px; flex: none; }
+    #root .ic-b { overflow: visible; }
+    #e-p1 { background: #ff5a1f; }
+    #e-mais { width: 130px; height: 130px; border-radius: 50%; border: 7px solid #fff; display: flex; align-items: center; justify-content: center; font-size: 96px; font-weight: 700; line-height: 1; padding-bottom: 10px; }
+    #e-rosa { background: radial-gradient(ellipse at 40% 55%, #ff7aa8, #ff4f8b 50%, #d62f6b); }
+    #e-sub { position: absolute; left: 0; top: 0; overflow: visible; }
+    #root .mq { position: absolute; left: -300px; white-space: nowrap; font-size: 300px; font-weight: 900; letter-spacing: -0.045em; line-height: 1; color: transparent; -webkit-text-stroke: 3px #ffffff40; }
+    #e-raios { position: absolute; left: -1500px; top: -1500px; width: 3000px; height: 3000px; border-radius: 50%; background: repeating-conic-gradient(from 0deg, #ffffff26 0deg 8deg, #ffffff00 8deg 16deg); }
+  </style>
+  <div id="root" data-composition-id="e" data-width="1920" data-height="1080">
+    <div id="e-mundo" data-layout-allow-overflow data-layout-allow-overlap>
+      <div id="e-cor" class="full" data-layout-ignore></div>
+      <div id="e-mq1" class="full" data-layout-ignore><div id="e-m1a" class="mq" style="top:20px" data-layout-ignore>amizade amizade amizade amizade</div><div id="e-m1b" class="mq" style="top:740px" data-layout-ignore>amizade amizade amizade amizade</div></div>
+      <div id="e-mq2" class="full" data-layout-ignore><div id="e-m2a" class="mq" style="top:20px" data-layout-ignore>jutsus jutsus jutsus jutsus jutsus</div><div id="e-m2b" class="mq" style="top:740px" data-layout-ignore>jutsus jutsus jutsus jutsus jutsus</div></div>
+      <div id="e-mq3" class="full" data-layout-ignore><div id="e-m3a" class="mq" style="top:20px" data-layout-ignore>poderes poderes poderes poderes</div><div id="e-m3b" class="mq" style="top:740px" data-layout-ignore>poderes poderes poderes poderes</div></div>
+      <div id="e-luz" class="full" data-layout-ignore></div>
+      <div id="e-h0" class="a t" style="font-size:96px;font-weight:800;letter-spacing:-0.035em"><span id="e-w58">Você</span> <span id="e-w59">pode</span> <span id="e-w60">fazer</span></div>
+      <div id="e-h1" class="a t" style="font-size:96px;font-weight:800;letter-spacing:-0.035em">aprender</div>
+      <div id="e-h2" class="a t" style="font-size:96px;font-weight:800;letter-spacing:-0.035em">receber</div>
+      <div id="e-h3" class="a t" style="font-size:96px;font-weight:800;letter-spacing:-0.035em"><span id="e-w68">e</span> <span id="e-w69">até</span> <span id="e-w70">mesmo...</span></div>
+      <div id="e-p1" class="a pilula"><svg id="e-i1" data-ic="aperto" style="color:#13a862"></svg><span id="e-x1">Amizade</span></div>
+      <div id="e-p2" class="a pilula"><svg data-ic="pergaminho" style="color:#6a3df0"></svg><span>Jutsus</span></div>
+      <div id="e-p3" class="a pilula"><svg data-ic="terceiro_olho" style="color:#ff5a1f"></svg><span>Poderes</span></div>
+      <div id="e-mais" class="a">+</div>
+      <div id="e-rosa" class="full" data-layout-ignore></div>
+      <div id="e-raios" data-layout-ignore></div>
+      <canvas id="e-confete" class="a" width="1920" height="1080" data-layout-ignore></canvas>
+      <img id="e-chibi" class="a" src="assets/chibi/09f.png" width="640" height="640" alt="" />
+      <div id="e-t1" class="a t" style="font-size:150px;font-weight:800"><span id="e-w71">se</span> <span id="e-w72">casar</span></div>
+      <div id="e-t2" class="a t" style="font-size:78px;font-weight:600"><span id="e-w73">com</span> <span id="e-w74">eles!</span></div>
+      <svg id="e-sub" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" stroke="#fff" stroke-width="12" stroke-linecap="round" data-layout-ignore><path id="e-subp" pathLength="1" d="M1000 610C1150 590 1300 625 1460 598S1560 586 1600 600" /></svg>
+      <svg id="e-anel" class="a ic-b" data-ic="anel" style="width:220px;height:220px;color:#fff;filter:drop-shadow(0 10px 20px #0004)"></svg>
+      <svg id="e-co1" class="a ic-b" data-ic="coracao" style="width:130px;height:130px;color:#fff"></svg>
+      <svg id="e-co2" class="a ic-b" data-ic="folha" style="width:90px;height:90px;color:#ffd1e1"></svg>
+      <svg id="e-co3" class="a ic-b" data-ic="lanterna" style="width:80px;height:80px;color:#fff"></svg>
+      <div id="e-cur" class="a"><svg width="74" height="108" viewBox="0 0 30 44" style="overflow:visible;display:block"><path d="M1 1V35L10 27 16 41 23 38 17 24H29Z" fill="#fff" stroke="#111" stroke-width="2" stroke-linejoin="round" /></svg></div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const S = 22.35, tl = gsap.timeline({ paused: true }), c = { xPercent: -50, yPercent: -50 };
+      L.icones(document.getElementById("e-mundo"));
+      L.mostra(tl, "#e-mundo", S, 22.45);
+      // O ponto vira a primeira pílula
+      const fechado = "inset(45px 280px 45px 280px round 20px)", aberto = "inset(0px 0px 0px 0px round 65px)";
+      gsap.set("#e-p1", { ...c, x: 960, y: 540, clipPath: fechado });
+      gsap.set(["#e-i1", "#e-x1"], { opacity: 0 });
+      tl.to("#e-p1", { clipPath: aberto, backgroundColor: "#ffffff", duration: 0.34, ease: "expo.out", immediateRender: false }, W[61] - 0.14 - S);
+      tl.fromTo(["#e-i1", "#e-x1"], { opacity: 0, filter: "blur(6px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.14, stagger: 0.06, immediateRender: false }, W[61] + 0.02 - S);
+      // A cor do mundo muda a cada pílula
+      const cor = [[W[61] - 0.12, "#13a862"], [W[64] - 0.02, "#6a3df0"], [W[66] - 0.02, "#ff5a1f"], [W[68] - 0.05, "#1a1020"]];
+      cor.forEach(([t, k]) => tl.to("#e-cor", { backgroundColor: k, duration: 0.4, ease: "power2.inOut", immediateRender: false }, t - S));
+      // Palavras gigantes em contorno correm atrás de cada pílula, na cor dela
+      [[1, W[61] - 0.12, W[64] - 0.02], [2, W[64] - 0.02, W[66] - 0.02], [3, W[66] - 0.02, W[68] - 0.05]].forEach(([n, a, b]) => {
+        L.mostra(tl, "#e-mq" + n, S, a, b);
+        L.vivo(tl, "#e-m" + n + "a", S, a, b, { x: 0 }, { x: -520 });
+        L.vivo(tl, "#e-m" + n + "b", S, a, b, { x: -520 }, { x: 0 });
+      });
+      // A câmera nunca para
+      L.vivo(tl, "#e-mundo", S, 22.45, 28.44, { scale: 1 }, { scale: 1.05 });
+      // Raios girando no rosa do casamento
+      L.mostra(tl, "#e-raios", S, 27.3);
+      L.vivo(tl, "#e-raios", S, 27.3, 28.7, { x: 960, y: 840, rotation: 0, scale: 0.4 }, { x: 960, y: 600, rotation: 35, scale: 1 });
+      // Cabeçalho troca de verbo
+      [["#e-h0", W[58], W[64] - 0.1], ["#e-h1", W[64], W[66] - 0.1], ["#e-h2", W[66], W[68] - 0.1], ["#e-h3", W[68], 27.25]].forEach(([s, a, b], i) => {
+        gsap.set(s, { ...c, x: 960, y: 200 });
+        if (i === 0) { for (let k = 58; k <= 60; k++) L.palavra(tl, "#e-w" + k, S, W[k]); }
+        else if (i === 3) { for (let k = 68; k <= 70; k++) L.palavra(tl, "#e-w" + k, S, W[k]); }
+        else L.palavra(tl, s, S, a);
+        L.sai(tl, s, S, b, 0.12);
+      });
+      // Botão de mais e cursor que cria as próximas
+      gsap.set("#e-mais", { ...c, x: 960, y: 850 });
+      L.carimbo(tl, "#e-mais", S, 23.9);
+      const cliques = [W[64], W[66], 27.2];
+      cliques.forEach((t) => tl.fromTo("#e-mais", { scale: 1 }, { scale: 0.86, duration: 0.05, yoyo: true, repeat: 1, immediateRender: false }, t + 0.01 - S));
+      L.k(tl, "#e-cur", S, [[23.95, { x: 1520, y: 1180, scale: 1 }], [24.4, { x: 990, y: 880 }, "power3.out"], [cliques[0] - 0.01, { scale: 1 }], [cliques[0] + 0.04, { scale: 0.8 }], [cliques[0] + 0.12, { scale: 1 }], [24.95, { x: 1170, y: 960 }, "power2.inOut"], [25.45, { x: 990, y: 880 }, "power2.inOut"], [cliques[1] - 0.01, { scale: 1 }], [cliques[1] + 0.04, { scale: 0.8 }], [cliques[1] + 0.12, { scale: 1 }], [26.1, { x: 1170, y: 960 }, "power2.inOut"], [26.9, { x: 990, y: 880 }, "power2.inOut"], [27.19, { scale: 1 }], [27.24, { scale: 0.8 }], [27.32, { scale: 1 }], [27.58, { x: 1720, y: 1220 }, "power3.in"]]);
+      // Pilha de pílulas sobe
+      L.k(tl, "#e-p1", S, [[W[64] + 0.02, { y: 540 }], [W[64] + 0.38, { y: 390 }, "power3.out"], [W[66] + 0.02, { y: 390 }], [W[66] + 0.38, { y: 240 }, "power3.out"], [27.25, { y: 240, filter: "blur(0px)" }], [27.52, { y: -700, filter: "blur(14px)" }, "power3.in"]]);
+      L.k(tl, "#e-p2", S, [[W[64] + 0.02, { ...c, x: 960, y: 850, scale: 0.2, opacity: 0, filter: "blur(10px)" }], [W[64] + 0.05, { opacity: 1 }], [W[64] + 0.42, { y: 540, scale: 1, filter: "blur(0px)" }, "expo.out"], [W[66] + 0.02, { y: 540 }], [W[66] + 0.38, { y: 390 }, "power3.out"], [27.28, { y: 390 }], [27.55, { y: -560, filter: "blur(14px)" }, "power3.in"]]);
+      L.k(tl, "#e-p3", S, [[W[66] + 0.02, { ...c, x: 960, y: 850, scale: 0.2, opacity: 0, filter: "blur(10px)" }], [W[66] + 0.05, { opacity: 1 }], [W[66] + 0.42, { y: 540, scale: 1, filter: "blur(0px)" }, "expo.out"], [27.31, { y: 540 }], [27.58, { y: -420, filter: "blur(14px)" }, "power3.in"]]);
+      [["#e-p2", 0.66], ["#e-p3", 0.66]].forEach(([s]) => gsap.set(s, { clipPath: aberto }));
+      gsap.set("#e-p1", { borderRadius: 0 });
+      // O mais vira aliança; o mundo fica rosa a partir dela
+      tl.to("#e-mais", { scale: 0, opacity: 0, duration: 0.1, ease: "power3.in", immediateRender: false }, 27.22 - S);
+      L.k(tl, "#e-anel", S, [[27.24, { ...c, x: 960, y: 850, scale: 0.3, rotation: -30, opacity: 0 }], [27.26, { opacity: 1 }], [27.44, { scale: 1.3, rotation: 6 }, "back.out(1.8)"], [27.5, { scale: 1.3 }], [27.92, { x: 1500, y: 290, scale: 0.85, rotation: 12 }, "power3.inOut"], [28.45, { rotation: 4 }]]);
+      L.mostra(tl, "#e-rosa", S, 27.3); L.iris(tl, "#e-rosa", S, 27.3, 0.32, 50, 78.7);
+      const conf = L.confete(document.getElementById("e-confete"), { t0: 27.34, x: 960, y: 840, ang: -Math.PI / 2, abre: 2.4, vel: 2200, cores: ["#ffffff", "#ffd1e1", "#ff2b5e"], n: 150, vida: 1.3 });
+      L.drive(tl, S, 27.3, 28.7, (t) => conf(t));
+      L.k(tl, "#e-chibi", S, [[W[72] - 0.02, { ...c, x: 560, y: 760, scale: 1.25, opacity: 0, filter: "blur(14px)" }], [W[72], { opacity: 1 }], [W[72] + 0.38, { y: 650, scale: 1, filter: "blur(0px)" }, "expo.out"]]);
+      gsap.set("#e-t1", { x: 1000, y: 520, yPercent: -50 }); gsap.set("#e-t2", { x: 1010, y: 690, yPercent: -50 });
+      L.palavra(tl, "#e-w71", S, W[71]); L.impacto(tl, "#e-w72", S, W[72], { de: 1.6, d: 0.3, blur: 12 });
+      L.palavra(tl, "#e-w73", S, W[73]); L.palavra(tl, "#e-w74", S, W[74]);
+      L.k(tl, "#e-subp", S, [[27.9, { strokeDasharray: 1, strokeDashoffset: 1 }], [28.12, { strokeDashoffset: 0 }, "power2.out"]]);
+      [["#e-co1", 1330, 330, 27.6, -14], ["#e-co2", 1700, 170, 27.7, 12], ["#e-co3", 1680, 430, 27.8, 20]].forEach(([s, x, y, t, r]) => { gsap.set(s, { ...c, x, y }); L.carimbo(tl, s, S, t, r); });
+      // Página vira para o palco de papel
+      gsap.set("#e-mundo", { transformPerspective: 1600, transformOrigin: "50% 50%" });
+      tl.to("#e-mundo", { rotationY: 90, scale: 0.94, duration: 0.17, ease: "power2.in", immediateRender: false }, 28.45 - S);
+      window.__timelines["e"] = tl;
+    })();
+  </script>
+</template>

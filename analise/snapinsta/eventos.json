@@ -1,0 +1,268 @@
+[
+{
+"tipo": "corte",
+"de": 22,
+"ate": 22,
+"forca": 230.5,
+"t": 0.73
+},
+{
+"tipo": "corte",
+"de": 42,
+"ate": 42,
+"forca": 226.4,
+"t": 1.4
+},
+{
+"tipo": "corte",
+"de": 60,
+"ate": 60,
+"forca": 221.2,
+"t": 2.0
+},
+{
+"tipo": "corte",
+"de": 76,
+"ate": 76,
+"forca": 221.5,
+"t": 2.53
+},
+{
+"tipo": "flash",
+"de": 78,
+"ate": 90,
+"forca": 208.5,
+"t": 2.6
+},
+{
+"tipo": "corte",
+"de": 91,
+"ate": 91,
+"forca": 228.7,
+"t": 3.03
+},
+{
+"tipo": "preto",
+"de": 91,
+"ate": 104,
+"forca": 14,
+"t": 3.03
+},
+{
+"tipo": "corte",
+"de": 105,
+"ate": 105,
+"forca": 236.7,
+"t": 3.5
+},
+{
+"tipo": "flash",
+"de": 106,
+"ate": 118,
+"forca": 234.0,
+"t": 3.53
+},
+{
+"tipo": "corte",
+"de": 119,
+"ate": 119,
+"forca": 237.8,
+"t": 3.97
+},
+{
+"tipo": "preto",
+"de": 119,
+"ate": 130,
+"forca": 12,
+"t": 3.97
+},
+{
+"tipo": "corte",
+"de": 131,
+"ate": 131,
+"forca": 236.0,
+"t": 4.37
+},
+{
+"tipo": "flash",
+"de": 131,
+"ate": 141,
+"forca": 234.8,
+"t": 4.37
+},
+{
+"tipo": "corte",
+"de": 142,
+"ate": 142,
+"forca": 236.5,
+"t": 4.73
+},
+{
+"tipo": "preto",
+"de": 143,
+"ate": 154,
+"forca": 12,
+"t": 4.77
+},
+{
+"tipo": "corte",
+"de": 155,
+"ate": 155,
+"forca": 236.2,
+"t": 5.17
+},
+{
+"tipo": "flash",
+"de": 155,
+"ate": 165,
+"forca": 233.0,
+"t": 5.17
+},
+{
+"tipo": "corte",
+"de": 166,
+"ate": 166,
+"forca": 234.9,
+"t": 5.53
+},
+{
+"tipo": "corte",
+"de": 177,
+"ate": 177,
+"forca": 236.5,
+"t": 5.9
+},
+{
+"tipo": "flash",
+"de": 177,
+"ate": 186,
+"forca": 231.8,
+"t": 5.9
+},
+{
+"tipo": "corte",
+"de": 187,
+"ate": 187,
+"forca": 236.7,
+"t": 6.23
+},
+{
+"tipo": "preto",
+"de": 187,
+"ate": 196,
+"forca": 10,
+"t": 6.23
+},
+{
+"tipo": "corte",
+"de": 197,
+"ate": 197,
+"forca": 235.1,
+"t": 6.57
+},
+{
+"tipo": "flash",
+"de": 197,
+"ate": 206,
+"forca": 232.2,
+"t": 6.57
+},
+{
+"tipo": "corte",
+"de": 207,
+"ate": 207,
+"forca": 234.7,
+"t": 6.9
+},
+{
+"tipo": "corte",
+"de": 216,
+"ate": 216,
+"forca": 235.8,
+"t": 7.2
+},
+{
+"tipo": "flash",
+"de": 216,
+"ate": 224,
+"forca": 232.1,
+"t": 7.2
+},
+{
+"tipo": "corte",
+"de": 225,
+"ate": 225,
+"forca": 235.5,
+"t": 7.5
+},
+{
+"tipo": "corte",
+"de": 234,
+"ate": 234,
+"forca": 236.8,
+"t": 7.8
+},
+{
+"tipo": "flash",
+"de": 234,
+"ate": 240,
+"forca": 235.6,
+"t": 7.8
+},
+{
+"tipo": "corte",
+"de": 241,
+"ate": 241,
+"forca": 238.7,
+"t": 8.03
+},
+{
+"tipo": "preto",
+"de": 241,
+"ate": 249,
+"forca": 9,
+"t": 8.03
+},
+{
+"tipo": "corte",
+"de": 250,
+"ate": 250,
+"forca": 238.1,
+"t": 8.33
+},
+{
+"tipo": "flash",
+"de": 250,
+"ate": 257,
+"forca": 235.9,
+"t": 8.33
+},
+{
+"tipo": "corte",
+"de": 258,
+"ate": 258,
+"forca": 238.0,
+"t": 8.6
+},
+{
+"tipo": "preto",
+"de": 258,
+"ate": 266,
+"forca": 9,
+"t": 8.6
+},
+{
+"tipo": "corte",
+"de": 267,
+"ate": 267,
+"forca": 240.0,
+"t": 8.9
+},
+{
+"tipo": "flash",
+"de": 269,
+"ate": 281,
+"forca": 234.7,
+"t": 8.97
+}
+]

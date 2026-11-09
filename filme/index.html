@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="pt-BR" data-resolution="landscape">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
+    <script src="assets/palavras.js"></script>
+    <script src="assets/icones.js"></script>
+    <script src="assets/recriados.js"></script>
+    <script src="assets/lib.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #0b0a10; }
+      #root { position: relative; width: 100%; height: 100%; background: #0b0a10; font-family: "Outfit", sans-serif; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="58.5" data-width="1920" data-height="1080">
+      <audio id="narracao" src="assets/som/narracao.mp3" data-start="0" data-duration="55.68" data-volume="1" data-track-index="10"></audio>
+      <audio id="musica" src="assets/som/musica.mp3" data-start="0" data-duration="58.5" data-volume="0.2" data-track-index="11"></audio>
+      <audio id="sfx0" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="0.087" data-duration="1.175" data-volume="0.35" data-track-index="30"></audio>
+      <audio id="sfx1" src="assets/som/mixkit/baixados/sfx_2299.mp3" data-start="0.126" data-duration="1.100" data-volume="0.45" data-track-index="31"></audio>
+      <audio id="sfx2" src="assets/som/mixkit/baixados/sfx_2582.mp3" data-start="0.465" data-duration="1.036" data-volume="0.3" data-track-index="32"></audio>
+      <audio id="sfx3" src="assets/som/mixkit/baixados/sfx_2582.mp3" data-start="0.585" data-duration="1.036" data-volume="0.3" data-track-index="33"></audio>
+      <audio id="sfx4" src="assets/som/mixkit/baixados/sfx_2582.mp3" data-start="0.705" data-duration="1.036" data-volume="0.3" data-track-index="34"></audio>
+      <audio id="sfx5" src="assets/som/mixkit/baixados/sfx_3115.mp3" data-start="0.847" data-duration="0.574" data-volume="0.35" data-track-index="35"></audio>
+      <audio id="sfx6" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="1.247" data-duration="1.333" data-volume="0.4" data-track-index="31"></audio>
+      <audio id="sfx7" src="assets/som/mixkit/baixados/sfx_2301.mp3" data-start="1.628" data-duration="2.000" data-volume="0.35" data-track-index="30"></audio>
+      <audio id="sfx8" src="assets/som/mixkit/baixados/sfx_1464.mp3" data-start="2.162" data-duration="1.100" data-volume="0.3" data-track-index="32"></audio>
+      <audio id="sfx9" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="2.269" data-duration="1.222" data-volume="0.5" data-track-index="33"></audio>
+      <audio id="sfx10" src="assets/som/mixkit/baixados/sfx_166.mp3" data-start="2.817" data-duration="0.781" data-volume="0.35" data-track-index="31"></audio>
+      <audio id="sfx11" src="assets/som/mixkit/baixados/sfx_1031.mp3" data-start="2.973" data-duration="0.834" data-volume="0.2" data-track-index="34"></audio>
+      <audio id="sfx12" src="assets/som/mixkit/baixados/sfx_1464.mp3" data-start="3.482" data-duration="1.100" data-volume="0.3" data-track-index="32"></audio>
+      <audio id="sfx13" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="3.567" data-duration="1.333" data-volume="0.4" data-track-index="33"></audio>
+      <audio id="sfx14" src="assets/som/mixkit/baixados/sfx_3115.mp3" data-start="4.237" data-duration="0.574" data-volume="0.3" data-track-index="30"></audio>
+      <audio id="sfx15" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="4.189" data-duration="1.222" data-volume="0.45" data-track-index="31"></audio>
+      <audio id="sfx16" src="assets/som/mixkit/baixados/sfx_166.mp3" data-start="4.617" data-duration="0.781" data-volume="0.3" data-track-index="32"></audio>
+      <audio id="sfx17" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="5.067" data-duration="1.175" data-volume="0.22" data-track-index="30"></audio>
+      <audio id="sfx18" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="5.127" data-duration="1.175" data-volume="0.18" data-track-index="33"></audio>
+      <audio id="sfx19" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="5.187" data-duration="1.175" data-volume="0.18" data-track-index="34"></audio>
+      <audio id="sfx20" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="5.247" data-duration="1.175" data-volume="0.18" data-track-index="35"></audio>
+      <audio id="sfx21" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="5.307" data-duration="1.175" data-volume="0.18" data-track-index="36"></audio>
+      <audio id="sfx22" src="assets/som/mixkit/baixados/sfx_1490.mp3" data-start="4.721" data-duration="1.757" data-volume="0.4" data-track-index="37"></audio>
+      <audio id="sfx23" src="assets/som/mixkit/baixados/sfx_1464.mp3" data-start="5.642" data-duration="1.100" data-volume="0.3" data-track-index="31"></audio>
+      <audio id="sfx24" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="5.767" data-duration="1.333" data-volume="0.35" data-track-index="32"></audio>
+      <audio id="sfx25" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="5.819" data-duration="1.222" data-volume="0.55" data-track-index="38"></audio>
+      <audio id="sfx26" src="assets/som/mixkit/baixados/sfx_2299.mp3" data-start="6.156" data-duration="1.100" data-volume="0.5" data-track-index="39"></audio>
+      <audio id="sfx27" src="assets/som/mixkit/baixados/sfx_2369.mp3" data-start="6.313" data-duration="1.189" data-volume="0.5" data-track-index="30"></audio>
+      <audio id="sfx28" src="assets/som/mixkit/baixados/sfx_2951.mp3" data-start="6.745" data-duration="1.070" data-volume="0.45" data-track-index="33"></audio>
+      <audio id="sfx29" src="assets/som/mixkit/baixados/sfx_2608.mp3" data-start="6.598" data-duration="1.275" data-volume="0.45" data-track-index="34"></audio>
+      <audio id="sfx30" src="assets/som/mixkit/baixados/sfx_2303.mp3" data-start="7.117" data-duration="2.500" data-volume="0.5" data-track-index="31"></audio>
+      <audio id="sfx31" src="assets/som/mixkit/baixados/sfx_1492.mp3" data-start="6.856" data-duration="1.334" data-volume="0.3" data-track-index="35"></audio>
+      <audio id="sfx32" src="assets/som/mixkit/baixados/sfx_790.mp3" data-start="6.822" data-duration="2.500" data-volume="0.5" data-track-index="36"></audio>
+      <audio id="sfx33" src="assets/som/mixkit/baixados/sfx_2902.mp3" data-start="8.009" data-duration="2.500" data-volume="0.75" data-track-index="30"></audio>
+      <audio id="sfx34" src="assets/som/mixkit/baixados/sfx_2299.mp3" data-start="9.796" data-duration="1.100" data-volume="0.55" data-track-index="31"></audio>
+      <audio id="sfx35" src="assets/som/mixkit/baixados/sfx_2349.mp3" data-start="9.659" data-duration="2.500" data-volume="0.35" data-track-index="32"></audio>
+      <audio id="sfx36" src="assets/som/mixkit/baixados/sfx_3115.mp3" data-start="10.537" data-duration="0.574" data-volume="0.35" data-track-index="30"></audio>
+      <audio id="sfx37" src="assets/som/mixkit/baixados/sfx_1490.mp3" data-start="10.181" data-duration="1.757" data-volume="0.3" data-track-index="33"></audio>
+      <audio id="sfx38" src="assets/som/mixkit/baixados/sfx_166.mp3" data-start="11.237" data-duration="0.781" data-volume="0.3" data-track-index="30"></audio>
+      <audio id="sfx39" src="assets/som/mixkit/baixados/sfx_1492.mp3" data-start="11.116" data-duration="1.334" data-volume="0.45" data-track-index="31"></audio>
+      <audio id="sfx40" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="11.819" data-duration="1.222" data-volume="0.35" data-track-index="34"></audio>
+      <audio id="sfx41" src="assets/som/mixkit/baixados/sfx_1490.mp3" data-start="12.521" data-duration="1.757" data-volume="0.45" data-track-index="30"></audio>
+      <audio id="sfx42" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="12.859" data-duration="1.222" data-volume="0.35" data-track-index="31"></audio>
+      <audio id="sfx43" src="assets/som/mixkit/baixados/sfx_1143.mp3" data-start="14.102" data-duration="2.500" data-volume="0.45" data-track-index="31"></audio>
+      <audio id="sfx44" src="assets/som/mixkit/baixados/sfx_174.mp3" data-start="14.094" data-duration="1.002" data-volume="0.35" data-track-index="32"></audio>
+      <audio id="sfx45" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="15.647" data-duration="1.175" data-volume="0.3" data-track-index="30"></audio>
+      <audio id="sfx46" src="assets/som/mixkit/baixados/sfx_2541.mp3" data-start="16.005" data-duration="0.264" data-volume="0.15" data-track-index="32"></audio>
+      <audio id="sfx47" src="assets/som/mixkit/baixados/sfx_2541.mp3" data-start="16.125" data-duration="0.264" data-volume="0.15" data-track-index="33"></audio>
+      <audio id="sfx48" src="assets/som/mixkit/baixados/sfx_2541.mp3" data-start="16.245" data-duration="0.264" data-volume="0.15" data-track-index="34"></audio>
+      <audio id="sfx49" src="assets/som/mixkit/baixados/sfx_2541.mp3" data-start="16.365" data-duration="0.264" data-volume="0.15" data-track-index="32"></audio>
+      <audio id="sfx50" src="assets/som/mixkit/baixados/sfx_2541.mp3" data-start="16.485" data-duration="0.264" data-volume="0.15" data-track-index="33"></audio>
+      <audio id="sfx51" src="assets/som/mixkit/baixados/sfx_2541.mp3" data-start="16.605" data-duration="0.264" data-volume="0.15" data-track-index="34"></audio>
+      <audio id="sfx52" src="assets/som/mixkit/baixados/sfx_2541.mp3" data-start="16.725" data-duration="0.264" data-volume="0.15" data-track-index="31"></audio>
+      <audio id="sfx53" src="assets/som/mixkit/baixados/sfx_2541.mp3" data-start="16.845" data-duration="0.264" data-volume="0.15" data-track-index="30"></audio>
+      <audio id="sfx54" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="16.749" data-duration="1.222" data-volume="0.45" data-track-index="32"></audio>
+      <audio id="sfx55" src="assets/som/mixkit/baixados/sfx_1490.mp3" data-start="17.261" data-duration="1.757" data-volume="0.4" data-track-index="30"></audio>
+      <audio id="sfx56" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="17.847" data-duration="1.333" data-volume="0.35" data-track-index="31"></audio>
+      <audio id="sfx57" src="assets/som/mixkit/baixados/sfx_1046.mp3" data-start="18.079" data-duration="0.800" data-media-start="1.000" data-volume="0.3" data-track-index="32"></audio>
+      <audio id="sfx58" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="18.107" data-duration="1.175" data-volume="0.2" data-track-index="33"></audio>
+      <audio id="sfx59" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="18.227" data-duration="1.175" data-volume="0.2" data-track-index="34"></audio>
+      <audio id="sfx60" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="18.347" data-duration="1.175" data-volume="0.2" data-track-index="35"></audio>
+      <audio id="sfx61" src="assets/som/mixkit/baixados/sfx_3115.mp3" data-start="18.737" data-duration="0.574" data-volume="0.4" data-track-index="36"></audio>
+      <audio id="sfx62" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="18.727" data-duration="1.333" data-volume="0.35" data-track-index="37"></audio>
+      <audio id="sfx63" src="assets/som/mixkit/baixados/sfx_3062.mp3" data-start="18.858" data-duration="2.500" data-volume="0.4" data-track-index="38"></audio>
+      <audio id="sfx64" src="assets/som/mixkit/baixados/sfx_2358.mp3" data-start="19.119" data-duration="0.479" data-volume="0.3" data-track-index="30"></audio>
+      <audio id="sfx65" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="19.187" data-duration="1.175" data-volume="0.2" data-track-index="32"></audio>
+      <audio id="sfx66" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="19.327" data-duration="1.175" data-volume="0.2" data-track-index="31"></audio>
+      <audio id="sfx67" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="19.467" data-duration="1.175" data-volume="0.2" data-track-index="33"></audio>
+      <audio id="sfx68" src="assets/som/mixkit/baixados/sfx_1492.mp3" data-start="18.696" data-duration="1.334" data-volume="0.3" data-track-index="39"></audio>
+      <audio id="sfx69" src="assets/som/mixkit/baixados/sfx_2789.mp3" data-start="19.699" data-duration="1.094" data-volume="0.45" data-track-index="30"></audio>
+      <audio id="sfx70" src="assets/som/mixkit/baixados/sfx_871.mp3" data-start="19.564" data-duration="1.301" data-volume="0.3" data-track-index="34"></audio>
+      <audio id="sfx71" src="assets/som/mixkit/baixados/sfx_166.mp3" data-start="20.017" data-duration="0.781" data-volume="0.35" data-track-index="35"></audio>
+      <audio id="sfx72" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="20.387" data-duration="1.175" data-volume="0.2" data-track-index="32"></audio>
+      <audio id="sfx73" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="20.467" data-duration="1.175" data-volume="0.2" data-track-index="36"></audio>
+      <audio id="sfx74" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="20.547" data-duration="1.175" data-volume="0.2" data-track-index="31"></audio>
+      <audio id="sfx75" src="assets/som/mixkit/baixados/sfx_3115.mp3" data-start="20.617" data-duration="0.574" data-volume="0.4" data-track-index="37"></audio>
+      <audio id="sfx76" src="assets/som/mixkit/baixados/sfx_2380.mp3" data-start="20.459" data-duration="0.902" data-volume="0.3" data-track-index="39"></audio>
+      <audio id="sfx77" src="assets/som/mixkit/baixados/sfx_2380.mp3" data-start="20.529" data-duration="0.902" data-volume="0.3" data-track-index="40"></audio>
+      <audio id="sfx78" src="assets/som/mixkit/baixados/sfx_2380.mp3" data-start="20.599" data-duration="0.902" data-volume="0.3" data-track-index="41"></audio>
+      <audio id="sfx79" src="assets/som/mixkit/baixados/sfx_2380.mp3" data-start="20.669" data-duration="0.902" data-volume="0.3" data-track-index="33"></audio>
+      <audio id="sfx80" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="21.219" data-duration="1.222" data-volume="0.55" data-track-index="30"></audio>
+      <audio id="sfx81" src="assets/som/mixkit/baixados/sfx_1492.mp3" data-start="20.596" data-duration="1.334" data-volume="0.35" data-track-index="42"></audio>
+      <audio id="sfx82" src="assets/som/mixkit/baixados/sfx_2608.mp3" data-start="21.758" data-duration="1.275" data-volume="0.45" data-track-index="31"></audio>
+      <audio id="sfx83" src="assets/som/mixkit/baixados/sfx_2358.mp3" data-start="23.239" data-duration="0.479" data-volume="0.4" data-track-index="30"></audio>
+      <audio id="sfx84" src="assets/som/mixkit/baixados/sfx_3083.mp3" data-start="22.876" data-duration="2.333" data-volume="0.3" data-track-index="32"></audio>
+      <audio id="sfx85" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="23.947" data-duration="1.175" data-volume="0.35" data-track-index="30"></audio>
+      <audio id="sfx86" src="assets/som/mixkit/baixados/sfx_2997.mp3" data-start="24.601" data-duration="1.045" data-volume="0.6" data-track-index="31"></audio>
+      <audio id="sfx87" src="assets/som/mixkit/baixados/sfx_1464.mp3" data-start="24.542" data-duration="1.100" data-volume="0.3" data-track-index="33"></audio>
+      <audio id="sfx88" src="assets/som/mixkit/baixados/sfx_2997.mp3" data-start="25.761" data-duration="1.045" data-volume="0.6" data-track-index="30"></audio>
+      <audio id="sfx89" src="assets/som/mixkit/baixados/sfx_1464.mp3" data-start="25.702" data-duration="1.100" data-volume="0.3" data-track-index="31"></audio>
+      <audio id="sfx90" src="assets/som/mixkit/baixados/sfx_2997.mp3" data-start="27.241" data-duration="1.045" data-volume="0.6" data-track-index="30"></audio>
+      <audio id="sfx91" src="assets/som/mixkit/baixados/sfx_3062.mp3" data-start="27.178" data-duration="2.500" data-volume="0.45" data-track-index="31"></audio>
+      <audio id="sfx92" src="assets/som/mixkit/baixados/sfx_2058.mp3" data-start="27.268" data-duration="1.649" data-volume="0.35" data-track-index="32"></audio>
+      <audio id="sfx93" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="27.119" data-duration="1.222" data-volume="0.4" data-track-index="33"></audio>
+      <audio id="sfx94" src="assets/som/mixkit/baixados/sfx_1105.mp3" data-start="28.133" data-duration="0.831" data-volume="0.55" data-track-index="34"></audio>
+      <audio id="sfx95" src="assets/som/mixkit/baixados/sfx_1104.mp3" data-start="28.457" data-duration="0.452" data-volume="0.45" data-track-index="30"></audio>
+      <audio id="sfx96" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="28.867" data-duration="1.175" data-volume="0.3" data-track-index="33"></audio>
+      <audio id="sfx97" src="assets/som/mixkit/baixados/sfx_2997.mp3" data-start="29.931" data-duration="1.045" data-volume="0.5" data-track-index="30"></audio>
+      <audio id="sfx98" src="assets/som/mixkit/baixados/sfx_2182.mp3" data-start="30.176" data-duration="0.417" data-volume="0.15" data-track-index="31"></audio>
+      <audio id="sfx99" src="assets/som/mixkit/baixados/sfx_2182.mp3" data-start="30.676" data-duration="0.417" data-volume="0.15" data-track-index="31"></audio>
+      <audio id="sfx100" src="assets/som/mixkit/baixados/sfx_2182.mp3" data-start="31.176" data-duration="0.417" data-volume="0.15" data-track-index="30"></audio>
+      <audio id="sfx101" src="assets/som/mixkit/baixados/sfx_2182.mp3" data-start="31.676" data-duration="0.417" data-volume="0.15" data-track-index="30"></audio>
+      <audio id="sfx102" src="assets/som/mixkit/baixados/sfx_2182.mp3" data-start="32.176" data-duration="0.417" data-volume="0.15" data-track-index="30"></audio>
+      <audio id="sfx103" src="assets/som/mixkit/baixados/sfx_2997.mp3" data-start="32.991" data-duration="1.045" data-volume="0.5" data-track-index="30"></audio>
+      <audio id="sfx104" src="assets/som/mixkit/baixados/sfx_871.mp3" data-start="33.104" data-duration="1.301" data-volume="0.3" data-track-index="31"></audio>
+      <audio id="sfx105" src="assets/som/mixkit/baixados/sfx_2301.mp3" data-start="33.318" data-duration="2.000" data-volume="0.3" data-track-index="32"></audio>
+      <audio id="sfx106" src="assets/som/mixkit/baixados/sfx_3062.mp3" data-start="34.958" data-duration="2.500" data-volume="0.45" data-track-index="30"></audio>
+      <audio id="sfx107" src="assets/som/mixkit/baixados/sfx_2349.mp3" data-start="35.039" data-duration="2.500" data-volume="0.45" data-track-index="31"></audio>
+      <audio id="sfx108" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="35.327" data-duration="1.333" data-volume="0.4" data-track-index="33"></audio>
+      <audio id="sfx109" src="assets/som/mixkit/baixados/sfx_2184.mp3" data-start="36.504" data-duration="1.198" data-volume="0.55" data-track-index="32"></audio>
+      <audio id="sfx110" src="assets/som/mixkit/baixados/sfx_2152.mp3" data-start="36.448" data-duration="1.555" data-volume="0.55" data-track-index="34"></audio>
+      <audio id="sfx111" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="36.727" data-duration="1.333" data-volume="0.4" data-track-index="33"></audio>
+      <audio id="sfx112" src="assets/som/mixkit/baixados/sfx_2047.mp3" data-start="36.878" data-duration="1.342" data-volume="0.35" data-track-index="35"></audio>
+      <audio id="sfx113" src="assets/som/orig/dado.mp3" data-start="37.293" data-duration="1.220" data-volume="0.5" data-track-index="36"></audio>
+      <audio id="sfx114" src="assets/som/orig/dado.mp3" data-start="37.693" data-duration="1.220" data-volume="0.35" data-track-index="30"></audio>
+      <audio id="sfx115" src="assets/som/mixkit/baixados/sfx_2059.mp3" data-start="36.594" data-duration="2.500" data-volume="0.4" data-track-index="37"></audio>
+      <audio id="sfx116" src="assets/som/mixkit/baixados/sfx_2627.mp3" data-start="38.807" data-duration="1.057" data-volume="0.5" data-track-index="31"></audio>
+      <audio id="sfx117" src="assets/som/mixkit/baixados/sfx_1490.mp3" data-start="38.621" data-duration="1.757" data-volume="0.35" data-track-index="32"></audio>
+      <audio id="sfx118" src="assets/som/mixkit/baixados/sfx_2166.mp3" data-start="40.768" data-duration="1.247" data-volume="0.55" data-track-index="30"></audio>
+      <audio id="sfx119" src="assets/som/mixkit/baixados/sfx_2792.mp3" data-start="40.946" data-duration="1.116" data-volume="0.4" data-track-index="31"></audio>
+      <audio id="sfx120" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="40.599" data-duration="1.222" data-volume="0.5" data-track-index="32"></audio>
+      <audio id="sfx121" src="assets/som/mixkit/baixados/sfx_2299.mp3" data-start="40.946" data-duration="1.100" data-volume="0.45" data-track-index="33"></audio>
+      <audio id="sfx122" src="assets/som/mixkit/baixados/sfx_2789.mp3" data-start="41.129" data-duration="1.094" data-volume="0.45" data-track-index="34"></audio>
+      <audio id="sfx123" src="assets/som/mixkit/baixados/sfx_2166.mp3" data-start="41.528" data-duration="1.247" data-volume="0.45" data-track-index="35"></audio>
+      <audio id="sfx124" src="assets/som/mixkit/baixados/sfx_2146.mp3" data-start="41.914" data-duration="1.134" data-volume="0.45" data-track-index="32"></audio>
+      <audio id="sfx125" src="assets/som/mixkit/baixados/sfx_3115.mp3" data-start="42.137" data-duration="0.574" data-volume="0.35" data-track-index="30"></audio>
+      <audio id="sfx126" src="assets/som/mixkit/baixados/sfx_2301.mp3" data-start="43.418" data-duration="2.000" data-volume="0.35" data-track-index="30"></audio>
+      <audio id="sfx127" src="assets/som/mixkit/baixados/sfx_2062.mp3" data-start="43.907" data-duration="2.500" data-volume="0.45" data-track-index="31"></audio>
+      <audio id="sfx128" src="assets/som/mixkit/baixados/sfx_1492.mp3" data-start="43.356" data-duration="1.334" data-volume="0.35" data-track-index="32"></audio>
+      <audio id="sfx129" src="assets/som/mixkit/baixados/sfx_1104.mp3" data-start="44.337" data-duration="0.452" data-volume="0.45" data-track-index="33"></audio>
+      <audio id="sfx130" src="assets/som/mixkit/baixados/sfx_2997.mp3" data-start="46.191" data-duration="1.045" data-volume="0.6" data-track-index="30"></audio>
+      <audio id="sfx131" src="assets/som/orig/dado.mp3" data-start="45.993" data-duration="1.220" data-volume="0.5" data-track-index="32"></audio>
+      <audio id="sfx132" src="assets/som/mixkit/baixados/sfx_2059.mp3" data-start="45.424" data-duration="2.500" data-volume="0.45" data-track-index="33"></audio>
+      <audio id="sfx133" src="assets/som/mixkit/baixados/sfx_2058.mp3" data-start="46.968" data-duration="1.649" data-volume="0.3" data-track-index="31"></audio>
+      <audio id="sfx134" src="assets/som/mixkit/baixados/sfx_166.mp3" data-start="47.117" data-duration="0.781" data-volume="0.35" data-track-index="34"></audio>
+      <audio id="sfx135" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="47.727" data-duration="1.175" data-volume="0.2" data-track-index="30"></audio>
+      <audio id="sfx136" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="47.927" data-duration="1.175" data-volume="0.2" data-track-index="32"></audio>
+      <audio id="sfx137" src="assets/som/mixkit/baixados/sfx_2364.mp3" data-start="48.127" data-duration="1.175" data-volume="0.2" data-track-index="33"></audio>
+      <audio id="sfx138" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="48.479" data-duration="1.222" data-volume="0.45" data-track-index="34"></audio>
+      <audio id="sfx139" src="assets/som/mixkit/baixados/sfx_2608.mp3" data-start="48.938" data-duration="1.275" data-volume="0.4" data-track-index="30"></audio>
+      <audio id="sfx140" src="assets/som/mixkit/baixados/sfx_3115.mp3" data-start="49.867" data-duration="0.574" data-volume="0.35" data-track-index="31"></audio>
+      <audio id="sfx141" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="49.877" data-duration="1.333" data-volume="0.3" data-track-index="32"></audio>
+      <audio id="sfx142" src="assets/som/mixkit/baixados/sfx_1464.mp3" data-start="50.062" data-duration="1.100" data-volume="0.3" data-track-index="33"></audio>
+      <audio id="sfx143" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="50.167" data-duration="1.333" data-volume="0.3" data-track-index="34"></audio>
+      <audio id="sfx144" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="50.249" data-duration="1.222" data-volume="0.45" data-track-index="30"></audio>
+      <audio id="sfx145" src="assets/som/mixkit/baixados/sfx_1464.mp3" data-start="51.102" data-duration="1.100" data-volume="0.3" data-track-index="31"></audio>
+      <audio id="sfx146" src="assets/som/mixkit/baixados/sfx_2582.mp3" data-start="51.325" data-duration="1.036" data-volume="0.25" data-track-index="32"></audio>
+      <audio id="sfx147" src="assets/som/mixkit/baixados/sfx_2582.mp3" data-start="51.365" data-duration="1.036" data-volume="0.25" data-track-index="33"></audio>
+      <audio id="sfx148" src="assets/som/mixkit/baixados/sfx_2582.mp3" data-start="51.405" data-duration="1.036" data-volume="0.25" data-track-index="35"></audio>
+      <audio id="sfx149" src="assets/som/mixkit/baixados/sfx_2908.mp3" data-start="50.543" data-duration="2.500" data-volume="0.7" data-track-index="36"></audio>
+      <audio id="sfx150" src="assets/som/mixkit/baixados/sfx_2299.mp3" data-start="51.396" data-duration="1.100" data-volume="0.5" data-track-index="37"></audio>
+      <audio id="sfx151" src="assets/som/mixkit/baixados/sfx_3115.mp3" data-start="51.777" data-duration="0.574" data-volume="0.3" data-track-index="30"></audio>
+      <audio id="sfx152" src="assets/som/mixkit/baixados/sfx_2655.mp3" data-start="52.047" data-duration="1.333" data-volume="0.3" data-track-index="34"></audio>
+      <audio id="sfx153" src="assets/som/mixkit/baixados/sfx_1464.mp3" data-start="52.382" data-duration="1.100" data-volume="0.3" data-track-index="30"></audio>
+      <audio id="sfx154" src="assets/som/mixkit/baixados/sfx_772.mp3" data-start="52.269" data-duration="1.222" data-volume="0.4" data-track-index="31"></audio>
+      <audio id="sfx155" src="assets/som/mixkit/baixados/sfx_2369.mp3" data-start="52.713" data-duration="1.189" data-volume="0.4" data-track-index="32"></audio>
+      <audio id="sfx156" src="assets/som/mixkit/baixados/sfx_1490.mp3" data-start="52.721" data-duration="1.757" data-volume="0.35" data-track-index="33"></audio>
+      <audio id="sfx157" src="assets/som/mixkit/baixados/sfx_2358.mp3" data-start="53.499" data-duration="0.479" data-volume="0.35" data-track-index="30"></audio>
+      <audio id="sfx158" src="assets/som/mixkit/baixados/sfx_790.mp3" data-start="51.942" data-duration="2.500" data-volume="0.45" data-track-index="38"></audio>
+      <audio id="sfx159" src="assets/som/mixkit/baixados/sfx_2902.mp3" data-start="53.129" data-duration="2.500" data-volume="0.8" data-track-index="35"></audio>
+      <audio id="sfx160" src="assets/som/mixkit/baixados/sfx_2299.mp3" data-start="54.916" data-duration="1.100" data-volume="0.55" data-track-index="30"></audio>
+      <audio id="sfx161" src="assets/som/mixkit/baixados/sfx_2349.mp3" data-start="54.759" data-duration="2.500" data-volume="0.35" data-track-index="31"></audio>
+      <audio id="sfx162" src="assets/som/mixkit/baixados/sfx_871.mp3" data-start="54.974" data-duration="1.301" data-volume="0.35" data-track-index="32"></audio>
+      <audio id="sfx163" src="assets/som/mixkit/baixados/sfx_3115.mp3" data-start="56.917" data-duration="0.574" data-volume="0.3" data-track-index="30"></audio>
+      <audio id="sfx164" src="assets/som/mixkit/baixados/sfx_1143.mp3" data-start="56.982" data-duration="1.518" data-volume="0.3" data-track-index="32"></audio>
+      <div id="a" data-composition-id="a" data-composition-src="compositions/a.html" data-start="0" data-duration="7.3" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:1"></div>
+      <div id="b" data-composition-id="b" data-composition-src="compositions/b.html" data-start="7.05" data-duration="3.9" data-track-index="2" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:2"></div>
+      <div id="c" data-composition-id="c" data-composition-src="compositions/c.html" data-start="10.7" data-duration="4.25" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:3"></div>
+      <div id="d" data-composition-id="d" data-composition-src="compositions/d.html" data-start="14.4" data-duration="8.2" data-track-index="2" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:4"></div>
+      <div id="e" data-composition-id="e" data-composition-src="compositions/e.html" data-start="22.35" data-duration="6.4" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:5"></div>
+      <div id="f" data-composition-id="f" data-composition-src="compositions/f.html" data-start="28.55" data-duration="10.9" data-track-index="2" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:6"></div>
+      <div id="g" data-composition-id="g" data-composition-src="compositions/g.html" data-start="39.1" data-duration="10.8" data-track-index="1" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:7"></div>
+      <div id="h" data-composition-id="h" data-composition-src="compositions/h.html" data-start="49.7" data-duration="8.8" data-track-index="2" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:8"></div>
+      <div id="grao" data-composition-id="grao" data-composition-src="compositions/grao.html" data-start="0" data-duration="58.5" data-track-index="5" data-track-kind="graphics" data-width="1920" data-height="1080" style="z-index:50;pointer-events:none"></div>
+    </div>
+    <script>
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+    </script>
+  </body>
+</html>

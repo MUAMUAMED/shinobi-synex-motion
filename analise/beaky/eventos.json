@@ -1,0 +1,121 @@
+[
+{
+"tipo": "corte",
+"de": 23,
+"ate": 23,
+"forca": 37.4,
+"t": 0.77
+},
+{
+"tipo": "flash",
+"de": 45,
+"ate": 45,
+"forca": 129.2,
+"t": 1.5
+},
+{
+"tipo": "corte",
+"de": 46,
+"ate": 46,
+"forca": 142.7,
+"t": 1.53
+},
+{
+"tipo": "parado",
+"de": 212,
+"ate": 243,
+"forca": 32,
+"t": 7.07
+},
+{
+"tipo": "corte",
+"de": 250,
+"ate": 250,
+"forca": 26.7,
+"t": 8.33
+},
+{
+"tipo": "impacto",
+"de": 250,
+"ate": 259,
+"forca": 0.0127,
+"t": 8.33
+},
+{
+"tipo": "corte",
+"de": 281,
+"ate": 281,
+"forca": 95.8,
+"t": 9.37
+},
+{
+"tipo": "corte",
+"de": 419,
+"ate": 419,
+"forca": 19.6,
+"t": 13.97
+},
+{
+"tipo": "corte",
+"de": 462,
+"ate": 462,
+"forca": 47.6,
+"t": 15.4
+},
+{
+"tipo": "implosao",
+"de": 541,
+"ate": 547,
+"forca": 0.0123,
+"t": 18.03
+},
+{
+"tipo": "corte",
+"de": 547,
+"ate": 547,
+"forca": 35.7,
+"t": 18.23
+},
+{
+"tipo": "parado",
+"de": 947,
+"ate": 977,
+"forca": 31,
+"t": 31.57
+},
+{
+"tipo": "corte",
+"de": 1029,
+"ate": 1029,
+"forca": 95.3,
+"t": 34.3
+},
+{
+"tipo": "parado",
+"de": 1073,
+"ate": 1119,
+"forca": 47,
+"t": 35.77
+},
+{
+"tipo": "parado",
+"de": 1121,
+"ate": 1180,
+"forca": 60,
+"t": 37.37
+},
+{
+"tipo": "parado",
+"de": 1182,
+"ate": 1245,
+"forca": 64,
+"t": 39.4
+},
+{
+"tipo": "parado",
+"de": 1247,
+"ate": 1382,
+"forca": 136,
+"t": 41.57
+}
+]

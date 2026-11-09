@@ -1,0 +1,59 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "Outfit", sans-serif; color: #fff; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    #root .full { position: absolute; inset: 0; }
+    #root .t { white-space: nowrap; line-height: 1; letter-spacing: -0.015em; }
+    #root .t span { display: inline-block; }
+    #c-noite { background: radial-gradient(ellipse at 50% 50%, #1d1722, #0b0a10 72%); }
+    #c-marca, #c-engr { width: 230px; height: 230px; }
+    #root .painel { position: absolute; top: 0; height: 1080px; width: 1100px; overflow: hidden; background: #000; }
+    #c-pa { left: 0; clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%); }
+    #c-pb { left: 820px; clip-path: polygon(25.45% 0, 100% 0, 100% 100%, 11.45% 100%); }
+    #root .painel .mv { position: absolute; inset: 0; }
+    #root .painel video { width: 1100px; height: 1080px; object-fit: cover; display: block; }
+    #root .tit b { display: block; font-size: 150px; font-weight: 900; letter-spacing: -0.045em; line-height: 0.88; text-shadow: 0 12px 50px #000c; white-space: nowrap; }
+    #root .tit small { display: block; font-size: 60px; font-weight: 800; color: #ff5a1f; letter-spacing: -0.02em; text-shadow: 0 8px 30px #000c; white-space: nowrap; }
+    #c-costura { position: absolute; left: 0; top: 0; overflow: visible; }
+    #c-escuro { background: #0b0a10; }
+  </style>
+  <div id="root" data-composition-id="c" data-width="1920" data-height="1080">
+    <div id="c-noite" class="full" data-layout-ignore></div>
+    <div id="c-pa" class="painel" data-layout-ignore><div id="c-ma" class="mv"><video id="c-rdr" class="clip" data-start="1.46" data-duration="3.49" data-track-index="2" src="assets/video/rdr.mp4" muted playsinline></video></div></div>
+    <div id="c-pb" class="painel" data-layout-ignore><div id="c-mb" class="mv"><video id="c-kcd" class="clip" data-start="2.5" data-duration="2.45" data-track-index="3" src="assets/video/kcd.mp4" muted playsinline></video></div></div>
+    <svg id="c-costura" width="1920" height="1080" viewBox="0 0 1920 1080" data-layout-ignore><path id="c-linha" pathLength="1" d="M1100 -10 943 1090" stroke="#fff" stroke-width="14" stroke-linecap="round" fill="none" /></svg>
+    <div id="c-r1" class="a tit"><b>Red Dead</b><small>Redemption</small></div>
+    <div id="c-r2" class="a tit" style="text-align:right"><b>Kingdom Come</b><small>Deliverance</small></div>
+    <div id="c-escuro" class="full" data-layout-ignore></div>
+    <div id="c-l1" class="a t" style="font-size:96px;font-weight:800;letter-spacing:-0.035em"><span id="c-w28">Inspirado</span> <span id="c-w29">nas</span> <span id="c-w30" style="color:#ff5a1f">mecânicas</span> <span id="c-w31">de</span></div>
+    <svg id="c-marca" class="a" viewBox="-100 -100 200 200"><path id="c-mp" fill="#fff" fill-rule="evenodd" d="M0-96C14-40 40-14 96 0 40 14 14 40 0 96-14 40-40 14-96 0-40-14-14-40 0-96ZM0-18A18 18 0 1 0 0 18 18 18 0 1 0 0-18Z" /></svg>
+    <svg id="c-engr" class="a" viewBox="-100 -100 200 200"><path fill="#ff5a1f" fill-rule="evenodd" d="M-9-98H9L13-80 25-76 39-87 52-77 46-60 54-49 72-51 78-36 64-25 66-12 83-5 81 11 64 15 59 27 70 41 59 53 45 45 34 54 35 72 19 77 13 61H-1L-7 76-24 72-23 54-35 46-49 54-60 42-50 28-55 16-72 11-73-6-56-12-55-25-68-37-61-51-44-49-34-58-38-76-22-81-14-64ZM0-34A34 34 0 1 0 0 34 34 34 0 1 0 0-34Z" /></svg>
+  </div>
+  <script>
+    (function () {
+      const S = 10.7, tl = gsap.timeline({ paused: true }), c = { xPercent: -50, yPercent: -50 };
+      // O mundo laranja vira noite a partir do símbolo, que continua no centro
+      L.mostra(tl, "#c-noite", S, 10.8); L.iris(tl, "#c-noite", S, 10.8, 0.36, 50, 50);
+      L.mostra(tl, "#c-marca", S, 10.8, 11.56);
+      L.k(tl, "#c-marca", S, [[10.8, { ...c, x: 960, y: 540, scale: 1.25, rotation: 75 }], [11.5, { rotation: 75 + 540, scale: 0.95, filter: "blur(3px)" }, "power2.in"]]);
+      tl.to("#c-mp", { fill: "#ff5a1f", duration: 0.3, immediateRender: false }, 10.85 - S);
+      // A estrela vira engrenagem em pleno giro, no "mecânicas"
+      L.k(tl, "#c-engr", S, [[11.42, { ...c, x: 960, y: 540, scale: 0.8, rotation: 0, opacity: 0, filter: "blur(3px)" }], [11.5, { opacity: 1 }], [11.7, { scale: 1, rotation: 120, filter: "blur(0px)" }, "power2.out"], [12.1, { rotation: 160 }], [12.5, { x: 1022, y: 540, scale: 0.78, rotation: 260 }, "power3.inOut"], [14.42, { rotation: 470 }], [14.86, { scale: 9, rotation: 760 }, "power3.in"]]);
+      gsap.set("#c-l1", { ...c, x: 960, y: 820 });
+      for (let i = 28; i <= 31; i++) L.palavra(tl, "#c-w" + i, S, W[i]);
+      L.sai(tl, "#c-l1", S, 12.08, 0.14);
+      // Painéis diagonais com as gameplays
+      L.k(tl, "#c-pa", S, [[W[32] - 0.02, { x: -1160, filter: "blur(16px)" }], [W[32] + 0.42, { x: 0, filter: "blur(0px)" }, "expo.out"]]);
+      L.k(tl, "#c-ma", S, [[W[32], { scale: 1.14 }], [14.9, { scale: 1, x: 30 }]]);
+      L.k(tl, "#c-pb", S, [[W[36] - 0.02, { x: 1160, filter: "blur(16px)" }], [W[36] + 0.42, { x: 0, filter: "blur(0px)" }, "expo.out"]]);
+      L.k(tl, "#c-mb", S, [[W[36], { scale: 1.14 }], [14.9, { scale: 1, x: -30 }]]);
+      L.k(tl, "#c-linha", S, [[W[36] + 0.1, { strokeDasharray: 1, strokeDashoffset: 1 }], [W[36] + 0.4, { strokeDashoffset: 0 }, "power3.out"]]);
+      // Títulos grandes que estalam na palavra e seguem deslizando
+      L.k(tl, "#c-r1", S, [[W[32], { x: 70, y: 80, scale: 1.25, opacity: 0, filter: "blur(10px)", transformOrigin: "0% 0%" }], [W[32] + 0.02, { opacity: 1 }], [W[32] + 0.15, { scale: 1, filter: "blur(0px)" }, "expo.out"], [14.3, { x: 120, opacity: 1 }], [14.42, { opacity: 0 }]]);
+      L.k(tl, "#c-r2", S, [[W[36], { x: 1860, xPercent: -100, y: 740, scale: 1.25, opacity: 0, filter: "blur(10px)", transformOrigin: "100% 100%" }], [W[36] + 0.02, { opacity: 1 }], [W[36] + 0.15, { scale: 1, filter: "blur(0px)" }, "expo.out"], [14.3, { x: 1810, opacity: 1 }], [14.42, { opacity: 0 }]]);
+      // A engrenagem cresce e a próxima cena abre pelo furo dela
+      L.k(tl, "#c-escuro", S, [[14.4, { opacity: 0 }], [14.8, { opacity: 0.7 }, "power2.in"]]);
+      window.__timelines["c"] = tl;
+    })();
+  </script>
+</template>

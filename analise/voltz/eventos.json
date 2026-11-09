@@ -1,0 +1,376 @@
+[
+{
+"tipo": "preto",
+"de": 0,
+"ate": 3,
+"forca": 4,
+"t": 0.0
+},
+{
+"tipo": "preto",
+"de": 22,
+"ate": 27,
+"forca": 6,
+"t": 0.73
+},
+{
+"tipo": "preto",
+"de": 88,
+"ate": 99,
+"forca": 12,
+"t": 2.93
+},
+{
+"tipo": "corte",
+"de": 113,
+"ate": 113,
+"forca": 62.4,
+"t": 3.77
+},
+{
+"tipo": "flash",
+"de": 114,
+"ate": 120,
+"forca": 125.4,
+"t": 3.8
+},
+{
+"tipo": "preto",
+"de": 143,
+"ate": 181,
+"forca": 39,
+"t": 4.77
+},
+{
+"tipo": "corte",
+"de": 202,
+"ate": 202,
+"forca": 21.3,
+"t": 6.73
+},
+{
+"tipo": "preto",
+"de": 241,
+"ate": 268,
+"forca": 28,
+"t": 8.03
+},
+{
+"tipo": "estrobo",
+"de": 244,
+"ate": 274,
+"forca": 4,
+"t": 8.13
+},
+{
+"tipo": "corte",
+"de": 269,
+"ate": 269,
+"forca": 149.0,
+"t": 8.97
+},
+{
+"tipo": "flash",
+"de": 269,
+"ate": 270,
+"forca": 154.4,
+"t": 8.97
+},
+{
+"tipo": "preto",
+"de": 277,
+"ate": 279,
+"forca": 3,
+"t": 9.23
+},
+{
+"tipo": "corte",
+"de": 372,
+"ate": 372,
+"forca": 34.8,
+"t": 12.4
+},
+{
+"tipo": "corte",
+"de": 377,
+"ate": 377,
+"forca": 22.1,
+"t": 12.57
+},
+{
+"tipo": "preto",
+"de": 384,
+"ate": 401,
+"forca": 18,
+"t": 12.8
+},
+{
+"tipo": "preto",
+"de": 437,
+"ate": 440,
+"forca": 4,
+"t": 14.57
+},
+{
+"tipo": "corte",
+"de": 451,
+"ate": 451,
+"forca": 32.6,
+"t": 15.03
+},
+{
+"tipo": "flash",
+"de": 452,
+"ate": 463,
+"forca": 71.0,
+"t": 15.07
+},
+{
+"tipo": "corte",
+"de": 459,
+"ate": 459,
+"forca": 23.4,
+"t": 15.3
+},
+{
+"tipo": "preto",
+"de": 494,
+"ate": 499,
+"forca": 6,
+"t": 16.47
+},
+{
+"tipo": "preto",
+"de": 519,
+"ate": 548,
+"forca": 30,
+"t": 17.3
+},
+{
+"tipo": "corte",
+"de": 552,
+"ate": 552,
+"forca": 31.6,
+"t": 18.4
+},
+{
+"tipo": "corte",
+"de": 581,
+"ate": 581,
+"forca": 35.3,
+"t": 19.37
+},
+{
+"tipo": "impacto",
+"de": 581,
+"ate": 590,
+"forca": 0.0066,
+"t": 19.37
+},
+{
+"tipo": "corte",
+"de": 587,
+"ate": 587,
+"forca": 29.8,
+"t": 19.57
+},
+{
+"tipo": "chicote",
+"de": 616,
+"ate": 619,
+"forca": 79.5,
+"dir": "horizontal",
+"t": 20.53
+},
+{
+"tipo": "flash",
+"de": 616,
+"ate": 628,
+"forca": 113.7,
+"t": 20.53
+},
+{
+"tipo": "corte",
+"de": 619,
+"ate": 619,
+"forca": 174.1,
+"t": 20.63
+},
+{
+"tipo": "corte",
+"de": 623,
+"ate": 623,
+"forca": 32.3,
+"t": 20.77
+},
+{
+"tipo": "impacto",
+"de": 623,
+"ate": 632,
+"forca": 0.0065,
+"t": 20.77
+},
+{
+"tipo": "corte",
+"de": 648,
+"ate": 648,
+"forca": 21.6,
+"t": 21.6
+},
+{
+"tipo": "corte",
+"de": 702,
+"ate": 702,
+"forca": 31.2,
+"t": 23.4
+},
+{
+"tipo": "corte",
+"de": 729,
+"ate": 729,
+"forca": 28.4,
+"t": 24.3
+},
+{
+"tipo": "impacto",
+"de": 729,
+"ate": 738,
+"forca": 0.0149,
+"t": 24.3
+},
+{
+"tipo": "chicote",
+"de": 733,
+"ate": 736,
+"forca": 119.9,
+"dir": "horizontal",
+"t": 24.43
+},
+{
+"tipo": "corte",
+"de": 736,
+"ate": 736,
+"forca": 176.3,
+"t": 24.53
+},
+{
+"tipo": "flash",
+"de": 736,
+"ate": 746,
+"forca": 195.1,
+"t": 24.53
+},
+{
+"tipo": "impacto",
+"de": 736,
+"ate": 745,
+"forca": 0.0066,
+"t": 24.53
+},
+{
+"tipo": "preto",
+"de": 758,
+"ate": 770,
+"forca": 13,
+"t": 25.27
+},
+{
+"tipo": "preto",
+"de": 780,
+"ate": 797,
+"forca": 18,
+"t": 26.0
+},
+{
+"tipo": "corte",
+"de": 802,
+"ate": 802,
+"forca": 184.4,
+"t": 26.73
+},
+{
+"tipo": "flash",
+"de": 802,
+"ate": 813,
+"forca": 203.6,
+"t": 26.73
+},
+{
+"tipo": "corte",
+"de": 807,
+"ate": 807,
+"forca": 19.7,
+"t": 26.9
+},
+{
+"tipo": "impacto",
+"de": 807,
+"ate": 816,
+"forca": 0.0177,
+"t": 26.9
+},
+{
+"tipo": "chicote",
+"de": 808,
+"ate": 815,
+"forca": 8.2,
+"dir": "vertical",
+"t": 26.93
+},
+{
+"tipo": "implosao",
+"de": 818,
+"ate": 824,
+"forca": 0.0109,
+"t": 27.27
+},
+{
+"tipo": "corte",
+"de": 824,
+"ate": 824,
+"forca": 27.6,
+"t": 27.47
+},
+{
+"tipo": "impacto",
+"de": 824,
+"ate": 833,
+"forca": 0.0077,
+"t": 27.47
+},
+{
+"tipo": "implosao",
+"de": 840,
+"ate": 846,
+"forca": 0.024,
+"t": 28.0
+},
+{
+"tipo": "corte",
+"de": 846,
+"ate": 846,
+"forca": 23.3,
+"t": 28.2
+},
+{
+"tipo": "preto",
+"de": 847,
+"ate": 865,
+"forca": 19,
+"t": 28.23
+},
+{
+"tipo": "preto",
+"de": 874,
+"ate": 1019,
+"forca": 146,
+"t": 29.13
+},
+{
+"tipo": "parado",
+"de": 901,
+"ate": 1019,
+"forca": 119,
+"t": 30.03
+}
+]

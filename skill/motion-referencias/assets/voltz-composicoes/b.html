@@ -1,0 +1,65 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; font-family: "Outfit", sans-serif; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    #b-side { position: absolute; inset: 0; background: linear-gradient(90deg, #5a2604, #2c1302 16%, #0000 34%, #0000 66%, #2c1302 84%, #5a2604); }
+    #b-txt { color: #eee; font-size: 72px; word-spacing: -4px; white-space: nowrap; font-weight: 400; letter-spacing: -0.01em; }
+    #b-txt span { display: inline-block; }
+    #b-dot { display: inline-block; width: 34px; height: 34px; border-radius: 50%; border: 7px solid #fff; vertical-align: -2px; }
+    #b-org { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #f26c0a, #c95405 52%, #8c3a03); }
+    #b-box { width: 400px; height: 400px; border-radius: 64px; background: linear-gradient(145deg, #f97f27, #ec5810); box-shadow: -16px 18px 0 #c84608, -20px 22px 8px #0005; display: flex; align-items: center; justify-content: center; }
+    #b-disc { width: 800px; height: 800px; border-radius: 50%; background: #e0741c; }
+    #b-arcs { position: absolute; left: 0; top: 0; }
+    #b-bots { color: #fff; font-size: 80px; font-weight: 500; }
+    canvas { position: absolute; left: 0; top: 0; }
+  </style>
+  <div id="root" data-composition-id="b" data-width="1080" data-height="1920">
+    <div id="b-side" data-layout-ignore></div>
+    <div id="b-txt" class="a"><span id="b-w0"><i id="b-dot"></i></span> <span id="b-w1">servidor</span> <span id="b-w2">tem</span> <span id="b-w3">foco</span> <span id="b-w4">em</span></div>
+    <div id="b-org" data-layout-ignore></div>
+    <canvas id="b-dust" width="1080" height="1920" data-layout-ignore></canvas>
+    <div id="b-disc" class="a" data-layout-ignore></div>
+    <div id="b-box" class="a" data-layout-allow-overflow>
+      <svg width="270" height="270" viewBox="0 0 100 100" fill="none" stroke="#5a2406" stroke-width="9" stroke-linecap="round"><circle cx="35" cy="42" r="14"/><path d="M12 82c0-16 10-26 23-26s23 10 23 26"/><circle id="b-c2" cx="68" cy="34" r="13" stroke="#fff"/><path d="M63 53c12-3 26 6 28 25" stroke="#fff"/></svg>
+    </div>
+    <canvas id="b-bolt" width="1080" height="1920" data-layout-ignore></canvas>
+    <svg id="b-arcs" width="1080" height="1920" viewBox="0 0 1080 1920" fill="none" stroke="#e8631a" stroke-width="5" stroke-linecap="round" data-layout-ignore>
+      <path id="b-a1" pathLength="1" d="M1100 370C860 480 800 800 1090 1020"/>
+      <path id="b-a2" pathLength="1" d="M640 1370 880 1240 960 1340M640 1370C720 1560 880 1620 1020 1670"/>
+    </svg>
+    <div id="b-bots" class="a">Bots</div>
+  </div>
+  <script>
+    (function () {
+      const S = 92, tl = gsap.timeline({ paused: true }), center = { xPercent: -50, yPercent: -50 };
+      // Texto com palavras entrando; encolhe ate sumir
+      FX.keys(tl, "#b-txt", S, [[92, { ...center, x: 540, y: 1100, opacity: 1, scale: 1 }], [97, { y: 1020 }, "power2.out"], [109, { y: 958 }], [110, { scale: 0.97 }], [111, { scale: 0.86 }, "power2.in"], [112, { scale: 0.66 }], [113, { scale: 0.36 }], [114, { scale: 0.05, opacity: 0 }]]);
+      FX.keys(tl, "#b-w0", S, [[93, { opacity: 0, filter: "blur(8px)" }], [95, { opacity: 1, filter: "blur(0px)" }]]);
+      [[1, 94], [2, 98], [3, 102], [4, 106]].forEach(([i, f]) => FX.word(tl, "#b-w" + i, S, f, 6));
+      FX.keys(tl, "#b-side", S, [[93, { opacity: 0 }], [100, { opacity: 0.35 }], [112, { opacity: 0.7 }]]);
+      // Flash laranja
+      FX.keys(tl, "#b-org", S, [[112, { opacity: 0 }], [113, { opacity: 0.75 }], [114, { opacity: 1 }], [116, { opacity: 0.85 }], [118, { opacity: 0.45 }], [120, { opacity: 0.32 }], [124, { opacity: 0.4 }], [127, { opacity: 0.75 }], [130, { opacity: 0.75 }], [133, { opacity: 0.35 }], [136, { opacity: 0.1 }], [140, { opacity: 0 }]]);
+      // Icone gira em 3D
+      gsap.set("#b-box", { transformPerspective: 1200 });
+      FX.keys(tl, "#b-box", S, [[113, { ...center, x: 540, y: 980, scale: 0.7, rotation: -30, rotationY: 80, rotationX: 30, opacity: 0, filter: "blur(16px)" }], [115, { opacity: 0.8, rotation: -28, rotationY: 80, filter: "blur(10px)" }], [116, { rotation: 0, rotationY: 82, filter: "blur(6px)", opacity: 1 }], [118, { rotation: 10, rotationY: 45, rotationX: 10, filter: "blur(1px)", scale: 0.85 }, "power1.out"], [120, { rotation: -6, rotationY: 22, filter: "blur(0px)", scale: 1 }, "power2.out"], [124, { rotation: 0, rotationY: 6, rotationX: 0, y: 950 }, "power2.out"], [128, { scale: 0.65, y: 950, filter: "blur(0px) brightness(1.5) saturate(0.6)" }, "power2.out"], [132, { scale: 0.62 }], [134, { scale: 0.7, filter: "blur(3px)", rotationX: 18, y: 940 }], [136, { scale: 0.66, filter: "blur(9px)", rotationX: 55, y: 930 }], [138, { scale: 0.4, opacity: 0, filter: "blur(16px)" }]]);
+      FX.keys(tl, "#b-disc", S, [[123, { ...center, x: 540, y: 950, scale: 0.2, opacity: 0 }], [124, { scale: 1, opacity: 0.55 }], [126, { scale: 0.56, opacity: 1, backgroundColor: "#ea5f10" }, "power2.out"], [128, { scale: 0.36, backgroundColor: "#f2b417" }, "power2.out"], [130, { scale: 0.46, backgroundColor: "#ef7a12" }], [133, { scale: 0.53, backgroundColor: "#a84a10", opacity: 0.8 }], [136, { opacity: 0 }]]);
+      // Raios
+      const B = FX.bolts(document.getElementById("b-bolt"), [
+        { f: 128, d: 2, c: "#ff6a14", w: 7, pts: [[0, 660], [250, 520], [330, 240], [370, 0]] },
+        { f: 129, d: 2, c: "#ff7a1a", w: 5, pts: [[0, 880], [420, 880], [720, 560], [1080, 540]] },
+        { f: 131, d: 2, c: "#ff6a14", w: 5, pts: [[0, 880], [640, 880], [860, 580], [1000, 480]] },
+        { f: 141, d: 3, c: "#f1560e", w: 40, pts: [[140, 1220], [380, 1190], [510, 1020], [660, 1320], [680, 1920]] },
+        { f: 143, d: 2, c: "#f1560e", w: 34, pts: [[0, 1220], [320, 1380], [800, 1200], [1080, 1120]] },
+        { f: 144, d: 2, c: "#d84c0a", w: 8, pts: [[0, 1250], [240, 1400], [420, 1500]] },
+      ], 21);
+      const D = FX.dust(document.getElementById("b-dust"), { seed: 4, n: 90, color: "#ff7a2a", alpha: 0.8 });
+      FX.drive(tl, S, 113, 146, (t) => { B(t); D(t); });
+      FX.keys(tl, "#b-dust", S, [[114, { opacity: 0 }], [119, { opacity: 0.9 }]]);
+      // Arcos
+      FX.keys(tl, "#b-a1", S, [[136, { strokeDasharray: 1, strokeDashoffset: 1 }], [139, { strokeDashoffset: 0.25 }], [146, { strokeDashoffset: -0.9 }]]);
+      FX.keys(tl, "#b-a2", S, [[133, { strokeDasharray: 1, strokeDashoffset: 1 }], [136, { strokeDashoffset: 0 }, "power2.out"], [140, { strokeDashoffset: -1 }]]);
+      FX.keys(tl, "#b-bots", S, [[134, { ...center, x: 450, y: 965, opacity: 0, filter: "blur(10px)", color: "#aaaaaa" }], [138, { opacity: 0.8, y: 955, filter: "blur(5px)" }], [143, { opacity: 1, y: 950, x: 448, filter: "blur(0px)", color: "#ffffff" }]]);
+      window.__timelines["b"] = tl;
+    })();
+  </script>
+</template>

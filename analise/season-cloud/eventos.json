@@ -1,0 +1,361 @@
+[
+{
+"tipo": "preto",
+"de": 12,
+"ate": 16,
+"forca": 5,
+"t": 0.4
+},
+{
+"tipo": "corte",
+"de": 38,
+"ate": 38,
+"forca": 22.8,
+"t": 1.27
+},
+{
+"tipo": "preto",
+"de": 38,
+"ate": 41,
+"forca": 4,
+"t": 1.27
+},
+{
+"tipo": "preto",
+"de": 55,
+"ate": 61,
+"forca": 7,
+"t": 1.83
+},
+{
+"tipo": "estrobo",
+"de": 84,
+"ate": 114,
+"forca": 4,
+"t": 2.8
+},
+{
+"tipo": "preto",
+"de": 99,
+"ate": 107,
+"forca": 9,
+"t": 3.3
+},
+{
+"tipo": "corte",
+"de": 111,
+"ate": 111,
+"forca": 20.4,
+"t": 3.7
+},
+{
+"tipo": "corte",
+"de": 122,
+"ate": 122,
+"forca": 39.3,
+"t": 4.07
+},
+{
+"tipo": "corte",
+"de": 158,
+"ate": 158,
+"forca": 106.8,
+"t": 5.27
+},
+{
+"tipo": "impacto",
+"de": 158,
+"ate": 167,
+"forca": 0.008,
+"t": 5.27
+},
+{
+"tipo": "corte",
+"de": 171,
+"ate": 171,
+"forca": 38.8,
+"t": 5.7
+},
+{
+"tipo": "preto",
+"de": 172,
+"ate": 174,
+"forca": 3,
+"t": 5.73
+},
+{
+"tipo": "corte",
+"de": 176,
+"ate": 176,
+"forca": 24.0,
+"t": 5.87
+},
+{
+"tipo": "corte",
+"de": 211,
+"ate": 211,
+"forca": 37.4,
+"t": 7.03
+},
+{
+"tipo": "preto",
+"de": 223,
+"ate": 227,
+"forca": 5,
+"t": 7.43
+},
+{
+"tipo": "corte",
+"de": 258,
+"ate": 258,
+"forca": 21.8,
+"t": 8.6
+},
+{
+"tipo": "corte",
+"de": 265,
+"ate": 265,
+"forca": 21.7,
+"t": 8.83
+},
+{
+"tipo": "preto",
+"de": 288,
+"ate": 291,
+"forca": 4,
+"t": 9.6
+},
+{
+"tipo": "corte",
+"de": 344,
+"ate": 344,
+"forca": 31.2,
+"t": 11.47
+},
+{
+"tipo": "preto",
+"de": 370,
+"ate": 374,
+"forca": 5,
+"t": 12.33
+},
+{
+"tipo": "corte",
+"de": 375,
+"ate": 375,
+"forca": 47.9,
+"t": 12.5
+},
+{
+"tipo": "implosao",
+"de": 380,
+"ate": 386,
+"forca": 0.013,
+"t": 12.67
+},
+{
+"tipo": "corte",
+"de": 386,
+"ate": 386,
+"forca": 25.1,
+"t": 12.87
+},
+{
+"tipo": "implosao",
+"de": 391,
+"ate": 397,
+"forca": 0.0179,
+"t": 13.03
+},
+{
+"tipo": "corte",
+"de": 397,
+"ate": 397,
+"forca": 59.1,
+"t": 13.23
+},
+{
+"tipo": "chicote",
+"de": 398,
+"ate": 401,
+"forca": 6.4,
+"dir": "horizontal",
+"t": 13.27
+},
+{
+"tipo": "corte",
+"de": 401,
+"ate": 401,
+"forca": 24.6,
+"t": 13.37
+},
+{
+"tipo": "implosao",
+"de": 428,
+"ate": 434,
+"forca": 0.0164,
+"t": 14.27
+},
+{
+"tipo": "chicote",
+"de": 433,
+"ate": 436,
+"forca": 7.5,
+"dir": "horizontal",
+"t": 14.43
+},
+{
+"tipo": "corte",
+"de": 434,
+"ate": 434,
+"forca": 24.6,
+"t": 14.47
+},
+{
+"tipo": "corte",
+"de": 481,
+"ate": 481,
+"forca": 27.7,
+"t": 16.03
+},
+{
+"tipo": "preto",
+"de": 483,
+"ate": 487,
+"forca": 5,
+"t": 16.1
+},
+{
+"tipo": "corte",
+"de": 534,
+"ate": 534,
+"forca": 42.0,
+"t": 17.8
+},
+{
+"tipo": "impacto",
+"de": 534,
+"ate": 543,
+"forca": 0.0086,
+"t": 17.8
+},
+{
+"tipo": "corte",
+"de": 593,
+"ate": 593,
+"forca": 35.2,
+"t": 19.77
+},
+{
+"tipo": "impacto",
+"de": 593,
+"ate": 602,
+"forca": 0.0105,
+"t": 19.77
+},
+{
+"tipo": "corte",
+"de": 621,
+"ate": 621,
+"forca": 46.3,
+"t": 20.7
+},
+{
+"tipo": "preto",
+"de": 622,
+"ate": 633,
+"forca": 12,
+"t": 20.73
+},
+{
+"tipo": "preto",
+"de": 636,
+"ate": 645,
+"forca": 10,
+"t": 21.2
+},
+{
+"tipo": "estrobo",
+"de": 660,
+"ate": 690,
+"forca": 4,
+"t": 22.0
+},
+{
+"tipo": "corte",
+"de": 683,
+"ate": 683,
+"forca": 34.6,
+"t": 22.77
+},
+{
+"tipo": "preto",
+"de": 695,
+"ate": 700,
+"forca": 6,
+"t": 23.17
+},
+{
+"tipo": "corte",
+"de": 701,
+"ate": 701,
+"forca": 28.3,
+"t": 23.37
+},
+{
+"tipo": "corte",
+"de": 732,
+"ate": 732,
+"forca": 50.4,
+"t": 24.4
+},
+{
+"tipo": "corte",
+"de": 770,
+"ate": 770,
+"forca": 29.5,
+"t": 25.67
+},
+{
+"tipo": "preto",
+"de": 803,
+"ate": 809,
+"forca": 7,
+"t": 26.77
+},
+{
+"tipo": "corte",
+"de": 864,
+"ate": 864,
+"forca": 40.4,
+"t": 28.8
+},
+{
+"tipo": "preto",
+"de": 939,
+"ate": 941,
+"forca": 3,
+"t": 31.3
+},
+{
+"tipo": "corte",
+"de": 1082,
+"ate": 1082,
+"forca": 19.5,
+"t": 36.07
+},
+{
+"tipo": "preto",
+"de": 1128,
+"ate": 1204,
+"forca": 77,
+"t": 37.6
+},
+{
+"tipo": "parado",
+"de": 1129,
+"ate": 1204,
+"forca": 76,
+"t": 37.63
+}
+]

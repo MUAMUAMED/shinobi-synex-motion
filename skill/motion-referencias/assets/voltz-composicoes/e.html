@@ -1,0 +1,86 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; font-family: "Outfit", sans-serif; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    canvas { position: absolute; left: 0; top: 0; }
+    #e-pur { position: absolute; inset: 0; background: linear-gradient(90deg, #2a0a3c, #0000 38%, #0000 62%, #2a0a3c), linear-gradient(#0000 70%, #1c0a2c); }
+    #e-lav { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, #a3a2b5, #b4b1d4 62%, #7d79ad); }
+    #e-blu { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 58%, #151a20, #24344a 95%); }
+    #e-grn { position: absolute; inset: 0; background: linear-gradient(90deg, #103f0c, #000 26%, #000 74%, #103f0c); }
+    #e-ball { width: 150px; height: 150px; border-radius: 50%; background: #fff; }
+    #e-pill { width: 800px; height: 320px; border-radius: 80px; background: linear-gradient(#f6701c, #f05d10); box-shadow: 0 -8px 0 #ffd5b2, 7px 8px 0 #ffd5b2; color: #fff; font-size: 88px; font-weight: 600; display: flex; align-items: center; justify-content: center; letter-spacing: -0.02em; white-space: nowrap; }
+    #e-plus { width: 240px; height: 262px; border-radius: 52px; background: #fff; display: flex; align-items: center; justify-content: center; color: #f05d10; font-size: 170px; font-weight: 800; line-height: 1; }
+    #e-glass { width: 744px; height: 900px; border-radius: 64px; background: linear-gradient(170deg, #ffffff40, #ffffff22); border: 6px solid #ffffff99; color: #fff; text-align: center; }
+    #e-gi { position: absolute; left: 322px; top: 300px; width: 92px; height: 92px; fill: #b18cff; }
+    #e-gt { position: absolute; left: 0; width: 100%; top: 388px; font-size: 44px; font-weight: 500; color: #fff; white-space: nowrap; }
+    #e-gb { position: absolute; left: 88px; top: 466px; width: 556px; height: 130px; border-radius: 26px; background: #f05de8; color: #fff; font-size: 38px; font-weight: 500; display: flex; align-items: center; justify-content: center; white-space: nowrap; }
+    #e-bd { position: absolute; left: -6px; top: -6px; width: 744px; height: 900px; overflow: visible; }
+    #e-burst { width: 1100px; height: 1100px; }
+    #e-star2 { width: 700px; height: 700px; }
+    #e-wide { width: 910px; height: 560px; border-radius: 52px; background: linear-gradient(110deg, #48484a, #38383b 55%, #5a5a5c); border: 4px solid #aaa; color: #fff; text-align: center; overflow: hidden; }
+    #e-wi { position: absolute; left: 400px; top: 84px; width: 110px; height: 110px; fill: #fff; }
+    #e-wt { position: absolute; left: 0; width: 100%; top: 190px; font-size: 62px; font-weight: 500; white-space: nowrap; }
+    #e-wb { position: absolute; left: 92px; top: 300px; width: 726px; height: 186px; border-radius: 34px; background: #fff; display: flex; align-items: center; justify-content: center; font-size: 76px; font-weight: 500; color: #5d5d60; white-space: nowrap; }
+    #e-wb i { font-style: normal; color: #38c946; }
+  </style>
+  <div id="root" data-composition-id="e" data-width="1080" data-height="1920">
+    <div id="e-pur" data-layout-ignore></div>
+    <div id="e-lav" data-layout-ignore></div>
+    <div id="e-blu" data-layout-ignore></div>
+    <div id="e-grn" data-layout-ignore></div>
+    <canvas id="e-c1" width="1080" height="1920" data-layout-ignore></canvas>
+    <div id="e-ball" class="a" data-layout-ignore></div>
+    <div id="e-pill" class="a" data-layout-allow-overflow>Membros VIPS</div>
+    <div id="e-plus" class="a" data-layout-allow-overflow>+</div>
+    <div id="e-glass" class="a" data-layout-allow-overflow data-layout-allow-overlap>
+      <svg id="e-bd" viewBox="0 0 744 900" fill="none" stroke="#fff" stroke-width="10" data-layout-ignore><rect id="e-bdr" x="3" y="3" width="738" height="894" rx="64" pathLength="1"/></svg>
+      <svg id="e-gi" viewBox="0 0 24 24"><path id="e-dp1"/></svg>
+      <div id="e-gt">Criar canal de voz</div>
+      <div id="e-gb">Criar canal exclusivo</div>
+    </div>
+    <div id="e-burst" class="a" data-layout-ignore></div>
+    <div id="e-wide" class="a" data-layout-allow-overflow>
+      <svg id="e-wi" viewBox="0 0 24 24"><path id="e-dp2"/></svg>
+      <div id="e-wt">Criar canal de voz</div>
+      <div id="e-wb">Destaca<i>dos</i></div>
+    </div>
+    <canvas id="e-c2" width="1080" height="1920" data-layout-ignore></canvas>
+  </div>
+  <script>
+    (function () {
+      const S = 384, tl = gsap.timeline({ paused: true }), center = { xPercent: -50, yPercent: -50 }, c = FX.c;
+      document.getElementById("e-dp1").setAttribute("d", FX.DISCORD);
+      document.getElementById("e-dp2").setAttribute("d", FX.DISCORD);
+      document.getElementById("e-burst").innerHTML = FX.star("#d8ffee");
+      // Bola sobe e vira lasca
+      FX.keys(tl, "#e-ball", S, [[386, { ...center, x: c(25), y: c(272), scale: 0.03, backgroundColor: "#ffffff", scaleX: 0.03 }], [387, { x: c(41), y: c(292), scale: 0.09, scaleX: 0.09 }], [389, { x: c(87), y: c(312), scale: 0.5, scaleX: 0.5 }, "power1.out"], [392, { x: c(107), y: c(248), scale: 0.72, scaleX: 0.72 }], [394, { x: c(102), y: c(210), scale: 0.65, scaleX: 0.6 }], [396, { x: c(97), y: c(186), scale: 0.6, scaleX: 0.45, backgroundColor: "#ffdac8" }], [398, { x: c(95), y: c(181), scale: 0.72, scaleX: 0.2, backgroundColor: "#f89665" }], [400, { y: 960, scale: 1.2, scaleX: 0.18, backgroundColor: "#f4641a", borderRadius: "30px", opacity: 1 }], [400.5, { opacity: 0 }]]);
+      FX.keys(tl, "#e-pur", S, [[388, { opacity: 0 }], [402, { opacity: 0.8 }], [412, { opacity: 1 }], [424, { opacity: 0.8 }], [432, { opacity: 0.3 }], [445, { opacity: 0.2 }]]);
+      // Pilula em 3D
+      gsap.set("#e-pill,#e-plus,#e-glass,#e-wide", { transformPerspective: 1100 });
+      FX.keys(tl, "#e-pill", S, [[399, { ...center, x: 540, y: 960, rotationY: 86, scale: 0.8, opacity: 0, skewY: 0 }], [400, { opacity: 1 }], [403, { rotationY: 70, scale: 1.05, y: 960 }], [405, { rotationY: 26, y: 950, scale: 1 }, "power2.out"], [407, { rotationY: -2, scale: 1.05, y: 945, scaleY: 0.72 }, "power2.out"], [410, { rotationY: 0, scale: 1, scaleY: 1, y: 935 }, "power2.out"], [416, { rotation: -1, y: 930, scale: 0.94 }], [418, { rotation: -5 }, "power1.in"], [420, { rotation: -14, x: 530, y: 950 }, "power1.in"], [422, { rotation: -21, scale: 0.84, backgroundColor: "#f7966a", color: "#ffffff" }], [424, { rotation: -22, scale: 0.6, rotationY: 28, backgroundColor: "#fbc2a4" }], [425, { scale: 0.38, rotationY: 40, opacity: 0.9 }], [426, { opacity: 0 }]]);
+      FX.keys(tl, "#e-plus", S, [[424, { ...center, x: 540, y: 930, scale: 0.92, rotation: -12, rotationY: 50, opacity: 0, color: "#ffffff" }], [425, { opacity: 1, rotation: -8, scale: 1.05, rotationY: 30 }], [427, { rotation: 4, rotationY: 44, scale: 0.86 }], [430, { rotation: 6, rotationY: 14, scale: 0.86, y: 930 }], [434, { rotation: 4, rotationY: 0, y: 940, scale: 0.82, color: "#f05d10" }, "power2.out"], [437, { rotation: 1, y: 945, scale: 0.7 }], [440, { rotation: 8, rotationY: 34, y: 955, scale: 0.6, backgroundColor: "#dddddd" }], [444, { rotation: 0, rotationY: 40, y: 935, scale: 0.5, backgroundColor: "#a0a0a0" }], [447, { rotation: -10, rotationY: 30, y: 925, scale: 0.72, backgroundColor: "#8c8c8c" }], [448.5, { opacity: 0 }]]);
+      // Cartao de vidro
+      FX.keys(tl, "#e-glass", S, [[447, { ...center, x: 540, y: 950, scale: 0.3, rotation: -8, rotationY: 28, opacity: 0, skewY: 8 }], [448, { opacity: 1, scale: 0.5 }], [451, { scale: 0.9, rotation: 0, rotationY: 8, skewY: 2 }, "power2.out"], [453, { scale: 1.2, skewY: -6, rotationY: -6 }, "power2.out"], [456, { scale: 1.22, skewY: -9, rotation: 2 }], [460, { scale: 1, skewY: -8, rotation: 0 }, "power1.out"], [464, { scale: 0.98, skewY: 0, rotationX: 0 }], [468, { scale: 1, skewY: 6, rotationY: -8 }], [474, { scale: 1, skewY: 7, rotationY: -6 }], [481, { scale: 1, skewY: 3, rotationY: 8, y: 955 }], [486, { scale: 1, skewY: 0, rotationY: 4, y: 945 }], [489, { scale: 0.95, rotationY: 12, skewX: 2 }], [491, { scale: 0.83, skewX: 3, rotation: 3, rotationY: 25 }, "power1.in"], [493, { scale: 0.54, rotation: 8, rotationX: 22 }, "power1.in"], [495, { scale: 0.12, rotation: 16, rotationY: 40 }, "power2.in"], [497, { scale: 0.06, opacity: 0.9 }], [498.5, { opacity: 0 }]]);
+      FX.keys(tl, "#e-gi", S, [[456, { opacity: 0 }], [460, { opacity: 1, fill: "#b18cff" }], [472, { fill: "#6fd0ff" }], [482, { fill: "#ffffff" }]]);
+      FX.keys(tl, "#e-gt", S, [[456, { opacity: 0, x: 0 }], [460, { opacity: 0.7, color: "#d7c6ff" }], [470, { opacity: 1, color: "#9de2ff" }], [482, { color: "#ffffff" }]]);
+      FX.keys(tl, "#e-gb", S, [[452, { opacity: 0.45, backgroundColor: "#ff7c7c", rotation: -8 }], [456, { backgroundColor: "#f28bff", rotation: -9, opacity: 0.8 }], [461, { backgroundColor: "#f55de8", rotation: -5, opacity: 1 }], [466, { backgroundColor: "#a56eff", rotation: 3 }], [470, { backgroundColor: "#6f9dff", rotation: 6 }], [474, { backgroundColor: "#62d5ff", rotation: 4 }], [478, { backgroundColor: "#8bf2bf", rotation: 2 }], [482, { backgroundColor: "#c8ffc4", rotation: 0 }], [487, { backgroundColor: "#ffffff", color: "#333333" }]]);
+      FX.keys(tl, "#e-bdr", S, [[467, { strokeDasharray: 1, strokeDashoffset: 1, opacity: 1 }], [478, { strokeDashoffset: 0.56 }], [488, { strokeDashoffset: 0 }]]);
+      FX.keys(tl, "#e-burst", S, [[451, { ...center, x: 540, y: 880, scale: 0.3, opacity: 0, rotation: 8 }], [453, { scale: 1, opacity: 1 }], [456, { scale: 1.4, opacity: 1 }], [460, { scale: 0.5, opacity: 0.5, y: 860 }], [464, { scale: 0.1, opacity: 0 }]]);
+      // Fundos
+      FX.keys(tl, "#e-lav", S, [[446, { opacity: 0 }], [450, { opacity: 0.7 }], [454, { opacity: 1 }], [461, { opacity: 0.9 }], [468, { opacity: 0 }]]);
+      FX.keys(tl, "#e-blu", S, [[458, { opacity: 0 }], [465, { opacity: 1 }], [476, { opacity: 0.5 }], [484, { opacity: 0 }]]);
+      FX.keys(tl, "#e-grn", S, [[488, { opacity: 0 }], [498, { opacity: 0.4 }], [506, { opacity: 1 }], [513, { opacity: 0.8 }], [522, { opacity: 0 }]]);
+      // Cartao largo "Destacados"
+      FX.keys(tl, "#e-wide", S, [[497, { ...center, x: 540, y: 950, scale: 0.08, rotation: 16, rotationX: 34, opacity: 0 }], [498, { opacity: 1 }], [500, { scale: 0.22, rotation: 8, rotationX: 28 }], [502, { scale: 0.48, rotation: 5, rotationX: 14 }, "power1.out"], [504, { scale: 0.86, rotation: -5, rotationX: 0 }, "power2.out"], [506, { scale: 1, rotation: -5 }, "power1.out"], [509, { scale: 0.92, rotation: -1 }], [512, { scale: 0.78, rotation: 0.5, y: 975 }, "power1.out"], [516, { scale: 0.68, rotation: 0, y: 940, opacity: 1, filter: "blur(0.5px)" }], [518, { filter: "blur(3px)", opacity: 0.75 }], [521, { scale: 0.68, y: 930, filter: "blur(9px)", opacity: 0.25 }], [523, { opacity: 0 }]]);
+      FX.keys(tl, "#e-wb i", S, [[500, { color: "#62d5ff" }], [504, { color: "#38d09a" }], [508, { color: "#46c936" }], [511, { color: "#b9c926" }], [514, { color: "#5d5d60" }]]);
+      // Confete colorido
+      const col = ["#ff5fb2", "#68e6ff", "#ffc65a", "#b777ff", "#61ec8e", "#ff7a7a", "#fff"];
+      const C1 = FX.confetti(document.getElementById("e-c1"), { seed: 31, n: 260, colors: col, x: 540, y: 1900, spread: 1.7, speed: 3300, t0: 445 / 30 });
+      const C2 = FX.confetti(document.getElementById("e-c2"), { seed: 42, n: 110, colors: col, x: 540, y: 1920, spread: 1.4, speed: 2900, t0: 447 / 30, alpha: 0.9 });
+      FX.drive(tl, S, 444, 525, (t) => { C1(t); C2(t); });
+      FX.keys(tl, "#e-c1", S, [[446, { opacity: 1, filter: "blur(2px)" }], [456, { filter: "blur(0px)" }], [478, { opacity: 0.7 }], [495, { opacity: 0.28 }], [506, { opacity: 0.55 }], [516, { opacity: 0.3 }], [521, { opacity: 0 }]]);
+      FX.keys(tl, "#e-c2", S, [[448, { opacity: 0.9 }], [475, { opacity: 0.2 }], [484, { opacity: 0 }]]);
+      window.__timelines["e"] = tl;
+    })();
+  </script>
+</template>

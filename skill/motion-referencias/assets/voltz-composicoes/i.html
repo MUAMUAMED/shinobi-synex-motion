@@ -1,0 +1,63 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #000; overflow: hidden; font-family: "Inter", sans-serif; }
+    #root .a { position: absolute; left: 0; top: 0; }
+    canvas { position: absolute; left: 0; top: 0; }
+    #i-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, #ff8fa0, #f06f82 55%, #d95a6a); }
+    #i-sun { width: 900px; height: 1200px; border-radius: 50%; background: radial-gradient(#ffe9a0cc, #ffd38a66 45%, #0000 70%); }
+    #i-wh { position: absolute; inset: 0; background: #fff; }
+    #i-chip { width: 520px; height: 520px; border-radius: 50%; background: #ee6280; border: 56px dashed #fff; }
+    #i-side { width: 100px; height: 440px; background: repeating-linear-gradient(#ffffffd0 0 60px, #d6244a 60px 130px); border-radius: 16px; }
+    #i-bars { width: 520px; height: 520px; filter: blur(6px); } #i-bars u { position: absolute; height: 74px; background: #fff; display: block; } #i-m { color: #fff; font-size: 56px; font-weight: 500; font-family: "Outfit", sans-serif; white-space: nowrap; }
+    #i-dark { position: absolute; inset: 0; background: #000; }
+    #i-red { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, #4c0a1c, #000 55%); }
+    #i-type { position: absolute; left: 0; top: 0; color: #fff; font-weight: 500; white-space: nowrap; letter-spacing: -0.02em; font-size: 320px; line-height: 1; }
+    #i-mask { position: absolute; left: 0; top: 0; overflow: hidden; }
+    #i-car { width: 16px; height: 320px; background: #22c02b; }
+    #i-small { color: #fff; font-size: 56px; font-weight: 500; white-space: nowrap; letter-spacing: -0.01em; }
+    .i-gl { position: absolute; background: #fff; }
+  </style>
+  <div id="root" data-composition-id="i" data-width="1080" data-height="1920">
+    <div id="i-bg" data-layout-ignore></div>
+    <div id="i-sun" class="a" data-layout-ignore></div>
+    <canvas id="i-dust" width="1080" height="1920" data-layout-ignore></canvas>
+    <div id="i-side" class="a" data-layout-ignore></div>
+    <div id="i-chip" class="a" data-layout-ignore></div><div id="i-bars" class="a" data-layout-ignore><u style="left:90px;top:0;width:340px"></u><u style="left:0;top:130px;width:420px"></u><u style="left:60px;top:250px;width:440px"></u><u style="left:120px;top:370px;width:330px"></u><u style="left:170px;top:470px;width:200px"></u></div>
+    <div id="i-m" class="a">Moedas</div>
+    <div id="i-wh" data-layout-ignore></div>
+    <div id="i-red" data-layout-ignore></div>
+    <div id="i-dark" data-layout-ignore></div>
+    <div id="i-type" data-layout-allow-overflow data-layout-bleed="true">Eventos em call com + de</div>
+    <div id="i-car" class="a" data-layout-ignore></div>
+    <div id="i-small" class="a">Eventos em call com + de..</div>
+    <div id="i-g1" class="i-gl" style="left:40px;top:908px;width:1040px;height:320px" data-layout-ignore></div>
+    <div id="i-g2" class="i-gl" style="left:0;top:175px;width:820px;height:505px" data-layout-ignore></div>
+    <div id="i-g3" class="i-gl" style="left:0;top:1190px;width:1080px;height:540px" data-layout-ignore></div>
+  </div>
+  <script>
+    (function () {
+      const S = 736, tl = gsap.timeline({ paused: true }), center = { xPercent: -50, yPercent: -50 };
+      FX.keys(tl, "#i-wh", S, [[736, { opacity: 1 }], [737, { opacity: 0.75 }], [738, { opacity: 0.25 }], [741, { opacity: 0 }]]);
+      FX.keys(tl, "#i-bg", S, [[737, { opacity: 1, filter: "brightness(1)" }], [742, { filter: "brightness(0.82)" }], [746, { filter: "brightness(0.5)" }], [750, { filter: "brightness(0.34)" }], [754, { filter: "brightness(0.18)" }], [757, { filter: "brightness(0.06)", opacity: 0.8 }], [760, { opacity: 0 }]]);
+      FX.keys(tl, "#i-sun", S, [[737, { ...center, x: 980, y: 1000, opacity: 1 }], [744, { x: 860, y: 620, opacity: 0.9 }], [750, { x: 400, y: 200, scale: 0.6, opacity: 0.7 }], [754, { x: 150, y: 150, scale: 0.4, opacity: 0.3 }], [756, { opacity: 0 }]]);
+      FX.keys(tl, "#i-chip", S, [[738, { ...center, x: 540, y: 960, scale: 1.08, rotation: 0, filter: "blur(10px) brightness(2)" }], [741, { scale: 1, filter: "blur(6px) brightness(1.6)" }], [744, { x: 520, y: 950, scale: 0.92, filter: "blur(1px) brightness(1)" }, "power2.out"], [749, { x: 560, y: 960, scale: 0.8, filter: "blur(0px) brightness(1)", rotationY: 0 }], [751, { x: 300, y: 960, scale: 0.78, rotationY: 30, transformPerspective: 900 }, "power2.in"], [753, { x: 230, y: 950, rotationY: 58 }], [755, { x: 180, y: 950, rotationY: 74, opacity: 0 }]]);
+      FX.keys(tl, "#i-side", S, [[749, { ...center, x: 100, y: 960, opacity: 0, scaleX: 0.3 }], [751, { x: 130, opacity: 1, scaleX: 0.9 }], [755, { x: 200, y: 960, scaleX: 1.3, opacity: 0.95, scaleY: 0.95 }], [757, { x: 284, y: 960, scaleX: 1.9, scaleY: 0.68, opacity: 1 }], [757.9, { opacity: 1 }], [758, { x: 375, scaleX: 0.5, scaleY: 0.22, backgroundImage: "none", backgroundColor: "#35b43c", opacity: 0.8 }], [760, { x: 636, opacity: 0.3 }], [761, { x: 932, opacity: 0.2 }], [762, { opacity: 0 }]]);
+      FX.keys(tl, "#i-bars", S, [[738, { ...center, x: 540, y: 960, x: 540, opacity: 1, scale: 1.1 }], [740, { x: 560, scale: 1 }], [742, { x: 520 }], [744, { x: 540, opacity: 0.8 }], [746, { opacity: 0 }]]);
+      FX.keys(tl, "#i-m", S, [[741, { ...center, x: 540, y: 1270, opacity: 0, filter: "blur(4px)" }], [744, { opacity: 1, filter: "blur(0px)", y: 1240 }], [748, { y: 1220, opacity: 0.9 }], [751, { x: 250, y: 1215 }, "power2.in"], [755, { x: 160, y: 1190, opacity: 0.9 }], [756, { opacity: 0 }]]);
+      FX.keys(tl, "#i-red", S, [[753, { opacity: 0 }], [757, { opacity: 0.5 }], [761, { opacity: 0 }]]);
+      FX.keys(tl, "#i-dark", S, [[754, { opacity: 0 }], [758, { opacity: 0.7 }], [761, { opacity: 1 }]]);
+      // Digitacao em letra gigante, camera acompanha
+      FX.keys(tl, "#i-type", S, [[762, { x: -300, y: 760, opacity: 0, filter: "blur(16px)" }], [763, { opacity: 0.2 }], [765, { x: -300, opacity: 0.65, filter: "blur(10px)" }], [767, { x: -880, filter: "blur(4px)" }], [770, { x: -1300, filter: "blur(2px)", opacity: 1 }], [775, { x: -2250 }], [781, { x: -3400, filter: "blur(6px)" }], [781.5, { opacity: 0 }]]);
+      FX.keys(tl, "#i-car", S, [[757, { x: 610, y: 965, opacity: 0, scaleY: 0.2, yPercent: -50 }], [762, { opacity: 0 }], [763, { x: 820, opacity: 0.7, scaleY: 0.7, y: 900 }], [766, { x: 240, y: 925, opacity: 1, scaleY: 0.8 }], [770, { x: 590, y: 925, scaleY: 0.85 }], [775, { x: 870, y: 925 }], [777, { x: 860 }], [780, { x: 440, y: 925 }], [781, { opacity: 0 }]]);
+      // Frase pequena
+      FX.keys(tl, "#i-small", S, [[781, { ...center, x: 540, y: 975, opacity: 0, color: "#46f04a" }], [781.5, { opacity: 1 }], [788, { color: "#ffffff" }], [792, { y: 968, opacity: 1, filter: "blur(0px)" }], [793, { y: 975, filter: "blur(1px)" }], [794, { y: 985, filter: "blur(0px)" }], [796, { y: 985, opacity: 0.7 }], [798, { opacity: 0.25, y: 970 }], [799, { opacity: 0.6, scaleY: 1.3, filter: "blur(3px)", y: 950 }], [800, { opacity: 0.25, y: 945 }], [801, { opacity: 0.1 }], [802, { opacity: 0 }]]);
+      FX.keys(tl, "#i-g1", S, [[797, { opacity: 0 }], [798, { opacity: 1 }], [799, { opacity: 0 }]]);
+      FX.keys(tl, "#i-g2", S, [[798, { opacity: 0 }], [799, { opacity: 1 }], [801, { opacity: 0 }]]);
+      FX.keys(tl, "#i-g3", S, [[800, { opacity: 0 }], [801, { opacity: 1 }], [802, { opacity: 0 }]]);
+      const D = FX.dust(document.getElementById("i-dust"), { seed: 23, n: 110, color: "#ffe0d8", alpha: 0.7 });
+      FX.drive(tl, S, 737, 760, (t) => D(t));
+      FX.keys(tl, "#i-dust", S, [[737, { opacity: 0.9 }], [754, { opacity: 0.5 }], [758, { opacity: 0 }]]);
+      window.__timelines["i"] = tl;
+    })();
+  </script>
+</template>
