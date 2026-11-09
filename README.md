@@ -17,6 +17,8 @@ O caso pronto é o vídeo do **Shinobi Synex**, um RPG de Naruto jogado no Disco
 | 7 | [`skill/motion-referencias/`](skill/motion-referencias/) | Skill do Claude Code: analisa referências e guia a criação |
 | 8 | [`docs/04-historico.md`](docs/04-historico.md) | Versões, o que foi recusado e por quê |
 | 9 | [`docs/05-licencas.md`](docs/05-licencas.md) | Origem e licença de cada música, efeito, ícone e imagem |
+| 10 | [`chibi/`](chibi/) | As 40 imagens da chibi narradora, com guia de expressões |
+| 11 | [`personagens/`](personagens/) | Cartões, folhas de personagem, rostos e retratos dos 125 NPCs, com `indice.json` |
 
 ## Em uma frase, o estilo
 Palavras grandes que trocam a cada palavra falada, fundo que alterna claro, escuro e cor da marca, cada cena nascendo de um elemento da anterior (ponto, íris, tinta, corte), algo se mexendo em todo quadro, bonecos de palito nas histórias cômicas, chibi narradora sempre em imagem fixa, e música e efeitos no tempo das palavras.

@@ -1,0 +1,41 @@
+﻿arquivo,par,expressao,boca,uso,descricao
+imagens/01_apresentadora_natural_boca_fechada.png,01,Apresentadora natural,fechada,pausa / escuta,"De frente, braços relaxados, sorriso leve. Narração principal."
+imagens/01_apresentadora_natural_boca_aberta.png,01,Apresentadora natural,aberta,fala,"De frente, braços relaxados, sorriso leve. Narração principal."
+imagens/02_recepcao_animada_boca_fechada.png,02,Recepção animada,fechada,pausa / escuta,"Acenando, expressão alegre. Abertura e saudação."
+imagens/02_recepcao_animada_boca_aberta.png,02,Recepção animada,aberta,fala,"Acenando, expressão alegre. Abertura e saudação."
+imagens/03_explicando_boca_fechada.png,03,Explicando,fechada,pausa / escuta,"Uma palma aberta, apresentando uma informação. Tom didático."
+imagens/03_explicando_boca_aberta.png,03,Explicando,aberta,fala,"Uma palma aberta, apresentando uma informação. Tom didático."
+imagens/04_destacando_dica_boca_fechada.png,04,Destacando uma dica,fechada,pausa / escuta,Indicador levantado ao lado do rosto. Enfatiza um ponto.
+imagens/04_destacando_dica_boca_aberta.png,04,Destacando uma dica,aberta,fala,Indicador levantado ao lado do rosto. Enfatiza um ponto.
+imagens/05_indicando_tela_boca_fechada.png,05,Indicando algo na tela,fechada,pausa / escuta,Apontando para a direita de quem vê a imagem. Apresenta conteúdo.
+imagens/05_indicando_tela_boca_aberta.png,05,Indicando algo na tela,aberta,fala,Apontando para a direita de quem vê a imagem. Apresenta conteúdo.
+imagens/06_confiante_boca_fechada.png,06,Confiante,fechada,pausa / escuta,"Mão na cintura, olhar seguro. Afirmação firme."
+imagens/06_confiante_boca_aberta.png,06,Confiante,aberta,fala,"Mão na cintura, olhar seguro. Afirmação firme."
+imagens/07_convencida_boca_fechada.png,07,Convencida / prepotente,fechada,pausa / escuta,"Queixo elevado, sobrancelha arqueada. Tom de eu avisei."
+imagens/07_convencida_boca_aberta.png,07,Convencida / prepotente,aberta,fala,"Queixo elevado, sobrancelha arqueada. Tom de eu avisei."
+imagens/08_brincalhona_boca_fechada.png,08,Brincalhona,fechada,pausa / escuta,Piscadinha e sinal de vitória. Comentário divertido.
+imagens/08_brincalhona_boca_aberta.png,08,Brincalhona,aberta,fala,Piscadinha e sinal de vitória. Comentário divertido.
+imagens/09_carinhosa_boca_fechada.png,09,Carinhosa,fechada,pausa / escuta,"Mãos sobre o peito, olhar acolhedor. Fala afetuosa."
+imagens/09_carinhosa_boca_aberta.png,09,Carinhosa,aberta,fala,"Mãos sobre o peito, olhar acolhedor. Fala afetuosa."
+imagens/10_timida_boca_fechada.png,10,Tímida,fechada,pausa / escuta,"Pontas dos indicadores juntas, olhar de lado e blush. Fala hesitante."
+imagens/10_timida_boca_aberta.png,10,Tímida,aberta,fala,"Pontas dos indicadores juntas, olhar de lado e blush. Fala hesitante."
+imagens/11_enrolando_cabelo_boca_fechada.png,11,Enrolando o cabelo,fechada,pausa / escuta,"Segurando uma mecha no dedo, sorriso discreto. Tom descontraído."
+imagens/11_enrolando_cabelo_boca_aberta.png,11,Enrolando o cabelo,aberta,fala,"Segurando uma mecha no dedo, sorriso discreto. Tom descontraído."
+imagens/12_curiosa_boca_fechada.png,12,Curiosa,fechada,pausa / escuta,"Cabeça inclinada, sobrancelhas levantadas. Faz uma pergunta."
+imagens/12_curiosa_boca_aberta.png,12,Curiosa,aberta,fala,"Cabeça inclinada, sobrancelhas levantadas. Faz uma pergunta."
+imagens/13_pensativa_boca_fechada.png,13,Pensativa,fechada,pausa / escuta,"Mão no queixo, olhando para cima. Raciocina em voz alta."
+imagens/13_pensativa_boca_aberta.png,13,Pensativa,aberta,fala,"Mão no queixo, olhando para cima. Raciocina em voz alta."
+imagens/14_confusa_boca_fechada.png,14,Confusa,fechada,pausa / escuta,"Palma virada para cima, sobrancelhas assimétricas. Tom de como assim."
+imagens/14_confusa_boca_aberta.png,14,Confusa,aberta,fala,"Palma virada para cima, sobrancelhas assimétricas. Tom de como assim."
+imagens/15_surpresa_boca_fechada.png,15,Surpresa,fechada,pausa / escuta,"Olhos arregalados, mãos junto ao rosto. Exclamação."
+imagens/15_surpresa_boca_aberta.png,15,Surpresa,aberta,fala,"Olhos arregalados, mãos junto ao rosto. Exclamação."
+imagens/16_empolgada_boca_fechada.png,16,Empolgada,fechada,pausa / escuta,"Punhos erguidos, olhar animado. Fala entusiasmada."
+imagens/16_empolgada_boca_aberta.png,16,Empolgada,aberta,fala,"Punhos erguidos, olhar animado. Fala entusiasmada."
+imagens/17_seria_alerta_boca_fechada.png,17,Séria / alerta,fechada,pausa / escuta,"Uma mão aberta em gesto de atenção, postura firme. Aviso importante."
+imagens/17_seria_alerta_boca_aberta.png,17,Séria / alerta,aberta,fala,"Uma mão aberta em gesto de atenção, postura firme. Aviso importante."
+imagens/18_brava_boca_fechada.png,18,Brava / emburrada,fechada,pausa / escuta,"Braços cruzados, sobrancelhas franzidas. Reclamação indignada."
+imagens/18_brava_boca_aberta.png,18,Brava / emburrada,aberta,fala,"Braços cruzados, sobrancelhas franzidas. Reclamação indignada."
+imagens/19_desconfiada_boca_fechada.png,19,Desconfiada / irônica,fechada,pausa / escuta,"Olhar de lado semicerrado, sobrancelha elevada e braços cruzados. Sarcasmo."
+imagens/19_desconfiada_boca_aberta.png,19,Desconfiada / irônica,aberta,fala,"Olhar de lado semicerrado, sobrancelha elevada e braços cruzados. Sarcasmo."
+imagens/20_cochichando_boca_fechada.png,20,Cochichando um segredo,fechada,pausa / escuta,Corpo inclinado e mão ao lado da boca. Fala baixa e discreta.
+imagens/20_cochichando_boca_aberta.png,20,Cochichando um segredo,aberta,cochicho,Corpo inclinado e mão ao lado da boca. Fala baixa e discreta.

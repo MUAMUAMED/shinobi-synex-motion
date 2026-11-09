@@ -1,0 +1,216 @@
+GUIA DAS IMAGENS — PERSONAGEM CHIBI
+
+40 PNGs, organizados em 20 pares.
+
+COMO USAR COM UMA IA DE EDIÇÃO
+Escolha a expressão pelo sentido e tom do trecho. Use boca aberta durante a fala e boca fechada nas pausas. Alterne apenas entre arquivos com o mesmo número de par. O par 01 é a base para narração normal. O par 20 representa cochicho. Os dois estados são poses estáticas de fala, não um conjunto completo de fonemas para sincronização labial.
+
+NOMES
+NN_expressao_boca_fechada.png = pausa / escuta.
+NN_expressao_boca_aberta.png = falando na mesma expressão.
+Os caminhos abaixo são relativos à pasta raiz do pacote.
+
+OBSERVAÇÕES PARA EDIÇÃO
+As imagens foram geradas individualmente; podem existir pequenas diferenças de traço, alinhamento e transparência entre os estados. Confira a sobreposição dos pares no editor antes de alternar rapidamente. Preserve a proporção das imagens e ajuste o tamanho e a posição conforme o vídeo.
+
+CATÁLOGO COMPLETO
+
+Arquivo: imagens/01_apresentadora_natural_boca_fechada.png
+Par: 01 | Expressão: Apresentadora natural | Boca: fechada | Uso: pausa / escuta
+Descrição: De frente, braços relaxados, sorriso leve. Narração principal.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/01_apresentadora_natural_boca_aberta.png
+Par: 01 | Expressão: Apresentadora natural | Boca: aberta | Uso: fala
+Descrição: De frente, braços relaxados, sorriso leve. Narração principal.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/02_recepcao_animada_boca_fechada.png
+Par: 02 | Expressão: Recepção animada | Boca: fechada | Uso: pausa / escuta
+Descrição: Acenando, expressão alegre. Abertura e saudação.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/02_recepcao_animada_boca_aberta.png
+Par: 02 | Expressão: Recepção animada | Boca: aberta | Uso: fala
+Descrição: Acenando, expressão alegre. Abertura e saudação.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/03_explicando_boca_fechada.png
+Par: 03 | Expressão: Explicando | Boca: fechada | Uso: pausa / escuta
+Descrição: Uma palma aberta, apresentando uma informação. Tom didático.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/03_explicando_boca_aberta.png
+Par: 03 | Expressão: Explicando | Boca: aberta | Uso: fala
+Descrição: Uma palma aberta, apresentando uma informação. Tom didático.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/04_destacando_dica_boca_fechada.png
+Par: 04 | Expressão: Destacando uma dica | Boca: fechada | Uso: pausa / escuta
+Descrição: Indicador levantado ao lado do rosto. Enfatiza um ponto.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/04_destacando_dica_boca_aberta.png
+Par: 04 | Expressão: Destacando uma dica | Boca: aberta | Uso: fala
+Descrição: Indicador levantado ao lado do rosto. Enfatiza um ponto.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/05_indicando_tela_boca_fechada.png
+Par: 05 | Expressão: Indicando algo na tela | Boca: fechada | Uso: pausa / escuta
+Descrição: Apontando para a direita de quem vê a imagem. Apresenta conteúdo.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/05_indicando_tela_boca_aberta.png
+Par: 05 | Expressão: Indicando algo na tela | Boca: aberta | Uso: fala
+Descrição: Apontando para a direita de quem vê a imagem. Apresenta conteúdo.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/06_confiante_boca_fechada.png
+Par: 06 | Expressão: Confiante | Boca: fechada | Uso: pausa / escuta
+Descrição: Mão na cintura, olhar seguro. Afirmação firme.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/06_confiante_boca_aberta.png
+Par: 06 | Expressão: Confiante | Boca: aberta | Uso: fala
+Descrição: Mão na cintura, olhar seguro. Afirmação firme.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/07_convencida_boca_fechada.png
+Par: 07 | Expressão: Convencida / prepotente | Boca: fechada | Uso: pausa / escuta
+Descrição: Queixo elevado, sobrancelha arqueada. Tom de eu avisei.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/07_convencida_boca_aberta.png
+Par: 07 | Expressão: Convencida / prepotente | Boca: aberta | Uso: fala
+Descrição: Queixo elevado, sobrancelha arqueada. Tom de eu avisei.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/08_brincalhona_boca_fechada.png
+Par: 08 | Expressão: Brincalhona | Boca: fechada | Uso: pausa / escuta
+Descrição: Piscadinha e sinal de vitória. Comentário divertido.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/08_brincalhona_boca_aberta.png
+Par: 08 | Expressão: Brincalhona | Boca: aberta | Uso: fala
+Descrição: Piscadinha e sinal de vitória. Comentário divertido.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/09_carinhosa_boca_fechada.png
+Par: 09 | Expressão: Carinhosa | Boca: fechada | Uso: pausa / escuta
+Descrição: Mãos sobre o peito, olhar acolhedor. Fala afetuosa.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/09_carinhosa_boca_aberta.png
+Par: 09 | Expressão: Carinhosa | Boca: aberta | Uso: fala
+Descrição: Mãos sobre o peito, olhar acolhedor. Fala afetuosa.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/10_timida_boca_fechada.png
+Par: 10 | Expressão: Tímida | Boca: fechada | Uso: pausa / escuta
+Descrição: Pontas dos indicadores juntas, olhar de lado e blush. Fala hesitante.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/10_timida_boca_aberta.png
+Par: 10 | Expressão: Tímida | Boca: aberta | Uso: fala
+Descrição: Pontas dos indicadores juntas, olhar de lado e blush. Fala hesitante.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/11_enrolando_cabelo_boca_fechada.png
+Par: 11 | Expressão: Enrolando o cabelo | Boca: fechada | Uso: pausa / escuta
+Descrição: Segurando uma mecha no dedo, sorriso discreto. Tom descontraído.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/11_enrolando_cabelo_boca_aberta.png
+Par: 11 | Expressão: Enrolando o cabelo | Boca: aberta | Uso: fala
+Descrição: Segurando uma mecha no dedo, sorriso discreto. Tom descontraído.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/12_curiosa_boca_fechada.png
+Par: 12 | Expressão: Curiosa | Boca: fechada | Uso: pausa / escuta
+Descrição: Cabeça inclinada, sobrancelhas levantadas. Faz uma pergunta.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/12_curiosa_boca_aberta.png
+Par: 12 | Expressão: Curiosa | Boca: aberta | Uso: fala
+Descrição: Cabeça inclinada, sobrancelhas levantadas. Faz uma pergunta.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/13_pensativa_boca_fechada.png
+Par: 13 | Expressão: Pensativa | Boca: fechada | Uso: pausa / escuta
+Descrição: Mão no queixo, olhando para cima. Raciocina em voz alta.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/13_pensativa_boca_aberta.png
+Par: 13 | Expressão: Pensativa | Boca: aberta | Uso: fala
+Descrição: Mão no queixo, olhando para cima. Raciocina em voz alta.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/14_confusa_boca_fechada.png
+Par: 14 | Expressão: Confusa | Boca: fechada | Uso: pausa / escuta
+Descrição: Palma virada para cima, sobrancelhas assimétricas. Tom de como assim.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/14_confusa_boca_aberta.png
+Par: 14 | Expressão: Confusa | Boca: aberta | Uso: fala
+Descrição: Palma virada para cima, sobrancelhas assimétricas. Tom de como assim.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/15_surpresa_boca_fechada.png
+Par: 15 | Expressão: Surpresa | Boca: fechada | Uso: pausa / escuta
+Descrição: Olhos arregalados, mãos junto ao rosto. Exclamação.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/15_surpresa_boca_aberta.png
+Par: 15 | Expressão: Surpresa | Boca: aberta | Uso: fala
+Descrição: Olhos arregalados, mãos junto ao rosto. Exclamação.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/16_empolgada_boca_fechada.png
+Par: 16 | Expressão: Empolgada | Boca: fechada | Uso: pausa / escuta
+Descrição: Punhos erguidos, olhar animado. Fala entusiasmada.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/16_empolgada_boca_aberta.png
+Par: 16 | Expressão: Empolgada | Boca: aberta | Uso: fala
+Descrição: Punhos erguidos, olhar animado. Fala entusiasmada.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/17_seria_alerta_boca_fechada.png
+Par: 17 | Expressão: Séria / alerta | Boca: fechada | Uso: pausa / escuta
+Descrição: Uma mão aberta em gesto de atenção, postura firme. Aviso importante.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/17_seria_alerta_boca_aberta.png
+Par: 17 | Expressão: Séria / alerta | Boca: aberta | Uso: fala
+Descrição: Uma mão aberta em gesto de atenção, postura firme. Aviso importante.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/18_brava_boca_fechada.png
+Par: 18 | Expressão: Brava / emburrada | Boca: fechada | Uso: pausa / escuta
+Descrição: Braços cruzados, sobrancelhas franzidas. Reclamação indignada.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/18_brava_boca_aberta.png
+Par: 18 | Expressão: Brava / emburrada | Boca: aberta | Uso: fala
+Descrição: Braços cruzados, sobrancelhas franzidas. Reclamação indignada.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/19_desconfiada_boca_fechada.png
+Par: 19 | Expressão: Desconfiada / irônica | Boca: fechada | Uso: pausa / escuta
+Descrição: Olhar de lado semicerrado, sobrancelha elevada e braços cruzados. Sarcasmo.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/19_desconfiada_boca_aberta.png
+Par: 19 | Expressão: Desconfiada / irônica | Boca: aberta | Uso: fala
+Descrição: Olhar de lado semicerrado, sobrancelha elevada e braços cruzados. Sarcasmo.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/20_cochichando_boca_fechada.png
+Par: 20 | Expressão: Cochichando um segredo | Boca: fechada | Uso: pausa / escuta
+Descrição: Corpo inclinado e mão ao lado da boca. Fala baixa e discreta.
+Dimensões: 1254 x 1254 px
+
+Arquivo: imagens/20_cochichando_boca_aberta.png
+Par: 20 | Expressão: Cochichando um segredo | Boca: aberta | Uso: cochicho
+Descrição: Corpo inclinado e mão ao lado da boca. Fala baixa e discreta.
+Dimensões: 1254 x 1254 px

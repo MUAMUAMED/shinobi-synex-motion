@@ -1,0 +1,487 @@
+{
+  "total_imagens": 40,
+  "total_expressoes": 20,
+  "instrucoes": "Alternar boca aberta durante a fala e fechada nas pausas; manter o mesmo par. Conferir alinhamento antes de animar.",
+  "imagens": [
+    {
+      "arquivo": "imagens/01_apresentadora_natural_boca_fechada.png",
+      "par": "01",
+      "expressao": "Apresentadora natural",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "De frente, braços relaxados, sorriso leve. Narração principal.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/01_apresentadora_natural_boca_aberta.png",
+      "par": "01",
+      "expressao": "Apresentadora natural",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "De frente, braços relaxados, sorriso leve. Narração principal.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/02_recepcao_animada_boca_fechada.png",
+      "par": "02",
+      "expressao": "Recepção animada",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Acenando, expressão alegre. Abertura e saudação.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/02_recepcao_animada_boca_aberta.png",
+      "par": "02",
+      "expressao": "Recepção animada",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Acenando, expressão alegre. Abertura e saudação.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/03_explicando_boca_fechada.png",
+      "par": "03",
+      "expressao": "Explicando",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Uma palma aberta, apresentando uma informação. Tom didático.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/03_explicando_boca_aberta.png",
+      "par": "03",
+      "expressao": "Explicando",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Uma palma aberta, apresentando uma informação. Tom didático.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/04_destacando_dica_boca_fechada.png",
+      "par": "04",
+      "expressao": "Destacando uma dica",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Indicador levantado ao lado do rosto. Enfatiza um ponto.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/04_destacando_dica_boca_aberta.png",
+      "par": "04",
+      "expressao": "Destacando uma dica",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Indicador levantado ao lado do rosto. Enfatiza um ponto.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/05_indicando_tela_boca_fechada.png",
+      "par": "05",
+      "expressao": "Indicando algo na tela",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Apontando para a direita de quem vê a imagem. Apresenta conteúdo.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/05_indicando_tela_boca_aberta.png",
+      "par": "05",
+      "expressao": "Indicando algo na tela",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Apontando para a direita de quem vê a imagem. Apresenta conteúdo.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/06_confiante_boca_fechada.png",
+      "par": "06",
+      "expressao": "Confiante",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Mão na cintura, olhar seguro. Afirmação firme.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/06_confiante_boca_aberta.png",
+      "par": "06",
+      "expressao": "Confiante",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Mão na cintura, olhar seguro. Afirmação firme.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/07_convencida_boca_fechada.png",
+      "par": "07",
+      "expressao": "Convencida / prepotente",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Queixo elevado, sobrancelha arqueada. Tom de eu avisei.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/07_convencida_boca_aberta.png",
+      "par": "07",
+      "expressao": "Convencida / prepotente",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Queixo elevado, sobrancelha arqueada. Tom de eu avisei.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/08_brincalhona_boca_fechada.png",
+      "par": "08",
+      "expressao": "Brincalhona",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Piscadinha e sinal de vitória. Comentário divertido.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/08_brincalhona_boca_aberta.png",
+      "par": "08",
+      "expressao": "Brincalhona",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Piscadinha e sinal de vitória. Comentário divertido.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/09_carinhosa_boca_fechada.png",
+      "par": "09",
+      "expressao": "Carinhosa",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Mãos sobre o peito, olhar acolhedor. Fala afetuosa.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/09_carinhosa_boca_aberta.png",
+      "par": "09",
+      "expressao": "Carinhosa",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Mãos sobre o peito, olhar acolhedor. Fala afetuosa.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/10_timida_boca_fechada.png",
+      "par": "10",
+      "expressao": "Tímida",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Pontas dos indicadores juntas, olhar de lado e blush. Fala hesitante.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/10_timida_boca_aberta.png",
+      "par": "10",
+      "expressao": "Tímida",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Pontas dos indicadores juntas, olhar de lado e blush. Fala hesitante.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/11_enrolando_cabelo_boca_fechada.png",
+      "par": "11",
+      "expressao": "Enrolando o cabelo",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Segurando uma mecha no dedo, sorriso discreto. Tom descontraído.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/11_enrolando_cabelo_boca_aberta.png",
+      "par": "11",
+      "expressao": "Enrolando o cabelo",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Segurando uma mecha no dedo, sorriso discreto. Tom descontraído.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/12_curiosa_boca_fechada.png",
+      "par": "12",
+      "expressao": "Curiosa",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Cabeça inclinada, sobrancelhas levantadas. Faz uma pergunta.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/12_curiosa_boca_aberta.png",
+      "par": "12",
+      "expressao": "Curiosa",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Cabeça inclinada, sobrancelhas levantadas. Faz uma pergunta.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/13_pensativa_boca_fechada.png",
+      "par": "13",
+      "expressao": "Pensativa",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Mão no queixo, olhando para cima. Raciocina em voz alta.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/13_pensativa_boca_aberta.png",
+      "par": "13",
+      "expressao": "Pensativa",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Mão no queixo, olhando para cima. Raciocina em voz alta.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/14_confusa_boca_fechada.png",
+      "par": "14",
+      "expressao": "Confusa",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Palma virada para cima, sobrancelhas assimétricas. Tom de como assim.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/14_confusa_boca_aberta.png",
+      "par": "14",
+      "expressao": "Confusa",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Palma virada para cima, sobrancelhas assimétricas. Tom de como assim.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/15_surpresa_boca_fechada.png",
+      "par": "15",
+      "expressao": "Surpresa",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Olhos arregalados, mãos junto ao rosto. Exclamação.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/15_surpresa_boca_aberta.png",
+      "par": "15",
+      "expressao": "Surpresa",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Olhos arregalados, mãos junto ao rosto. Exclamação.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/16_empolgada_boca_fechada.png",
+      "par": "16",
+      "expressao": "Empolgada",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Punhos erguidos, olhar animado. Fala entusiasmada.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/16_empolgada_boca_aberta.png",
+      "par": "16",
+      "expressao": "Empolgada",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Punhos erguidos, olhar animado. Fala entusiasmada.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/17_seria_alerta_boca_fechada.png",
+      "par": "17",
+      "expressao": "Séria / alerta",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Uma mão aberta em gesto de atenção, postura firme. Aviso importante.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/17_seria_alerta_boca_aberta.png",
+      "par": "17",
+      "expressao": "Séria / alerta",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Uma mão aberta em gesto de atenção, postura firme. Aviso importante.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/18_brava_boca_fechada.png",
+      "par": "18",
+      "expressao": "Brava / emburrada",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Braços cruzados, sobrancelhas franzidas. Reclamação indignada.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/18_brava_boca_aberta.png",
+      "par": "18",
+      "expressao": "Brava / emburrada",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Braços cruzados, sobrancelhas franzidas. Reclamação indignada.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/19_desconfiada_boca_fechada.png",
+      "par": "19",
+      "expressao": "Desconfiada / irônica",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Olhar de lado semicerrado, sobrancelha elevada e braços cruzados. Sarcasmo.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/19_desconfiada_boca_aberta.png",
+      "par": "19",
+      "expressao": "Desconfiada / irônica",
+      "boca": "aberta",
+      "uso": "fala",
+      "descricao": "Olhar de lado semicerrado, sobrancelha elevada e braços cruzados. Sarcasmo.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/20_cochichando_boca_fechada.png",
+      "par": "20",
+      "expressao": "Cochichando um segredo",
+      "boca": "fechada",
+      "uso": "pausa / escuta",
+      "descricao": "Corpo inclinado e mão ao lado da boca. Fala baixa e discreta.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "arquivo": "imagens/20_cochichando_boca_aberta.png",
+      "par": "20",
+      "expressao": "Cochichando um segredo",
+      "boca": "aberta",
+      "uso": "cochicho",
+      "descricao": "Corpo inclinado e mão ao lado da boca. Fala baixa e discreta.",
+      "dimensoes_px": [
+        1254,
+        1254
+      ]
+    }
+  ]
+}
